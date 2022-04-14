@@ -19,7 +19,7 @@ def home():
 
 
 @ app.route("/learn")
-def quiz():
+def learn():
     return render_template("learn.html")
 
 @ app.route("/quiz")
