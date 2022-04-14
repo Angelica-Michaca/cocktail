@@ -10,14 +10,21 @@ app = Flask(__name__)
 
 @ app.route("/")
 def defaultPage():
-    return render_template("homepage.html")
+    return render_template("home.html")
 
 
-@ app.route("/homepage")
-def homePage():
-    return render_template("homepage.html")
+@ app.route("/home")
+def home():
+    return render_template("home.html")
 
 
+@ app.route("/learn")
+def quiz():
+    return render_template("learn.html")
+
+@ app.route("/quiz")
+def quiz():
+    return render_template("quiz.html")
 
 
 
