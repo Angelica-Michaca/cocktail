@@ -1,24 +1,122 @@
-<!-- Base color: Grey
-    accent color: ?
-    +
-    light gray + white
--->
 {% extends "layout.html" %}
 
 {% block content %}
 
-<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
-<script>
-    //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
-    let userIngredientChoices = {{ userIngredientChoices| tojson}}
-</script>
+<!DOCTYPE html>
 
-<div class= "darkGreyBackground">
+<html>
+
+<head>
+
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
    
-sfdafdlafj
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+    <script>
+        //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
+        let userIngredientChoices = {{ userIngredientChoices| tojson}}
+    </script>
+
+
+    <style>
+        .containerGray {
+            background-color: rgb(32, 32, 32);
+        }
+
+        .quizBodyText {
+            margin: 10px;
+            font-family: italiana;
+            color: white;
+            font-size: 30px;
+        }
+
+        .quizTitleText {
+            margin: 20px;
+            font-family: italiana;
+            color: white;
+            font-size: 60px;
+        }
+
+        .ingredients {
+            width: 100;
+            height: 100;
+        }
+
+        .quizIngredientsText {
+            margin: 20px;
+            font-family: italiana;
+            color: white;
+            font-size: 20px;
+        }
+
+
+        .ingredients:hover {
+            cursor: move;
+        }
+
+        .highlightActive {
+            background-color: darkgray;
+        }
+
+        .highlightHover {
+            background-color: gray;
+        }
+    </style>
 
 
 
-</div>
+</head>
 
+
+<body class="containerGray">
+
+    <div class="quizTitleText" id="title"></div>
+
+    <div class="quizBodyText" id="instruction"></div>
+
+    <div class="row quizBodyText" id="ingredientsRow"><!-- row for drink images/icons--></div>
+
+
+    <div class="row">
+        <!--row for glass image/icon glass content text-->
+        <div class="col-md quizBodyText glass" id="glass"></div>
+
+        <div class="col-md quizBodyText">
+            <!-- col for glass contents textbox -->
+            <div id='glassInstruction'></div>
+            <div class="quizBodyText" id="glassInput"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- row for reset, undo, and  submit -->
+        <div class="col-md">
+            <!-- col for reset button-->
+            <button class="btn btn-light btn-lg" type="button">Reset</button>
+        </div>
+
+        <div class="col-md">
+            <!-- col for undo button -->
+            <button class="btn btn-light btn-lg" type="button">Undo</button>
+        </div>
+
+        <div class="col-md">
+            <!-- col for submit button -->
+            <button class="btn btn-light btn-lg" type="button">Submit</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
 {% endblock %}
