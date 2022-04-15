@@ -5,6 +5,18 @@ app = Flask(__name__)
 
 ingredients = ["lime", "orange juice", "tequila"] #testing git
 
+
+ingredients = {
+    "moscow_mule": {
+    "ingredients": ["lime", "lemon"],
+    "video": ,
+    "jpegs": ,
+    }
+
+
+}
+
+
 # ROUTES
 
 
