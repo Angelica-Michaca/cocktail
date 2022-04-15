@@ -1,0 +1,24 @@
+<!-- Base color: Grey
+    accent color: ?
+    +
+    light gray + white
+-->
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+<script>
+    //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
+    let userIngredientChoices = {{ userIngredientChoices| tojson}}
+</script>
+
+<div class= "darkGreyBackground">
+   
+sfdafdlafj
+
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %} {% block content %}
+<div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="left-page-headers">{{cocktails.name}}</h2>
+      <h4 class="right-page-header">Ingredients</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="col-md-6 cocktail-video">
+        <a href="{{cocktails.video}}"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

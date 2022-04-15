@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LionBar</title>
 
-    <link rel="" type="" href="" />
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
@@ -20,54 +19,137 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static', filename='main.css') }}"
+    />
+
+    <link rel="stylesheet" type="text/css" href="static/main.css" />
 
     <script
       type="text/javascript"
       src="{{ url_for('static', filename = 'layout.js') }}"
     ></script>
+
+    <style>
+      body {
+        background-color: rgb(36, 37, 36);
+      }
+      /* Modify the background color */
+      .navbar-custom {
+        background-color: rgb(36, 37, 36);
+      }
+      /* Modify brand and text color */
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text {
+        color: rgb(255, 255, 255);
+      }
+
+      /* Modify nav-links text color */
+      a {
+        color: white;
+      }
+
+      #welcome-header {
+        text-align: center;
+        color: white;
+      }
+
+      .welcome-blurb {
+        margin-bottom: 25px;
+        font-size: 50px;
+        /* add correct font later*/
+      }
+
+      .learn-blurb {
+        font-size: 25px;
+        margin-bottom: 25px;
+      }
+
+      .click-drink-blurb {
+        color: rgb(154, 154, 154);
+        margin-bottom: 20px;
+      }
+
+      .custom-card {
+        background-color: rgb(36, 37, 36);
+      }
+
+      .margarita_img {
+        max-width: 30%;
+      }
+
+      /*.small_card {
+        width: 12rem;
+        height: 7rem;
+      }*/
+
+      .drink_btn {
+        color: black;
+        background-color: white;
+        border-color: white;
+      }
+
+      .quiz_btn {
+        color: white;
+        border-color: white;
+
+        background-color: rgb(36, 37, 36);
+      }
+
+      .btn-primary {
+        margin: 5px;
+      }
+
+      .homepage-btn {
+        width: 8.5rem;
+      }
+
+      #drink_name-btn {
+        background-color: white;
+        color: black;
+        border-color: white;
+      }
+
+      #take-quiz-btn {
+        color: white;
+        background-color: rgb(36, 37, 36);
+        border-color: white;
+      }
+    </style>
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <a class="navbar-brand" href="/">LionBar</a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">LIONBAR</a>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Margarita <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="/learn/margarita">MARGARITA</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="/learn/piña_colada">PIÑA COLADA </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="/learn/moscow_mule">MOSCOW MULE </a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
+    <div class="container">{% block content %} {% endblock %}</div>
   </body>
 </html>

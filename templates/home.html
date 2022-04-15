@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block content %}
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'home.js') }}"
+></script>
+
+<script>
+    var cocktails = {{ cocktails| tojson}}
+    $(document).ready(function () {
+      $.each(cocktails, function (i, d) {
+          console.log("Showing cocktails: " + d);
+      })
+  })
+</script>
+
+<div id="welcome-header">
+  <h1 class="welcome-blurb">Welcome to the LionBar!</h1>
+  <h5 class="learn-blurb">Learn about drinks and how to mix them</h5>
+  <h6 class="click-drink-blurb">
+    Choose a drink to learn about or a quiz to test your knowledge about each
+    drink
+  </h6>
+</div>
+<div class="row home-row"></div>
+
+{% endblock %}
