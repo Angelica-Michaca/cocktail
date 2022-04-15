@@ -15,6 +15,8 @@ let ingredients = [ // use 8 ingredients for each quiz
 
 let glass = []
 
+
+
 /**
  * This function adds instructions and title dynamically. 
  */
@@ -124,6 +126,7 @@ $(document).ready(function () {
             //for debugging purpose, console.log the arrays
             console.log("glass: "+glass)
             console.log("ingredients: "+ingredients)
+            console.log("correct_ingredients:" + correct_ingredients)
         }
     })
 })

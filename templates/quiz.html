@@ -22,8 +22,8 @@
     <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
     <script>
         //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
-        let ingredients = {{ ingredients| tojson}}
-    </script>
+        let ingredients = {{ingredients| tojson}}
+        let correct_ingredients = {{ correct_ingredients| tojson }}
 
 
     <style>
