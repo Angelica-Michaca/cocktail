@@ -3,7 +3,7 @@ from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
 
-
+ingredients = ["lime", "orange juice", "tequila"] #testing git
 
 # ROUTES
 
