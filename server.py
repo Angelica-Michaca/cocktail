@@ -8,21 +8,25 @@ ingredients = ["lime", "orange juice", "tequila"] #testing git
 
 data = {
     "moscow_mule": {
-    "ingredients": ["lime", "lemon"],
+    "ingredients": 
+    "video": "",
+    "jpegs": "",
     },
     "pina_colada": {
     "ingredients": ["lime", "lemon"],
     },
     "margarita": {
-    "ingredients": ["Lime Juice",
-    "Orange Juice",
+    "ingredients": ["Fresh Lime Juice",
+    "Pineapple Juice",
     "Ginger Syrup",
     "Simple Syrup",
-    "Lime Tequila",
     "Orange Tequila",
-    "Lemon Tequila",
-    "Tequila"],
+    "Tequila",
+    "Vodka",
+    "Ginger Beer",
+    "Cream of Coconut"],
     }
+    "true_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
 }
 
 glass = []
@@ -43,14 +47,15 @@ def home():
 def learn():
     return render_template("learn.html")
 
-@ app.route("/quiz")
-def quiz():
+@ app.route("/quiz/<drink>", methods=['GET', 'POST'])
+def quiz(drink):
     global data
     global glass
 
-    margarita_ingredients = data["margarita"]["ingredients"]
+    ingredients = data[drink]["ingredients"]
+    true_ingredients = data[drink]["true_ingredients"]
 
-    return render_template("quiz.html", ingredients=margarita_ingredients, glass=glass)
+    return render_template("quiz.html", ingredients=ingredients, glass=glass, true_ingredients=true_ingredients)
 
 
 
