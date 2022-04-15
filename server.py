@@ -6,17 +6,26 @@ app = Flask(__name__)
 ingredients = ["lime", "orange juice", "tequila"] #testing git
 
 
-ingredients = {
+data = {
     "moscow_mule": {
     "ingredients": ["lime", "lemon"],
-    "video": ,
-    "jpegs": ,
+    },
+    "pina_colada": {
+    "ingredients": ["lime", "lemon"],
+    },
+    "margarita": {
+    "ingredients": ["Lime Juice",
+    "Orange Juice",
+    "Ginger Syrup",
+    "Simple Syrup",
+    "Lime Tequila",
+    "Orange Tequila",
+    "Lemon Tequila",
+    "Tequila"],
     }
-
-
 }
 
-
+glass = []
 # ROUTES
 
 
@@ -36,7 +45,12 @@ def learn():
 
 @ app.route("/quiz")
 def quiz():
-    return render_template("quiz.html")
+    global data
+    global glass
+
+    margarita_ingredients = data["margarita"]["ingredients"]
+
+    return render_template("quiz.html", ingredients=margarita_ingredients, glass=glass)
 
 
 

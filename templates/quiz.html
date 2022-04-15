@@ -22,7 +22,7 @@
     <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
     <script>
         //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
-        let userIngredientChoices = {{ userIngredientChoices| tojson}}
+        let ingredients = {{ ingredients| tojson}}
     </script>
 
 
@@ -46,7 +46,7 @@
 
     <div class="row">
         <!--row for glass image/icon glass content text-->
-        <div class="col-md quizBodyText glass" id="glass"></div>
+        <div class="col-md quizBodyText glass" id='glass-holder'></div>
 
         <div class="col-md quizBodyText">
             <!-- col for glass contents textbox -->

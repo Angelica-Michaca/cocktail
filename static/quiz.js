@@ -67,7 +67,7 @@ function addImages(){
  * This function adds image of the glass dynamically. 
  */
 function addGlass(){
-    $("#glass").append("<img src = 'https://proofmart.com/wp-content/uploads/2021/06/glass-4-web.png' alt='glass' draggable = 'false'></img>")
+    $("#glass-holder").append("<img src = 'https://proofmart.com/wp-content/uploads/2021/06/glass-4-web.png' alt='glass' draggable = 'false' id='glass'></img>")
 }
 
 
