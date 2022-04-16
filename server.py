@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 ingredients = ["lime", "orange juice", "tequila"] #testing git
 
-
+#data the dictionary used for quiz pages
 data = {
     "moscow_mule": {
     "ingredients": ["lime", "lemon"],
@@ -26,6 +26,9 @@ data = {
     "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
     }
 }
+
+# glass the array of what user adds in the glass durin quiz
+glass = []
 
 cocktails = {
     "margarita":{
@@ -159,10 +162,8 @@ cocktails = {
     }
 }
 
-glass = []
+
 # ROUTES
-
-
 @ app.route("/")
 def defaultPage():
     return render_template("home.html")
@@ -187,7 +188,9 @@ def quiz():
 
     return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients)
 
-
+@ app.route("/quizResult")
+def quizResult():
+    return render_template("quizResult.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
