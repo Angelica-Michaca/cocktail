@@ -64,6 +64,11 @@ cocktails = {
                     "timestamp": "0:11"
                 }
             }  
+        },
+        "facts": {
+            "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
+            "taste": "Margaritas taste like agave, from the tequila",
+            "goes_well_with": "Tacos"
         }
     },
     "pina_colada":{
@@ -102,6 +107,11 @@ cocktails = {
                     "timestamp": "0:06"
                 }
             }  
+        },
+        "facts": {
+            "fun_fact": "\"Piña\" means pineapple, and \"colada\" means strained",
+            "taste": "Piña Coladas taste like pineapple and coconut",
+            "goes_well_with": "Seafood"
         }
     },
     "moscow_mule":{
@@ -140,6 +150,11 @@ cocktails = {
                     "timestamp": "0:04"
                 }
             }  
+        },
+        "facts": {
+            "fun_fact": "This cocktail is not from Moscow. It was invented at a Hollywood bar!",
+            "taste": "Moscow Mule tastes like ginger",
+            "goes_well_with": "Spicy Food"
         }
     }
 }
