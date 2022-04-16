@@ -7,7 +7,6 @@
 function addInstruction() { // for 3 drinks, make arrays of title / instructions in server.py and use that to create html dynamically
     $("#title").append("Margarita Quiz Result")
     $("#instruction").append("You Mastered the Margarita! Congratulations on learning how to make this cocktail. Are you ready to learn how to make other cocktails?")
-
 }
 
 
