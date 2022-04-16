@@ -30,19 +30,20 @@ data = {
 cocktails = {
     "margarita":{
         "name": "Margarita",
-        "image": "",
+        "image": "../static/images/margarita",
+        "glass_image": "../static/images/margarita_glass",
         "video": "https://www.youtube.com/embed/2BiT4wfRfWg",
         "ingredients":{
             "alcohol":{
                 "tequila":{
                     "name": "Tequila",
-                    "ingredient_image": "",
+                    "ingredient_image": "../static/images/tequila",
                     "volume": "1.5",
                     "timestamp": "0:15",
                 },
                 "orange_tequila":{
                     "name": "Orange Tequila",
-                    "ingredient_image": "",
+                    "ingredient_image": "../static/images/orange_tequila",
                     "volume": "0.75",
                     "timestamp": "0:12",
                 }
@@ -50,7 +51,7 @@ cocktails = {
             "juice":{
                 "fresh_lime_juice":{
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "",
+                    "ingredient_image": "../static/images/fresh_lime_juice",
                     "volume": "0.75",
                     "timestamp": "0:09"
                 }
@@ -58,7 +59,7 @@ cocktails = {
             "syrup":{
                 "simple_syrup":{
                     "name": "Simple Syrup",
-                    "ingredient_image": "",
+                    "ingredient_image": "../static/images/simple_syrup",
                     "volume": "0.25",
                     "timestamp": "0:11"
                 }
@@ -67,13 +68,14 @@ cocktails = {
     },
     "pina_colada":{
         "name": "Piña Colada",
-        "image": "",
+        "image": "../static/images/pina_colada",
+        "glass_image": "../static/images/pina_colada_glass",
         "video": "https://www.youtube.com/embed/nyzeEdPkfOw",
         "ingredients":{
             "alcohol":{
                 "tequila":{
                     "name": "Tequila",
-                    "ingredient_image": "",
+                    "ingredient_image": "../static/images/tequila",
                     "volume": "2.0",
                     "timestamp": "0:04",
                 }
@@ -81,13 +83,13 @@ cocktails = {
             "juice":{
                 "pineapple_juice":{
                     "name": "Pineapple Juice",
-                    "ingredient_image": "",
+                    "ingredient_image": "../static/images/pineapple_juice",
                     "volume": "2.0",
                     "timestamp": "0:10"
                 },
                 "fresh_lime_juice":{
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "",
+                    "ingredient_image": "../static/images/fresh_lime_juice",
                     "volume": "0.5",
                     "timestamp": "0:09"
                 }
@@ -95,7 +97,7 @@ cocktails = {
             "syrup":{
                 "cream_of_coconut":{
                     "name": "Cream of Coconut",
-                    "ingredient_image": "",
+                    "ingredient_image": "../static/images/cream_of_coconut",
                     "volume": "2.0",
                     "timestamp": "0:06"
                 }
@@ -104,37 +106,38 @@ cocktails = {
     },
     "moscow_mule":{
         "name": "Moscow Mule",
-        "image": "",
+        "image": "../static/images/moscow_mule",
+        "glass_image": "../static/images/moscow_mule_glass",
         "video": "https://www.youtube.com/embed/FirpAjZomHA",
         "ingredients":{
             "alcohol":{
-                "tequila":{
-                    "name": "Tequila",
-                    "ingredient_image": "",
-                    "volume": "1.5",
-                    "timestamp": "0:15",
+                "vodka":{
+                    "name": "Vodka",
+                    "ingredient_image": "../static/images/vodka",
+                    "volume": "2.0",
+                    "timestamp": "0:10",
                 },
-                "orange_tequila":{
-                    "name": "Orange Tequila",
-                    "ingredient_image": "",
-                    "volume": "0.75",
-                    "timestamp": "0:12",
+                "ginger_beer":{
+                    "name": "Ginger Beer",
+                    "ingredient_image": "../static/images/ginger_beer",
+                    "volume": "As you wish",
+                    "timestamp": "0:13",
                 }
             },
             "juice":{
                 "fresh_lime_juice":{
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "",
-                    "volume": "0.75",
-                    "timestamp": "0:09"
+                    "ingredient_image": "../static/images/fresh_lime_juice",
+                    "volume": "1.0",
+                    "timestamp": "0:03"
                 }
             },
             "syrup":{
-                "simple_syrup":{
-                    "name": "Simple Syrup",
-                    "ingredient_image": "",
-                    "volume": "0.25",
-                    "timestamp": "0:11"
+                "ginger_syrup":{
+                    "name": "Ginger Syrup",
+                    "ingredient_image": "../static/images/ginger_syrup",
+                    "volume": "0.75",
+                    "timestamp": "0:04"
                 }
             }  
         }
