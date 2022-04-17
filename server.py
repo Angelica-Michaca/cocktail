@@ -8,22 +8,41 @@ ingredients = ["lime", "orange juice", "tequila"]  # testing git
 
 data = {
     "moscow_mule": {
-        "ingredients": ["lime", "lemon"],
+    "ingredients": ["Fresh Lime Juice",
+    "Pineapple Juice",
+    "Ginger Syrup",
+    "Simple Syrup",
+    "Orange Tequila",
+    "Tequila",
+    "Vodka",
+    "Ginger Beer",
+    "Cream of Coconut"],
+    "correct_ingredients": ["Vodka", "Ginger Beer", "Fresh Lime Juice", "Ginger Syrup"]
     },
     "pina_colada": {
+    "ingredients": ["Fresh Lime Juice",
+    "Pineapple Juice",
+    "Ginger Syrup",
+    "Simple Syrup",
+    "Orange Tequila",
+    "Tequila",
+    "Vodka",
+    "Ginger Beer",
+    "Cream of Coconut"],
+    "correct_ingredients": ["Tequila", "Pineapple Juice", "Fresh Lime Juice", "Cream of Coconut"]
         "ingredients": ["lime", "lemon"],
     },
     "margarita": {
-        "ingredients": ["Fresh Lime Juice",
-                        "Pineapple Juice",
-                        "Ginger Syrup",
-                        "Simple Syrup",
-                        "Orange Tequila",
-                        "Tequila",
-                        "Vodka",
-                        "Ginger Beer",
-                        "Cream of Coconut"],
-        "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
+    "ingredients": ["Fresh Lime Juice",
+    "Pineapple Juice",
+    "Ginger Syrup",
+    "Simple Syrup",
+    "Orange Tequila",
+    "Tequila",
+    "Vodka",
+    "Ginger Beer",
+    "Cream of Coconut"],
+    "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
     }
 }
 
@@ -157,15 +176,26 @@ def learnCocktail(name=None):
     return render_template("learn.html", cocktail=cocktail)
 
 
-@ app.route("/quiz", methods=['GET', 'POST'])
-def quiz():
+@ app.route("/quiz/<drink>", methods=['GET', 'POST'])
+def quiz(drink=None):
     global data
     global glass
 
-    ingredients = data["margarita"]["ingredients"]
-    correct_ingredients = data["margarita"]["correct_ingredients"]
+    #ingredients = data["margarita"]["ingredients"]
+    ingredients = data[drink]["ingredients"]
+    correct_ingredients = data[drink]["correct_ingredients"]
 
-    return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients)
+
+    if drink == "moscow_mule":
+        drink_name = "Moscow Mule"
+    elif drink == "margarita":
+        drink_name = "Margarita"
+    elif drink == "pina_colada":
+        drink_name = "Pina Colada"
+
+
+
+    return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name)
 
 
 if __name__ == '__main__':
