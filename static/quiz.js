@@ -19,8 +19,9 @@ function copyArray(){
 }
 
 function addInstruction() { // for 3 drinks, make arrays of title / instructions in server.py and use that to create html dynamically
-    $("#title").append("Margarita Quiz")
-    $("#instruction").append("Drag and drop the necessary ingredients into the glass in the correct order to make a Margarita.")
+    //$("#title").append("Margarita Quiz")
+    //$("#title").append("Moscow Mule")
+    //$("#instruction").append("Drag and drop the necessary ingredients into the glass in the correct order to make a Margarita.")
     $("#glassInstruction").append("In your glass:")
 }
 
