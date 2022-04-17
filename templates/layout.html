@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LionBar</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
 
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -19,18 +19,33 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{url_for('static', filename='main.css') }}"
-    />
 
-    <link rel="stylesheet" type="text/css" href="static/main.css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename = 'layout.js') }}"
+    ></script>
 
+    <title>LionBar</title>
     <style>
       body {
         background-color: rgb(36, 37, 36);
       }
+      .navbar-brand{
+        font-size: 36px;
+        color: white;
+        font-family: italiano;
+      }
+      .navbar {
+        background-color: rgb(36, 37, 36);
+        font-size:23px;
+        font-family: italiano;
+        
+      }
+      a.nav-link{
+        color: white;
+      }
+
       /* Modify the background color */
       .navbar-custom {
         background-color: rgb(36, 37, 36);
@@ -53,6 +68,7 @@
         text-align: center;
         color: white;
         font: italica;
+        margin: 20px;
       }
 
       .welcome-blurb {
@@ -74,6 +90,7 @@
 
       .custom-card {
         background-color: rgb(36, 37, 36);
+        border-color: white;
       }
 
       .margarita_img {
@@ -117,42 +134,70 @@
         background-color: rgb(36, 37, 36);
         border-color: white;
       }
+
+      .btn-container {
+        width: 300px;
+      }
+
+      .btn-in-home-cards{
+        width: 100%;
+        display: block;
+        height: 60px;
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-family: italiano;
+        
+      }
+
+      .take-quiz-btn{
+        background-color:rgb(36, 37, 36);
+        border-color: white;
+        border-radius: 0%;
+        color: white
+
+      }
+      .learn-drink-btn{
+        background-color:white;
+        border-color: white;
+        border-radius: 0%;
+        color: black;
+
+      }
+
+      .card-img-top {
+        width: 100%;
+        height: 15vw;
+        
+    }
+
+    .card-deck{
+      margin:30px
+    }
+
+    
+
+
+
+
+
+      
     </style>
   </head>
-
   <body>
     <nav class="navbar navbar-expand-lg navbar-custom">
-      <a class="navbar-brand" href="/">LionBar</a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/learn">MARGARITA</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/learn/pina_colada">PIÑA COLADA </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/">MOSCOW MULE </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/quiz">QUIZZES </a>
-          </li>
-        </ul>
+      <div class="container">
+        <a class="navbar-brand nav-link mr-auto" href="/">LIONBAR</a>
+        <a class="nav-link mr-auto" href="/learn">MARGARITA</a>
+        <a class="nav-link mr-auto" href="/learn">PINA COLADA</a>
+        <a class="nav-link mr-auto" href="/learn">MOSCOW MULE </a>
+        <a class="nav-link mr-auto" href="/quiz">QUIZZES </a>
       </div>
     </nav>
-    <div class="container">{% block content %} {% endblock %}</div>
+    
+  </div>
+</div>
+
+
+    <div class="container mainContent">{% block content %} {% endblock %}</div>
   </body>
 </html>

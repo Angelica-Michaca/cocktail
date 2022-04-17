@@ -13,6 +13,83 @@
     drink
   </h6>
 </div>
-<div class="row home-row"></div>
+<div class="row">
+  <div class="card-deck">
+    <!-- dynamically create 3 cards on home page-->
+    <div class="card custom-card text-center">
+      <div class="ratio-images">
+        <img
+          class="card-img-top"
+          src="/static/images/margarita.png"
+          alt="Card image cap"
+        />
+      </div>
+
+      <div class="card-body">
+        <div class="btn-container">
+          <a href="http://127.0.0.1:5000/learn/margarita"
+            ><button class="btn-in-home-cards learn-drink-btn">
+              Margarita
+            </button></a
+          >
+          <a href="http://127.0.0.1:5000/quiz/margarita"
+            ><button class="take-quiz-btn btn-in-home-cards">
+              Take the Quiz
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    <!--pina colada card-->
+    <div class="card custom-card text-center">
+      <div class="ratio-images">
+        <img
+          class="card-img-top"
+          src="/static/images/pina_colada.png"
+          alt="Card image cap"
+        />
+      </div>
+
+      <div class="card-body">
+        <div class="btn-container">
+          <a href="http://127.0.0.1:5000/learn/pina_colada"
+            ><button class="btn-in-home-cards learn-drink-btn">
+              Pina Colada
+            </button></a
+          >
+          <a href="http://127.0.0.1:5000/quiz/pina_colada"
+            ><button class="take-quiz-btn btn-in-home-cards">
+              Take the Quiz
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card text-center">
+      <div class="ratio-images">
+        <img
+          class="card-img-top center"
+          src="/static/images/moscow_mule.png"
+          alt="Card image cap"
+        />
+      </div>
+
+      <div class="card-body">
+        <div class="btn-container">
+          <a href="http://127.0.0.1:5000/learn/moscow_mule"
+            ><button class="btn-in-home-cards learn-drink-btn">
+              Moscow Mule
+            </button></a
+          >
+          <a href="http://127.0.0.1:5000/quiz/moscow_mule"
+            ><button class="take-quiz-btn btn-in-home-cards">
+              Take the Quiz
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

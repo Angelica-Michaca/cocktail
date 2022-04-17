@@ -1,36 +1,30 @@
+function featureCocktails(cocktail){
+  let link_learn = "http://127.0.0.1:5000/learn/" + cocktail.name
+  let link_quiz = "http://127.0.0.1:5000/quiz/" + cocktail.name
 
-
-function display_drinksCardRow(cocktail_name, imgLink){
-
-  var drinksCardRow = "<div class = ' col-md-4'><div class = 'card text-center'><div class = 'card-body custom-card'> <div class = 'pic-of-drink'>"
-  drinksCardRow = drinksCardRow + "<img src='" + imgLink + "'></img></div>"
+  let featureCode = "<div class='card'><img class='card-img-top' src='/images/ginger_beer.png' "   
   
-  drinksCardRow = drinksCardRow + "<div class = 'drinkNameBtn'><a href='/learn/'" + cocktail_name +"'>"+ cocktail_name
+  featureCode = featureCode + "  alt='Card image cap'><div class='card-body'> "
+  featureCode = featureCode + "<div class='btn-group'>"
+  featureCode = featureCode + "<a href='"+ link_learn + "'><button>"+ cocktail.name + "</button></a>"
+  featureCode = featureCode + "<a href='"+ link_quiz + "'><button> Take the Quiz</button></a></div></div></div>"
   
-  drinksCardRow = drinksCardRow + "</a></div>"
-  drinksCardRow = drinksCardRow + "<div class = 'takeQuizBtn'><a href= '/quiz/' " + cocktail_name + "'>Take the Quiz"
   
-  drinksCardRow =   drinksCardRow + "</a></div></div></div></div></div>"
-
-  $(".home-row").append(drinksCardRow);
-
+  return featureCode
 }
 
-
-
 $(document).ready(function(){
+  let code=""
 
-  let c1_name = cocktails["margarita"].name
-  let imgLink1 = cocktails["margarita"].image
+  code=featureCocktails(cocktails.margarita)
+  $("#one").append(code)
 
-  let c2_name = cocktails["pina_colada"].name
-  let imgLink2 = cocktails["pina_colada"].image
+  code=featureCocktails(cocktails.pina_colada)
+  $("#two").append(code)
 
-  let c3_name = cocktails["moscow_mule"].name
-  let imgLink3 = cocktails["moscow_mule"].image
-  
-  display_cocktails(c1_name, imgLink1)
-  display_cocktails(c2_name, imgLink2)
-  display_cocktails(c3_name, imgLink3)
+  code=featureCocktails(cocktails.moscow_mule)
+  $("#three").append(code)
 
 })
+
+

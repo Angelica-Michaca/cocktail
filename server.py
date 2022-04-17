@@ -146,11 +146,6 @@ glass = []
 
 
 @ app.route("/")
-def defaultPage():
-    return render_template("home.html")
-
-
-@ app.route("/home")
 def home():
     return render_template("home.html", cocktails=cocktails)
 
