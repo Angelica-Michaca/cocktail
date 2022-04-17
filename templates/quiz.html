@@ -31,15 +31,16 @@
       let ingredients = {{ingredients| tojson}}
       let correct_ingredients = {{ correct_ingredients| tojson }}
       let glass = {{ glass| tojson }}
+      let drink = {{drink| tojson}}
     </script>
 
     <style></style>
   </head>
 
   <body class="containerGray">
-    <div class="quizTitleText" id="title"></div>
+    <div class="quizTitleText" id="title">{{drink}}</div>
 
-    <div class="quizBodyText" id="instruction"></div>
+    <div class="quizBodyText" id="instruction">Drag and drop the necessary ingredients into the glass in the correct order to make a {{drink}}.</div>
 
     <div class="row quizBodyText" id="ingredientsRow">
       <!-- row for drink images/icons-->
@@ -55,6 +56,8 @@
         <div class="quizBodyText" id="glassInput"></div>
       </div>
     </div>
+    <br>
+    <br>
 
     <div class="row">
       <!-- row for reset, undo, and  submit -->
@@ -79,6 +82,8 @@
         </button>
       </div>
     </div>
+    <br>
+    <br>
   </body>
 </html>
 {% endblock %}
