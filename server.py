@@ -3,11 +3,12 @@ from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
 
-ingredients = ["lime", "orange juice", "tequila"] #testing git
+ingredients = ["lime", "orange juice", "tequila"]  # testing git
 
-#data the dictionary used for quiz pages
+
 data = {
     "moscow_mule": {
+<<<<<<< HEAD
     "ingredients": ["Fresh Lime Juice",
     "Pineapple Juice",
     "Ginger Syrup",
@@ -30,158 +31,145 @@ data = {
     "Ginger Beer",
     "Cream of Coconut"],
     "correct_ingredients": ["Tequila", "Pineapple Juice", "Fresh Lime Juice", "Cream of Coconut"]
+=======
+        "ingredients": ["lime", "lemon"],
+    },
+    "pina_colada": {
+        "ingredients": ["lime", "lemon"],
+>>>>>>> 3bf5d12007982126fb07df99c81edcf5e83d06ae
     },
     "margarita": {
-    "ingredients": ["Fresh Lime Juice",
-    "Pineapple Juice",
-    "Ginger Syrup",
-    "Simple Syrup",
-    "Orange Tequila",
-    "Tequila",
-    "Vodka",
-    "Ginger Beer",
-    "Cream of Coconut"],
-    "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
+        "ingredients": ["Fresh Lime Juice",
+                        "Pineapple Juice",
+                        "Ginger Syrup",
+                        "Simple Syrup",
+                        "Orange Tequila",
+                        "Tequila",
+                        "Vodka",
+                        "Ginger Beer",
+                        "Cream of Coconut"],
+        "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
     }
 }
 
-# glass the array of what user adds in the glass durin quiz
-glass = []
-
 cocktails = {
-    "margarita":{
+    "margarita": {
         "name": "Margarita",
-        "image": "../static/images/margarita",
-        "glass_image": "../static/images/margarita_glass",
+        "image": "",
         "video": "https://www.youtube.com/embed/2BiT4wfRfWg",
-        "ingredients":{
-            "alcohol":{
-                "tequila":{
+        "ingredients": {
+            "alcohol": {
+                "tequila": {
                     "name": "Tequila",
-                    "ingredient_image": "../static/images/tequila",
+                    "ingredient_image": "",
                     "volume": "1.5",
-                    "timestamp": "0:15",
+                    "timestamp": "0:15"
                 },
-                "orange_tequila":{
+                "orange_tequila": {
                     "name": "Orange Tequila",
-                    "ingredient_image": "../static/images/orange_tequila",
+                    "ingredient_image": "",
                     "volume": "0.75",
-                    "timestamp": "0:12",
+                    "timestamp": "0:12"
                 }
             },
-            "juice":{
-                "fresh_lime_juice":{
+            "juice": {
+                "fresh_lime_juice": {
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "../static/images/fresh_lime_juice",
+                    "ingredient_image": "",
                     "volume": "0.75",
                     "timestamp": "0:09"
                 }
             },
-            "syrup":{
-                "simple_syrup":{
+            "syrup": {
+                "simple_syrup": {
                     "name": "Simple Syrup",
-                    "ingredient_image": "../static/images/simple_syrup",
+                    "ingredient_image": "",
                     "volume": "0.25",
                     "timestamp": "0:11"
                 }
-            }  
-        },
-        "facts": {
-            "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
-            "taste": "Margaritas taste like agave, from the tequila",
-            "goes_well_with": "Tacos"
+            }
         }
     },
-    "pina_colada":{
+    "pina_colada": {
         "name": "Piña Colada",
-        "image": "../static/images/pina_colada",
-        "glass_image": "../static/images/pina_colada_glass",
+        "image": "",
         "video": "https://www.youtube.com/embed/nyzeEdPkfOw",
-        "ingredients":{
-            "alcohol":{
-                "tequila":{
+        "ingredients": {
+            "alcohol": {
+                "tequila": {
                     "name": "Tequila",
-                    "ingredient_image": "../static/images/tequila",
+                    "ingredient_image": "",
                     "volume": "2.0",
-                    "timestamp": "0:04",
+                    "timestamp": "0:04"
                 }
             },
-            "juice":{
-                "pineapple_juice":{
+            "juice": {
+                "pineapple_juice": {
                     "name": "Pineapple Juice",
-                    "ingredient_image": "../static/images/pineapple_juice",
+                    "ingredient_image": "",
                     "volume": "2.0",
                     "timestamp": "0:10"
                 },
-                "fresh_lime_juice":{
+                "fresh_lime_juice": {
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "../static/images/fresh_lime_juice",
+                    "ingredient_image": "",
                     "volume": "0.5",
                     "timestamp": "0:09"
                 }
             },
-            "syrup":{
-                "cream_of_coconut":{
+            "syrup": {
+                "cream_of_coconut": {
                     "name": "Cream of Coconut",
-                    "ingredient_image": "../static/images/cream_of_coconut",
+                    "ingredient_image": "",
                     "volume": "2.0",
                     "timestamp": "0:06"
                 }
-            }  
-        },
-        "facts": {
-            "fun_fact": "\"Piña\" means pineapple, and \"colada\" means strained",
-            "taste": "Piña Coladas taste like pineapple and coconut",
-            "goes_well_with": "Seafood"
+            }
         }
     },
-    "moscow_mule":{
+    "moscow_mule": {
         "name": "Moscow Mule",
-        "image": "../static/images/moscow_mule",
-        "glass_image": "../static/images/moscow_mule_glass",
+        "image": "",
         "video": "https://www.youtube.com/embed/FirpAjZomHA",
-        "ingredients":{
-            "alcohol":{
-                "vodka":{
-                    "name": "Vodka",
-                    "ingredient_image": "../static/images/vodka",
-                    "volume": "2.0",
-                    "timestamp": "0:10",
+        "ingredients": {
+            "alcohol": {
+                "tequila": {
+                    "name": "Tequila",
+                    "ingredient_image": "",
+                    "volume": "1.5",
+                    "timestamp": "0:15"
                 },
-                "ginger_beer":{
-                    "name": "Ginger Beer",
-                    "ingredient_image": "../static/images/ginger_beer",
-                    "volume": "As you wish",
-                    "timestamp": "0:13",
-                }
-            },
-            "juice":{
-                "fresh_lime_juice":{
-                    "name": "Fresh Lime Juice",
-                    "ingredient_image": "../static/images/fresh_lime_juice",
-                    "volume": "1.0",
-                    "timestamp": "0:03"
-                }
-            },
-            "syrup":{
-                "ginger_syrup":{
-                    "name": "Ginger Syrup",
-                    "ingredient_image": "../static/images/ginger_syrup",
+                "orange_tequila": {
+                    "name": "Orange Tequila",
+                    "ingredient_image": "",
                     "volume": "0.75",
-                    "timestamp": "0:04"
+                    "timestamp": "0:12"
                 }
-            }  
-        },
-        "facts": {
-            "fun_fact": "This cocktail is not from Moscow. It was invented at a Hollywood bar!",
-            "taste": "Moscow Mule tastes like ginger",
-            "goes_well_with": "Spicy Food"
+            },
+            "juice": {
+                "fresh_lime_juice": {
+                    "name": "Fresh Lime Juice",
+                    "ingredient_image": "",
+                    "volume": "0.75",
+                    "timestamp": "0:09"
+                }
+            },
+            "syrup": {
+                "simple_syrup": {
+                    "name": "Simple Syrup",
+                    "ingredient_image": "",
+                    "volume": "0.25",
+                    "timestamp": "0:11"
+                }
+            }
         }
     }
 }
 
-
+glass = []
 # ROUTES
+
+
 @ app.route("/")
 def defaultPage():
     return render_template("home.html")
@@ -189,12 +177,15 @@ def defaultPage():
 
 @ app.route("/home")
 def home():
-    return render_template("home.html")
+    return render_template("home.html", cocktails=cocktails)
 
 
-@ app.route("/learn")
-def learn():
-    return render_template("learn.html")
+@ app.route("/learn/<name>")
+def learnCocktail(name=None):
+    global cocktails
+    cocktail = cocktails[name]
+    return render_template("learn.html", cocktail=cocktail)
+
 
 @ app.route("/quiz/<drink>", methods=['GET', 'POST'])
 def quiz(drink=None):
@@ -217,9 +208,6 @@ def quiz(drink=None):
 
     return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name)
 
-@ app.route("/quizResult")
-def quizResult():
-    return render_template("quizResult.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

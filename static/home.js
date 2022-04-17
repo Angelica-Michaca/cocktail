@@ -1,3 +1,5 @@
+
+
 function display_drinksCardRow(cocktail_name, imgLink){
 
   var drinksCardRow = "<div class = ' col-md-4'><div class = 'card text-center'><div class = 'card-body custom-card'> <div class = 'pic-of-drink'>"
@@ -7,8 +9,8 @@ function display_drinksCardRow(cocktail_name, imgLink){
   
   drinksCardRow = drinksCardRow + "</a></div>"
   drinksCardRow = drinksCardRow + "<div class = 'takeQuizBtn'><a href= '/quiz/' " + cocktail_name + "'>Take the Quiz"
-
-  spotlight_row = spotlight_row + "</a></div>"
+  
+  drinksCardRow =   drinksCardRow + "</a></div></div></div></div></div>"
 
   $(".home-row").append(drinksCardRow);
 
@@ -18,14 +20,14 @@ function display_drinksCardRow(cocktail_name, imgLink){
 
 $(document).ready(function(){
 
-  let c1_name = cocktails[1].name
-  let imgLink1 = cocktails[1].image
+  let c1_name = cocktails["margarita"].name
+  let imgLink1 = cocktails["margarita"].image
 
-  let c2_name = cocktails[2].name
-  let imgLink2 = cocktails[2].image
+  let c2_name = cocktails["pina_colada"].name
+  let imgLink2 = cocktails["pina_colada"].image
 
-  let c3_name = cocktails[3].name
-  let imgLink3 = cocktails[3].image
+  let c3_name = cocktails["moscow_mule"].name
+  let imgLink3 = cocktails["moscow_mule"].image
   
   display_cocktails(c1_name, imgLink1)
   display_cocktails(c2_name, imgLink2)

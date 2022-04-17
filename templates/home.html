@@ -5,15 +5,6 @@
   src="{{ url_for('static', filename = 'home.js') }}"
 ></script>
 
-<script>
-    var cocktails = {{ cocktails| tojson}}
-    $(document).ready(function () {
-      $.each(cocktails, function (i, d) {
-          console.log("Showing cocktails: " + d);
-      })
-  })
-</script>
-
 <div id="welcome-header">
   <h1 class="welcome-blurb">Welcome to the LionBar!</h1>
   <h5 class="learn-blurb">Learn about drinks and how to mix them</h5>
