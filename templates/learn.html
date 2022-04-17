@@ -8,6 +8,7 @@
 <script>
   let cocktail = {{cocktail|tojson}}
 </script>
+
 <!DOCTYPE html>
 
 <html>
@@ -25,7 +26,7 @@
         text-align: center;
       }
 
-      .custom-card {
+      .custom-card-learn {
         background-color: rgb(32, 32, 32);
         color: white;
         border-color: white;
@@ -131,89 +132,59 @@
       }
     </style>
   </head>
-  <head>
-    <div class="row headers">
-      <div class="col-md-6">
-        <h2 class="left-header center">{{cocktail.name}}</h2>
-      </div>
-      <div class="col-md-6">
-        <h4 class="right-header center">Ingredients</h4>
-      </div>
-    </div>
 
-    <!--Make second row with video and ingredients-->
-    <div class="row">
-      <div class="col-md-6">
-        <!--add video tutorial here using cocktail.video-->
-        <iframe width="540" height="493.2" src="{{cocktail.video}}controls=0">
-        </iframe>
-      </div>
-      <div class="col-md-6">
-        <div class="row ingredient_labels">Alcohol</div>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="..." class="card-img" alt="..." />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body white-font">
-                    <h5 class="card-title">Tequila</h5>
-                    <p class="card-text">1.5 oz</p>
-                    <p class="card-text">
-                      <small class="card-text"
-                        >Timestamp <span class="blue-time">0:15</span>
-                      </small>
-                    </p>
-                  </div>
+  <div class="row headers">
+    <div class="col-md-6">
+      <h2 class="left-header center" id="name-of-drink"></h2>
+    </div>
+    <div class="col-md-6">
+      <h4 class="right-header center">Ingredients</h4>
+    </div>
+  </div>
+
+  <!--Make second row with video and ingredients-->
+  <div class="row">
+    <div class="col-md-6">
+      <!--add video tutorial here using cocktail.video-->
+      <div id="video-tutorial"></div>
+      <iframe
+        width="540"
+        height="493.2"
+        src="{{cocktails.margarita.video}}controls=0"
+      >
+      </iframe>
+    </div>
+    <div class="col-md-6">
+      <div class="row ingredient_labels">Alcohol</div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="..." class="card-img" alt="..." />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body white-font">
+                  <h5 class="card-title">Tequila</h5>
+                  <p class="card-text">1.5 oz</p>
+                  <p class="card-text">
+                    <small class="card-text"
+                      >Timestamp <span class="blue-time">0:15</span>
+                    </small>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row ingredient_labels">Juice</div>
-        <div class="row"></div>
-        <div class="row ingredient_labels">Syrup</div>
-        <!-- -->
       </div>
+      <div class="row ingredient_labels">Juice</div>
+      <div class="row"></div>
+      <div class="row ingredient_labels">Syrup</div>
+      <!-- -->
     </div>
-    <!--dynamically creat fun fact cards with data from dictionary -->
-    <div class="row justify-content-center parent-card">
-      <!-- Facts-->
-      <div class="facts-container">
-        <div class="card custom-white-card horizontally-centered">
-          <div class="card-body custom-card-size-facts">
-            <div class="fun_fact">Fun Fact</div>
-            <div class="cocktail_funfact">{{cocktail.facts.fun_fact}}</div>
-          </div>
-        </div>
-        <div class="card custom-white-card horizontally-centered">
-          <div class="card-body custom-card-size-facts">
-            <div class="fun_fact">Taste</div>
-            <div class="cocktail_funfact">{{cocktail.facts.taste}}</div>
-          </div>
-        </div>
-        <div class="card custom-white-card horizontally-centered">
-          <div class="card-body custom-card-size-facts">
-            <div class="fun_fact">Goes Well With</div>
-            <div class="cocktail_funfact">
-              {{cocktail.facts.goes_well_with]}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+  <!--dynamically creat fun fact cards with data from dictionary -->
 
-    <!--Practice button at the bottom of learn section-->
-    <div class="row parent-btn">
-      <div class="practice-btn">
-        <button class="practiceButton btn" id="practice">
-          <a href="/practice/{{cocktail.name}}">Practice</a>
-        </button>
-      </div>
-    </div>
-
-    {% endblock %}
-  </head>
+  {% endblock %}
 </html>

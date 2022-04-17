@@ -1,89 +1,104 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %}
+
+{% block content %}
 
 <!DOCTYPE html>
 
 <html>
-  <head>
+
+<head>
+
     <!-- JQuery -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+   
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    />
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
-    <script
-      type="text/javascript"
-      src="{{ url_for('static', filename = 'quiz.js') }}"
-    ></script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
     <script>
+<<<<<<< Updated upstream
       //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
       let ingredients = {{ingredients| tojson}}
       let correct_ingredients = {{ correct_ingredients| tojson }}
       let glass = {{ glass| tojson }}
       let drink = {{drink| tojson}}
     </script>
+=======
+        //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
+        let ingredients = {{ingredients| tojson}}
+        let correct_ingredients = {{ correct_ingredients| tojson }}
+        let glass = {{ glass| tojson }}
+        </script>
 
-    <style></style>
-  </head>
+    <style>
+   
+    </style>
 
+
+
+</head>
+>>>>>>> Stashed changes
+
+
+<<<<<<< Updated upstream
   <body class="containerGray">
     <div class="quizTitleText" id="title">{{drink}}</div>
+=======
+<body class="containerGray">
+
+    <div class="quizTitleText" id="title"></div>
+>>>>>>> Stashed changes
 
     <div class="quizBodyText" id="instruction">Drag and drop the necessary ingredients into the glass in the correct order to make a {{drink}}.</div>
 
-    <div class="row quizBodyText" id="ingredientsRow">
-      <!-- row for drink images/icons-->
-    </div>
+    <div class="row quizBodyText" id="ingredientsRow"><!-- row for drink images/icons--></div>
+
 
     <div class="row">
-      <!--row for glass image/icon glass content text-->
-      <div class="col-md quizBodyText glass" id="glass-holder"></div>
+        <!--row for glass image/icon glass content text-->
+        <div class="col-md quizBodyText glass" id='glass-holder'></div>
 
-      <div class="col-md quizBodyText">
-        <!-- col for glass contents textbox -->
-        <div id="glassInstruction"></div>
-        <div class="quizBodyText" id="glassInput"></div>
-      </div>
+        <div class="col-md quizBodyText">
+            <!-- col for glass contents textbox -->
+            <div id='glassInstruction'></div>
+            <div class="quizBodyText" id="glassInput"></div>
+        </div>
     </div>
     <br>
     <br>
 
     <div class="row">
-      <!-- row for reset, undo, and  submit -->
-      <div class="col-md">
-        <!-- col for reset button-->
-        <button class="btn btn-light btn-lg" id="resetButton" type="button">
-          Reset
-        </button>
-      </div>
+        <!-- row for reset, undo, and  submit -->
+        <div class="col-md">
+            <!-- col for reset button-->
+            <button class="btn btn-light btn-lg"  id = "resetButton" type="button">Reset</button>
+        </div>
 
-      <div class="col-md">
-        <!-- col for undo button -->
-        <button class="btn btn-light btn-lg" id="undoButton" type="button">
-          Undo
-        </button>
-      </div>
+        <div class="col-md">
+            <!-- col for undo button -->
+            <button class="btn btn-light btn-lg"  id = "undoButton"type="button">Undo</button>
+        </div>
 
-      <div class="col-md">
-        <!-- col for submit button -->
-        <button class="btn btn-light btn-lg" id="submitButton" type="button">
-          Submit
-        </button>
-      </div>
+        <div class="col-md">
+            <!-- col for submit button -->
+            <button class="btn btn-light btn-lg" id = "submitButton" type="button">Submit</button>
+        </div>
+
+
     </div>
+<<<<<<< Updated upstream
     <br>
     <br>
   </body>
+=======
+
+</body>
+
+>>>>>>> Stashed changes
 </html>
 {% endblock %}

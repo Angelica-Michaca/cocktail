@@ -189,9 +189,11 @@ def home():
 
 
 @ app.route("/learn/<name>")
-def learnCocktail(name=None):
-    global cocktails
-    cocktail = cocktails[name]
+def learnCocktailpage(name=None):
+    for currCocktail in cocktails.values():
+        if name == currCocktail["name"]:
+            cocktail = currCocktail
+    
     return render_template("learn.html", cocktail=cocktail)
 
 @ app.route("/quiz/<drink>", methods=['GET', 'POST'])
