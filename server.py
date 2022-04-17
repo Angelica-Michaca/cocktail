@@ -145,24 +145,24 @@ glass = []
 # ROUTES
 
 
-@app.route("/")
+@ app.route("/")
 def defaultPage():
     return render_template("home.html")
 
 
-@app.route("/home")
+@ app.route("/home")
 def home():
     return render_template("home.html", cocktails=cocktails)
 
 
-@app.route("/learn/<name>")
+@ app.route("/learn/<name>")
 def learnCocktail(name=None):
     global cocktails
     cocktail = cocktails[name]
     return render_template("learn.html", cocktail=cocktail)
 
 
-@app.route("/quiz", methods=['GET', 'POST'])
+@ app.route("/quiz", methods=['GET', 'POST'])
 def quiz():
     global data
     global glass
