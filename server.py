@@ -190,11 +190,17 @@ def home():
 
 @ app.route("/learn/<name>")
 def learnCocktailpage(name=None):
-    for currCocktail in cocktails.values():
-        if name == currCocktail["name"]:
-            cocktail = currCocktail
+    #for currCocktail in cocktails.values():
+    #    if name == currCocktail["name"]:
+    #        cocktail = currCocktail
+
+    drink = cocktails[name]
+    print(drink)
+    video_url = drink["video"]
+    print(video_url)
+
     
-    return render_template("learn.html", cocktail=cocktail)
+    return render_template("learn.html", video_url = video_url)
 
 @ app.route("/quiz/<drink>", methods=['GET', 'POST'])
 def quiz(drink=None):
