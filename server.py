@@ -8,7 +8,6 @@ ingredients = ["lime", "orange juice", "tequila"]  # testing git
 
 data = {
     "moscow_mule": {
-<<<<<<< HEAD
     "ingredients": ["Fresh Lime Juice",
     "Pineapple Juice",
     "Ginger Syrup",
@@ -31,24 +30,19 @@ data = {
     "Ginger Beer",
     "Cream of Coconut"],
     "correct_ingredients": ["Tequila", "Pineapple Juice", "Fresh Lime Juice", "Cream of Coconut"]
-=======
         "ingredients": ["lime", "lemon"],
-    },
-    "pina_colada": {
-        "ingredients": ["lime", "lemon"],
->>>>>>> 3bf5d12007982126fb07df99c81edcf5e83d06ae
     },
     "margarita": {
-        "ingredients": ["Fresh Lime Juice",
-                        "Pineapple Juice",
-                        "Ginger Syrup",
-                        "Simple Syrup",
-                        "Orange Tequila",
-                        "Tequila",
-                        "Vodka",
-                        "Ginger Beer",
-                        "Cream of Coconut"],
-        "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
+    "ingredients": ["Fresh Lime Juice",
+    "Pineapple Juice",
+    "Ginger Syrup",
+    "Simple Syrup",
+    "Orange Tequila",
+    "Tequila",
+    "Vodka",
+    "Ginger Beer",
+    "Cream of Coconut"],
+    "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
     }
 }
 
