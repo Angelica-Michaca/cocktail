@@ -1,17 +1,204 @@
 {% extends "layout.html" %} {% block content %}
-<div>
-  <div class="row">
-    <div class="col-md-6">
-      <h2 class="left-page-headers">{{cocktails.name}}</h2>
-      <h4 class="right-page-header">Ingredients</h4>
-    </div>
+
+<head>
+  <style>
+    .center {
+      height: 46.4px;
+      line-height: 46.4px; /* same as height! */
+    }
+    .horizontally-centered {
+      text-align: center;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .custom-card {
+      background-color: rgb(32, 32, 32);
+      color: white;
+      border-color: white;
+      border-radius: 0%;
+    }
+
+    .practice-btn {
+      margin: auto;
+      background-color: white;
+      border-color: white;
+      color: black;
+    }
+
+    .gap-3 {
+      margin: 10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: white;
+    }
+
+    .card-body {
+      background-color: rgb(32, 32, 32);
+    }
+    .white-font {
+      color: white;
+    }
+    .headers {
+      margin-top: 3rem;
+    }
+    .blue-time {
+      color: rgb(51, 92, 216);
+    }
+    .col-md-4 {
+      background-color: rgb(32, 32, 32);
+    }
+
+    .card-title {
+      font-size: 12px;
+    }
+
+    .card-text {
+      font-size: 10px;
+    }
+
+    .ingredient_labels {
+      color: white;
+      padding: 5px;
+    }
+    body {
+      background-color: rgb(32, 32, 32);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .facts-cards {
+      margin: 20px;
+      align-items: flex-end;
+    }
+
+    .fun_fact {
+      text-decoration: underline;
+      text-decoration-color: white;
+      margin-bottom: 5px;
+      font-size: 25px;
+    }
+
+    .cocktail_funfact {
+      font-size: 20px;
+    }
+
+    .custom-white-card {
+      background-color: transparent;
+      border-color: white;
+      border-radius: 0%;
+      color: white;
+    }
+
+    .parent-card {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .practiceButton {
+      width: 250px;
+    }
+
+    a {
+      text-align: center;
+    }
+
+    .custom-card-size-facts {
+      width: 35rem;
+    }
+    .right-header {
+      font-size: 21px;
+    }
+  </style>
+</head>
+
+
+<div class="row headers">
+  <div class="col-md-6">
+    <h2 class="left-header center">{{cocktail.name}}</h2>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="col-md-6 cocktail-video">
-        <a href="{{cocktails.video}}"></a>
+  <div class="col-md-6">
+    <h4 class="right-header center">Ingredients</h4>
+  </div>
+</div>
+
+<!--Make second row with video and ingredients-->
+<div class="row">
+  <div class="col-md-6">
+    <!--add video tutorial here using cocktail.video-->
+    <iframe width="540" height="493.2" src="{{cocktail.video}}controls=0">
+    </iframe>
+  </div>
+  <div class="col-md-6">
+    <div class="row ingredient_labels">Alcohol</div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="..." class="card-img" alt="..." />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body white-font">
+                <h5 class="card-title">Tequila</h5>
+                <p class="card-text">1.5 oz</p>
+                <p class="card-text">
+                  <small class="card-text"
+                    >Timestamp <span class="blue-time">0:15</span>
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="row ingredient_labels">Juice</div>
+    <div class="row"></div>
+    <div class="row ingredient_labels">Syrup</div>
+    <!-- -->
+  </div>
+</div>
+<!--dynamically creat fun fact cards with data from dictionary -->
+<div class="row justify-content-center parent-card">
+  <!-- Facts-->
+  <div class="facts-container">
+    <div class="card custom-white-card horizontally-centered">
+      <div class="card-body custom-card-size-facts">
+        <div class="fun_fact">Fun Fact</div>
+        <div class="cocktail_funfact">{{cocktail.facts["fun_fact"]}}</div>
+      </div>
+    </div>
+    <div class="card custom-white-card horizontally-centered">
+      <div class="card-body custom-card-size-facts">
+        <div class="fun_fact">Taste</div>
+        <div class="cocktail_funfact">{{cocktail.facts["taste"]}}</div>
+      </div>
+    </div>
+    <div class="card custom-white-card horizontally-centered">
+      <div class="card-body custom-card-size-facts">
+        <div class="fun_fact">Goes Well With</div>
+        <div class="cocktail_funfact">{{cocktail.facts["goes_well_with"]}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Practice button at the bottom of learn section-->
+<div class="row parent-btn">
+  <div class="practice-btn">
+    <button class="practiceButton btn" id="practice">
+      <a href="/practice/{{cocktail.name}}">Practice</a>
+    </button>
   </div>
 </div>
 

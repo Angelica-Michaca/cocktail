@@ -40,3 +40,41 @@
         .highlightHover {
             background-color: gray;
         }
+
+        .center {
+            height: 46.4px;
+            line-height: 46.4px; /* same as height! */
+          }
+        .horizontally-centered {
+            text-align: center;
+        }
+        
+        
+        .custom-card{
+            background-color: rgb(32, 32, 32);
+            color: white;
+            border-color: white;
+            border-radius: 0%;
+        }
+        
+        .practice-btn{
+            margin: auto;
+            background-color: white;
+            border-color: white;
+            color: black;
+        }
+        
+        .gap-3{
+            margin: 10px;
+        }
+        
+        h1,h2, h3, h4, h5, h6{
+            color: white;
+            
+        }
+        
+        body {
+            background-color: rgb(32, 32, 32);
+            font-family: 'DM Sans', sans-serif;
+        }
+        
