@@ -76,6 +76,7 @@
       .card-body {
         background-color: rgb(32, 32, 32);
         border-color: white;
+        width: ;
       }
       .white-font {
         color: white;
@@ -107,17 +108,17 @@
         font-family: "DM Sans", sans-serif;
       }
 
-      .facts-cards {
+      /*.facts-cards {
         margin: 20px;
         align-items: flex-end;
-      }
+      }*/
 
-      .fun_fact {
+      /*.fun_fact {
         text-decoration: underline;
         text-decoration-color: white;
         margin-bottom: 5px;
         font-size: 25px;
-      }
+      }*/
 
       .cocktail_funfact {
         font-size: 20px;
@@ -222,6 +223,18 @@
       .gap-3 {
         margin-bottom: 5px;
       }
+      .stack-of-facts {
+        width: 55rem;
+      }
+
+      .practiceButton {
+        width: 100%;
+        display: block;
+        height: 60px;
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-family: italiano;
+      }
     </style>
   </head>
 
@@ -309,38 +322,38 @@
 
   <!--dynamically creat fun fact cards with data from dictionary -->
   <div class="row justify-content-center">
-    <div class="vstack gap-3">
-      <div class="text-center card" style="width: 50rem">
-        <div class="card-body">
-          <h5 class="card-title-fact">Fun Fact</h5>
-          <p class="card-text-blurb">{{fun_fact['fun_fact']}}</p>
-        </div>
+    <div class="card stack-of-facts">
+      <div class="card-body text-center">
+        <h5 class="card-title-fact">Fun Fact</h5>
+        <p class="card-text-blurb">{{fun_fact['fun_fact']}}</p>
       </div>
-      <div class="text-center card" style="width: 50rem">
-        <div class="card-body">
-          <h5 class="card-title-fact">Taste</h5>
-          <p class="card-text-blurb">{{fun_fact['taste']}}</p>
-        </div>
-      </div>
-      <div class="text-center card" style="width: 50rem">
-        <div class="card-body">
-          <h5 class="card-title-fact">Goes Well With</h5>
-          <p class="card-text-blurb">{{fun_fact['goes_well_with']}}</p>
-        </div>
-      </div>
-      <!---->
     </div>
   </div>
-  <!--Practice button -->
   <div class="row justify-content-center">
-    <a class="practice-button" href="http://127.0.0.1:5000/practice">
-      <button type="button" class="btn btn-primary btn-lg btn-block">
-        Practice
-      </button>
-    </a>
+    <div class="card stack-of-facts">
+      <div class="card-body text-center">
+        <h5 class="card-title-fact">Taste</h5>
+        <p class="card-text-blurb">{{fun_fact['taste']}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="card stack-of-facts">
+      <div class="card-body text-center">
+        <h5 class="card-title-fact">Goes Well With</h5>
+        <p class="card-text-blurb">{{fun_fact['goes_well_with']}}</p>
+      </div>
+    </div>
   </div>
 
-  <!--Fun fact-->
+  <!--Practice button -->
+  <div class="row justify-content-center">
+    <a class="practice-button" href="http://127.0.0.1:5000/practice"
+      ><button type="button" class="btn btn-primary practiceButton btn-lg">
+        Practice
+      </button></a
+    >
+  </div>
 
   {% endblock %}
 </html>
