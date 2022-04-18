@@ -310,6 +310,7 @@ def learnCocktailpage(name=None):
     print(fun_fact)
 
     return render_template("learn.html",
+                           name=name,
                            video_url=video_url,
                            alcohol_img=alcohol_img,
                            alcohol_vol=alcohol_vol,

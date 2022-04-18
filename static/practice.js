@@ -1,6 +1,7 @@
 /**
  * This function populates the text in the page. 
  */
+let correct_answers = 0;
 
  function populateText(){
 
@@ -25,10 +26,6 @@
 
     // POPULATE HINT HEADER
     let hint_header = $("<div class='quizBodyText'>Need a hint?</div><button class='btn btn-light btn-lg'  id='showHint' type='button' onclick='toggleHint()'>Show ingredients list</button>");
-    
-    /*$("#showHint").click(function() {
-        toggleHint();
-    });*/
 
     $("#hintBox").append(hint_header);
 
@@ -82,10 +79,17 @@ function checkAnswer(i){
     if(user_input.toLowerCase() == ingredients_names_in_order[i].toLowerCase()){
         $("#ingredient_"+i+"_check").removeClass("wrong-background");
         $("#ingredient_"+i+"_check").addClass("right-background");
+        correct_answers = correct_answers + 1
     }
     else{
+        $("#ingredient_"+i).val("");
         $("#ingredient_"+i+"_check").removeClass("right-background");
         $("#ingredient_"+i+"_check").addClass("wrong-background");
+        correct_answers = correct_answers - 1
+    }
+
+    if(correct_answers == 4){
+        quizButton();
     }
 }
 
@@ -99,6 +103,16 @@ function toggleHint(){
         $("#hint_list").addClass("visible")
         $("#showHint").html("Hide ingredients list");
     }
+}
+
+function quizButton(){
+    $(".row.headers").empty();
+    let congrats = $("<div class='quizBodyText'>Well done</div><div class='quizBodyText'>Your drink is ready.</div><div class='quizBodyText'>Are you ready for a harder quiz?</div>");
+    let quiz_button = $("<a class='btn btn-light btn-lg' href='http://127.0.0.1:5000/quiz/"+drink_info.link+"'>Take the Quiz</a>");
+    let back_button = $("<a class='btn btn-light btn-lg' href='http://127.0.0.1:5000/'>Back to Home</a>");
+    $(".row.headers").append(congrats);
+    $(".row.headers").append(quiz_button);
+    $(".row.headers").append(back_button);
 }
 
 $(document).ready(function(){

@@ -7,6 +7,8 @@
 <style></style>
 
 <script>
+  let name = {{name}}
+  console.log(name)
   let drink_name = {{drink_name}}
   let video_url = {{video_url| tojson}}
   let alcohol_img = {{alcohol_img| tojson}}
@@ -348,7 +350,7 @@
 
   <!--Practice button -->
   <div class="row justify-content-center">
-    <a class="practice-button" href="http://127.0.0.1:5000/practice"
+    <a class="practice-button" href="http://127.0.0.1:5000/practice/{{name}}" 
       ><button type="button" class="btn btn-primary practiceButton btn-lg">
         Practice
       </button></a
