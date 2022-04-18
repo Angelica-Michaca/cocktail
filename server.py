@@ -205,12 +205,15 @@ def learnCocktailpage(name=None):
     video_url = drink["video"]
     print(video_url)
 
+    #fun_fact1 = drink[""]
+
     alcohols = drink["ingredients"]["alcohol"]
     juices = drink["ingredients"]["juice"]
     syrups = drink["ingredients"]["syrup"]
 
-    # get length of items
-    alcohol_items = []
+    print(alcohols)
+    # fun facts data full list w/ fun, taste, and pairs well with data
+    fun_fact = drink["facts"]
 
     drink_name = []
     test = drink["name"]
@@ -250,24 +253,24 @@ def learnCocktailpage(name=None):
         syrup_vol.append(syrups[syrup]["volume"])
         syrup_timestamp.append(syrups[syrup]["timestamp"])
         syrup_name.append(syrups[syrup]["name"])
+    print(fun_fact)
 
-
-
-    return render_template("learn.html", 
-        video_url=video_url, 
-        alcohol_img=alcohol_img, 
-        alcohol_vol=alcohol_vol, 
-        alcohol_timestamp=alcohol_timestamp, 
-        drink_name=drink_name, 
-        alcohol_name=alcohol_name, 
-        juice_img=juice_img,
-        juice_vol=juice_vol,
-        juice_timestamp=juice_timestamp,
-        juice_name=juice_name,
-        syrup_name=syrup_name,
-        syrup_img=syrup_img,
-        syrup_vol=syrup_vol,
-        syrup_timestamp=syrup_timestamp)
+    return render_template("learn.html",
+                           video_url=video_url,
+                           alcohol_img=alcohol_img,
+                           alcohol_vol=alcohol_vol,
+                           alcohol_timestamp=alcohol_timestamp,
+                           drink_name=drink_name,
+                           alcohol_name=alcohol_name,
+                           juice_img=juice_img,
+                           juice_vol=juice_vol,
+                           juice_timestamp=juice_timestamp,
+                           juice_name=juice_name,
+                           syrup_name=syrup_name,
+                           syrup_img=syrup_img,
+                           syrup_vol=syrup_vol,
+                           syrup_timestamp=syrup_timestamp,
+                           fun_fact=fun_fact)
 
 
 @ app.route("/quiz/<drink>", methods=['GET', 'POST'])
