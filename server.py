@@ -48,7 +48,7 @@ data = {
 cocktails = {
     "margarita": {
         "name": "Margarita",
-        "image": "static/images/margarita",
+        "image": "static/images/margarita.png",
         "video": "https://www.youtube.com/embed/2BiT4wfRfWg",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
@@ -90,7 +90,7 @@ cocktails = {
     },
     "pina_colada": {
         "name": "Piña Colada",
-        "image": "/static/images/pina_colada",
+        "image": "/static/images/pina_colada.png",
         "video": "https://www.youtube.com/embed/nyzeEdPkfOw",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
@@ -132,7 +132,7 @@ cocktails = {
     },
     "moscow_mule": {
         "name": "Moscow Mule",
-        "image": "/static/images/moscow_mule",
+        "image": "/static/images/moscow_mule.png",
         "video": "https://www.youtube.com/embed/FirpAjZomHA",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
