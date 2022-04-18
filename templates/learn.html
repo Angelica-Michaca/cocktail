@@ -4,19 +4,23 @@
   type="text/javascript"
   src="{{ url_for('static', filename = 'learn.js') }}"
 ></script>
-<style>
-
-</style>
+<style></style>
 
 <script>
-
   let drink_name = {{drink_name}}
   let video_url = {{video_url| tojson}}
   let alcohol_img = {{alcohol_img| tojson}}
   let alcohol_vol = {{alcohol_vol| tojson}}
   let alcohol_timestamp = {{alcohol_timestamp| tojson}}
   let alcohol_name = {{alcohol_name| tojson}}
-  let alcohol_items = {{alcohol_items| tojson}}
+  let juice_img = {{juice_img| tojson}}
+  let juice_vol = {{juice_vol| tojson}}
+  let juice_timestamp = {{juice_timestamp| tojson}}
+  let juice_name = {{juice_name| tojson}}
+  let syrup_img = {{syrup_img| tojson}}
+  let syrup_vol = {{syrup_vol| tojson}}
+  let syrup_timestamp = {{syrup_timestamp| tojson}}
+  let syrup_name = {{syrup_name| tojson}}
 </script>
 
 <!DOCTYPE html>
@@ -24,7 +28,171 @@
 <html>
   <head>
     <style>
-      
+      <<<<<<< HEAD
+
+      =======
+            .center {
+              height: 46.4px;
+              line-height: 46.4px; /* same as height! */
+            }
+            .horizontally-centered {
+              text-align: center;
+            }
+
+            .align-center {
+              text-align: center;
+            }
+
+            .custom-card-learn {
+              background-color: rgb(32, 32, 32);
+              color: white;
+              border-color: white;
+              border-radius: 0%;
+            }
+
+            .practice-btn {
+              margin: auto;
+              background-color: white;
+              border-color: white;
+              color: black;
+            }
+
+            .gap-3 {
+              margin: 10px;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              color: white;
+            }
+
+            .card-body {
+              background-color: rgb(32, 32, 32);
+            }
+            .white-font {
+              color: white;
+            }
+            .headers {
+              margin-top: 3rem;
+            }
+            .blue-time {
+              color: rgb(51, 92, 216);
+            }
+            .col-md-4 {
+              background-color: rgb(32, 32, 32);
+            }
+
+            .card-title {
+              font-size: 12px;
+            }
+
+            .card-text {
+              font-size: 10px;
+            }
+
+            .ingredient_labels {
+              color: white;
+              padding: 5px;
+            }
+            body {
+              background-color: rgb(32, 32, 32);
+              font-family: "DM Sans", sans-serif;
+            }
+
+            .facts-cards {
+              margin: 20px;
+              align-items: flex-end;
+            }
+
+            .fun_fact {
+              text-decoration: underline;
+              text-decoration-color: white;
+              margin-bottom: 5px;
+              font-size: 25px;
+            }
+
+            .cocktail_funfact {
+              font-size: 20px;
+            }
+
+            .custom-white-card {
+              background-color: transparent;
+              border-color: white;
+              border-radius: 0%;
+              color: white;
+            }
+
+            .parent-card {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 20px;
+              margin-top: 20px;
+            }
+
+            .practiceButton {
+              width: 250px;
+            }
+
+            a {
+              text-align: center;
+            }
+
+            .custom-card-size-facts {
+              width: 35rem;
+            }
+            .right-header {
+              font-size: 21px;
+            }
+
+            .alcohol_img{
+              width: 1px;
+              height: 1px;
+            }
+
+            img{
+               height: 70%;
+               width: 70%;
+
+            }
+
+            .font-white{
+              color: white;
+            }
+
+            .timestamps{
+              color: white;
+            }
+
+            .card{
+              border-color: white;
+              background-color: transparent;
+              width: 270px;
+              height: 120px;
+              color: white;
+              margin-right: 10px;
+              z-index: 100;
+            }
+
+            .alc-name{
+              font-weight: bold;
+              padding-top: 10px;
+              padding-left: 40px;
+            }
+
+            .alc-info{
+              display: inline-block;
+
+            }
+
+            .under{
+              z-index: -1;
+            }
+
+      >>>>>>> cfe8ecddf65d447fad116b7e0b1760b5c3bd495f
     </style>
   </head>
 
@@ -42,18 +210,71 @@
     <div class="col-md-6">
       <!--add video tutorial here using cocktail.video-->
       <div id="video-tutorial">
-        <iframe width="540" height="493.2px" poster="" src="{{video_url}}"> </iframe>
+        <iframe width="540" height="493.2px" poster="" src="{{video_url}}">
+        </iframe>
       </div>
     </div>
     <div class="col-md-6">
       <div class="row ingredient_labels">Alcohol</div>
-      <div class="row" id="alcohol_Cardrow">
-        <img src="/static/images/tequila.png" alt="" />
+      <div class="row">
+        {% for i in range(alcohol_img|length) %}
+        <div class="card">
+          <div class="row">
+            <p class="alc-name">{{alcohol_name[i]}}</p>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="alcohol-img" src="{{alcohol_img[i]}}" alt="" />
+            </div>
+            <div class="col-md-8">
+              <p class="alc-info">
+                Volume: {{alcohol_vol[i]}} oz Timestamp {{alcohol_timestamp[i]}}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
       <div class="row ingredient_labels">Juice</div>
-      <div class="row"></div>
+      <div class="row">
+        {% for i in range(juice_img|length) %}
+        <div class="card">
+          <div class="row">
+            <p class="alc-name">{{juice_name[i]}}</p>
+          </div>
+          <div class="row under">
+            <div class="col-md-4 under">
+              <img class="alcohol-img" src="{{juice_img[i]}}" alt="" />
+            </div>
+            <div class="col-md-8">
+              <p class="alc-info">
+                Volume: {{juice_vol[i]}} oz Timestamp {{juice_timestamp[i]}}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
       <div class="row ingredient_labels">Syrup</div>
-      <!-- -->
+      <div class="row">
+        {% for i in range(syrup_img|length) %}
+        <div class="card">
+          <div class="row">
+            <p class="alc-name">{{syrup_name[i]}}</p>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="alcohol-img" src="{{syrup_img[i]}}" alt="" />
+            </div>
+            <div class="col-md-8">
+              <p class="alc-info">
+                Volume: {{syrup_vol[i]}} oz Timestamp {{syrup_timestamp[i]}}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
   <!--dynamically creat fun fact cards with data from dictionary -->
