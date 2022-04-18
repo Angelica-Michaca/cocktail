@@ -60,7 +60,11 @@
             }
 
             .gap-3 {
-              margin: 10px;
+              margin:3rem;
+            }
+
+            .gap-4{
+              margin-bottom: 2rem;
             }
 
             h1,
@@ -74,6 +78,7 @@
 
             .card-body {
               background-color: rgb(32, 32, 32);
+              border-color: white;
             }
             .white-font {
               color: white;
@@ -176,7 +181,6 @@
               height: 120px;
               color: white;
               margin-right: 10px;
-              z-index: 100;
             }
 
             .alc-name{
@@ -193,6 +197,38 @@
             .under{
               z-index: -1;
             }
+            .btn-primary{
+              background-color: white;
+              border-color: white;
+              color: black;
+            }
+
+            .card-title-fact{
+              font-size: 30px;
+              text-decoration: underline;
+              font-family: italiano;
+            }
+            .card-text-blurb{
+              font-size: 26px;
+            }
+
+            .practice-button{
+              margin: auto;
+            }
+
+            .top-half{
+              margin-bottom: 30px;
+            }
+            .vstack{
+              border-color: white;
+              margin: auto;
+              width: 60%;
+            }
+            .gap-3{
+              margin-bottom: 5px;
+            }
+
+
 
       >>>>>>> cfe8ecddf65d447fad116b7e0b1760b5c3bd495f
     </style>
@@ -208,7 +244,7 @@
   </div>
 
   <!--Make second row with video and ingredients-->
-  <div class="row">
+  <div class="row top-half">
     <div class="col-md-6">
       <!--add video tutorial here using cocktail.video-->
       <div id="video-tutorial">
@@ -277,33 +313,40 @@
       </div>
     </div>
   </div>
-  <!--dynamically creat fun fact cards with data from dictionary -->
 
+  <!--dynamically creat fun fact cards with data from dictionary -->
   <div class="row justify-content-center">
-    <div class="card text-center" style="width: 50rem">
-      <div class="card-body">
-        <h5 class="card-title">Fun Fact</h5>
-        <p class="card-text">{{fun_fact['fun_fact']}}</p>
+    <div class="vstack gap-3">
+      <div class="text-center card" style="width: 50rem">
+        <div class="card-body">
+          <h5 class="card-title-fact">Fun Fact</h5>
+          <p class="card-text-blurb">{{fun_fact['fun_fact']}}</p>
+        </div>
       </div>
-    </div>
-    <br />
-    <!--Taste Fact-->
-    <div class="card text-center" style="width: 50rem">
-      <div class="card-body">
-        <h5 class="card-title">Taste</h5>
-        <p class="card-text">{{fun_fact['taste']}}</p>
+      <div class="text-center card" style="width: 50rem">
+        <div class="card-body">
+          <h5 class="card-title-fact">Taste</h5>
+          <p class="card-text-blurb">{{fun_fact['taste']}}</p>
+        </div>
       </div>
-    </div>
-    <br />
-    <!--Pairs well with fact-->
-    <div class="card text-center" style="width: 50rem">
-      <div class="card-body">
-        <h5 class="card-title">Goes Well With</h5>
-        <p class="card-text">{{fun_fact['goes_well_with']}}</p>
+      <div class="text-center card" style="width: 50rem">
+        <div class="card-body">
+          <h5 class="card-title-fact">Goes Well With</h5>
+          <p class="card-text-blurb">{{fun_fact['goes_well_with']}}</p>
+        </div>
       </div>
+      <!---->
     </div>
-    
   </div>
+  <!--Practice button -->
+  <div class="row justify-content-center">
+    <a class="practice-button" href="http://127.0.0.1:5000/practice">
+      <button type="button" class="btn btn-primary btn-lg btn-block">
+        Practice
+      </button>
+    </a>
+  </div>
+
   <!--Fun fact-->
 
   {% endblock %}
