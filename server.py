@@ -3,6 +3,9 @@ from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
 
+sergio_test = []
+sergio_test2 = []
+
 ingredients = ["lime", "orange juice", "tequila"]  # testing git
 
 practice_data = {
@@ -186,8 +189,6 @@ cocktails = {
 }
 
 glass = []
-
-# ROUTES
 
 
 @ app.route("/")
