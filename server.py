@@ -93,9 +93,9 @@ cocktails = {
         "image": "/static/images/pina_colada",
         "video": "https://www.youtube.com/embed/nyzeEdPkfOw",
         "facts": {
-            "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
-            "taste": "Margaritas taste like agave, from the tequila",
-            "goes_well_with": "Tacos"
+            "fun_fact": " Pina means pineapple and colada means strained",
+            "taste": "Pina Colada tastes like pineapple and coconut",
+            "goes_well_with": "Seafood"
         },
         "ingredients": {
             "alcohol": {
@@ -135,9 +135,9 @@ cocktails = {
         "image": "/static/images/moscow_mule",
         "video": "https://www.youtube.com/embed/FirpAjZomHA",
         "facts": {
-            "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
-            "taste": "Margaritas taste like agave, from the tequila",
-            "goes_well_with": "Tacos"
+            "fun_fact": "This cocktail is not from Moscow. It was invented at a Hollywood bar!",
+            "taste": "Moscow Mule tastes like ginger",
+            "goes_well_with": "Spicy Food"
         },
         "ingredients": {
             "alcohol": {
