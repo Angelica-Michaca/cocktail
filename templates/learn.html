@@ -21,6 +21,8 @@
   let syrup_vol = {{syrup_vol| tojson}}
   let syrup_timestamp = {{syrup_timestamp| tojson}}
   let syrup_name = {{syrup_name| tojson}}
+
+  let fun_fact = {{fun_fact | tojson}}
 </script>
 
 <!DOCTYPE html>
@@ -28,171 +30,211 @@
 <html>
   <head>
     <style>
-      <<<<<<< HEAD
+      .center {
+        height: 46.4px;
+        line-height: 46.4px; /* same as height! */
+      }
+      .horizontally-centered {
+        text-align: center;
+      }
 
-      =======
-            .center {
-              height: 46.4px;
-              line-height: 46.4px; /* same as height! */
-            }
-            .horizontally-centered {
-              text-align: center;
-            }
+      .align-center {
+        text-align: center;
+      }
 
-            .align-center {
-              text-align: center;
-            }
+      .custom-card-learn {
+        background-color: rgb(32, 32, 32);
+        color: white;
+        border-color: white;
+        border-radius: 0%;
+      }
 
-            .custom-card-learn {
-              background-color: rgb(32, 32, 32);
-              color: white;
-              border-color: white;
-              border-radius: 0%;
-            }
+      .practice-btn {
+        margin: auto;
+        background-color: white;
+        border-color: white;
+        color: black;
+      }
 
-            .practice-btn {
-              margin: auto;
-              background-color: white;
-              border-color: white;
-              color: black;
-            }
+      .gap-3 {
+        margin: 3rem;
+      }
 
-            .gap-3 {
-              margin: 10px;
-            }
+      .gap-4 {
+        margin-bottom: 2rem;
+      }
 
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-              color: white;
-            }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: white;
+      }
 
-            .card-body {
-              background-color: rgb(32, 32, 32);
-            }
-            .white-font {
-              color: white;
-            }
-            .headers {
-              margin-top: 3rem;
-            }
-            .blue-time {
-              color: rgb(51, 92, 216);
-            }
-            .col-md-4 {
-              background-color: rgb(32, 32, 32);
-            }
+      .card-body {
+        background-color: rgb(32, 32, 32);
+        border-color: white;
+        width: ;
+      }
+      .white-font {
+        color: white;
+      }
+      .headers {
+        margin-top: 3rem;
+      }
+      .blue-time {
+        color: rgb(51, 92, 216);
+      }
+      .col-md-4 {
+        background-color: rgb(32, 32, 32);
+      }
 
-            .card-title {
-              font-size: 12px;
-            }
+      .card-title {
+        font-size: 12px;
+      }
 
-            .card-text {
-              font-size: 10px;
-            }
+      .card-text {
+        font-size: 10px;
+      }
 
-            .ingredient_labels {
-              color: white;
-              padding: 5px;
-            }
-            body {
-              background-color: rgb(32, 32, 32);
-              font-family: "DM Sans", sans-serif;
-            }
+      .ingredient_labels {
+        color: white;
+        padding: 5px;
+      }
+      body {
+        background-color: rgb(32, 32, 32);
+        font-family: "DM Sans", sans-serif;
+      }
 
-            .facts-cards {
-              margin: 20px;
-              align-items: flex-end;
-            }
+      /*.facts-cards {
+        margin: 20px;
+        align-items: flex-end;
+      }*/
 
-            .fun_fact {
-              text-decoration: underline;
-              text-decoration-color: white;
-              margin-bottom: 5px;
-              font-size: 25px;
-            }
+      /*.fun_fact {
+        text-decoration: underline;
+        text-decoration-color: white;
+        margin-bottom: 5px;
+        font-size: 25px;
+      }*/
 
-            .cocktail_funfact {
-              font-size: 20px;
-            }
+      .cocktail_funfact {
+        font-size: 20px;
+      }
 
-            .custom-white-card {
-              background-color: transparent;
-              border-color: white;
-              border-radius: 0%;
-              color: white;
-            }
+      .custom-white-card {
+        background-color: transparent;
+        border-color: white;
+        border-radius: 0%;
+        color: white;
+      }
 
-            .parent-card {
-              display: flex;
-              justify-content: space-between;
-              margin-bottom: 20px;
-              margin-top: 20px;
-            }
+      .parent-card {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
 
-            .practiceButton {
-              width: 250px;
-            }
+      .practiceButton {
+        width: 250px;
+      }
 
-            a {
-              text-align: center;
-            }
+      a {
+        text-align: center;
+      }
 
-            .custom-card-size-facts {
-              width: 35rem;
-            }
-            .right-header {
-              font-size: 21px;
-            }
+      .custom-card-size-facts {
+        width: 35rem;
+      }
+      .right-header {
+        font-size: 21px;
+      }
 
-            .alcohol_img{
-              width: 1px;
-              height: 1px;
-            }
+      .alcohol_img {
+        width: 1px;
+        height: 1px;
+      }
 
-            img{
-               height: 70%;
-               width: 70%;
+      img {
+        height: 70%;
+        width: 70%;
+      }
 
-            }
+      .font-white {
+        color: white;
+      }
 
-            .font-white{
-              color: white;
-            }
+      .timestamps {
+        color: white;
+      }
 
-            .timestamps{
-              color: white;
-            }
+      .card {
+        border-color: white;
+        background-color: transparent;
+        width: 270px;
+        height: 120px;
+        color: white;
+        margin-right: 10px;
+      }
 
-            .card{
-              border-color: white;
-              background-color: transparent;
-              width: 270px;
-              height: 120px;
-              color: white;
-              margin-right: 10px;
-              z-index: 100;
-            }
+      .alc-name {
+        font-weight: bold;
+        padding-top: 10px;
+        padding-left: 40px;
+      }
 
-            .alc-name{
-              font-weight: bold;
-              padding-top: 10px;
-              padding-left: 40px;
-            }
+      .alc-info {
+        display: inline-block;
+      }
 
-            .alc-info{
-              display: inline-block;
+      .under {
+        z-index: -1;
+      }
+      .btn-primary {
+        background-color: white;
+        border-color: white;
+        color: black;
+      }
 
-            }
+      .card-title-fact {
+        font-size: 30px;
+        text-decoration: underline;
+        font-family: italiano;
+      }
+      .card-text-blurb {
+        font-size: 26px;
+      }
 
-            .under{
-              z-index: -1;
-            }
+      .practice-button {
+        margin: auto;
+      }
 
-      >>>>>>> cfe8ecddf65d447fad116b7e0b1760b5c3bd495f
+      .top-half {
+        margin-bottom: 30px;
+      }
+      .vstack {
+        border-color: white;
+        margin: auto;
+        width: 60%;
+      }
+      .gap-3 {
+        margin-bottom: 5px;
+      }
+      .stack-of-facts {
+        width: 55rem;
+      }
+
+      .practiceButton {
+        width: 100%;
+        display: block;
+        height: 60px;
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-family: italiano;
+      }
     </style>
   </head>
 
@@ -206,7 +248,7 @@
   </div>
 
   <!--Make second row with video and ingredients-->
-  <div class="row">
+  <div class="row top-half">
     <div class="col-md-6">
       <!--add video tutorial here using cocktail.video-->
       <div id="video-tutorial">
@@ -277,7 +319,41 @@
       </div>
     </div>
   </div>
+
   <!--dynamically creat fun fact cards with data from dictionary -->
+  <div class="row justify-content-center">
+    <div class="card stack-of-facts">
+      <div class="card-body text-center">
+        <h5 class="card-title-fact">Fun Fact</h5>
+        <p class="card-text-blurb">{{fun_fact['fun_fact']}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="card stack-of-facts">
+      <div class="card-body text-center">
+        <h5 class="card-title-fact">Taste</h5>
+        <p class="card-text-blurb">{{fun_fact['taste']}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="card stack-of-facts">
+      <div class="card-body text-center">
+        <h5 class="card-title-fact">Goes Well With</h5>
+        <p class="card-text-blurb">{{fun_fact['goes_well_with']}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!--Practice button -->
+  <div class="row justify-content-center">
+    <a class="practice-button" href="http://127.0.0.1:5000/practice"
+      ><button type="button" class="btn btn-primary practiceButton btn-lg">
+        Practice
+      </button></a
+    >
+  </div>
 
   {% endblock %}
 </html>

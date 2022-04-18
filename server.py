@@ -104,9 +104,9 @@ cocktails = {
         "image": "/static/images/pina_colada.png",
         "video": "https://www.youtube.com/embed/nyzeEdPkfOw",
         "facts": {
-            "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
-            "taste": "Margaritas taste like agave, from the tequila",
-            "goes_well_with": "Tacos"
+            "fun_fact": " Pina means pineapple and colada means strained",
+            "taste": "Pina Colada tastes like pineapple and coconut",
+            "goes_well_with": "Seafood"
         },
         "ingredients": {
             "alcohol": {
@@ -146,9 +146,9 @@ cocktails = {
         "image": "/static/images/moscow_mule.png",
         "video": "https://www.youtube.com/embed/FirpAjZomHA",
         "facts": {
-            "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
-            "taste": "Margaritas taste like agave, from the tequila",
-            "goes_well_with": "Tacos"
+            "fun_fact": "This cocktail is not from Moscow. It was invented at a Hollywood bar!",
+            "taste": "Moscow Mule tastes like ginger",
+            "goes_well_with": "Spicy Food"
         },
         "ingredients": {
             "alcohol": {
@@ -259,12 +259,15 @@ def learnCocktailpage(name=None):
     video_url = drink["video"]
     print(video_url)
 
+    #fun_fact1 = drink[""]
+
     alcohols = drink["ingredients"]["alcohol"]
     juices = drink["ingredients"]["juice"]
     syrups = drink["ingredients"]["syrup"]
 
-    # get length of items
-    alcohol_items = []
+    print(alcohols)
+    # fun facts data full list w/ fun, taste, and pairs well with data
+    fun_fact = drink["facts"]
 
     drink_name = []
     test = drink["name"]
@@ -304,24 +307,24 @@ def learnCocktailpage(name=None):
         syrup_vol.append(syrups[syrup]["volume"])
         syrup_timestamp.append(syrups[syrup]["timestamp"])
         syrup_name.append(syrups[syrup]["name"])
+    print(fun_fact)
 
-
-
-    return render_template("learn.html", 
-        video_url=video_url, 
-        alcohol_img=alcohol_img, 
-        alcohol_vol=alcohol_vol, 
-        alcohol_timestamp=alcohol_timestamp, 
-        drink_name=drink_name, 
-        alcohol_name=alcohol_name, 
-        juice_img=juice_img,
-        juice_vol=juice_vol,
-        juice_timestamp=juice_timestamp,
-        juice_name=juice_name,
-        syrup_name=syrup_name,
-        syrup_img=syrup_img,
-        syrup_vol=syrup_vol,
-        syrup_timestamp=syrup_timestamp)
+    return render_template("learn.html",
+                           video_url=video_url,
+                           alcohol_img=alcohol_img,
+                           alcohol_vol=alcohol_vol,
+                           alcohol_timestamp=alcohol_timestamp,
+                           drink_name=drink_name,
+                           alcohol_name=alcohol_name,
+                           juice_img=juice_img,
+                           juice_vol=juice_vol,
+                           juice_timestamp=juice_timestamp,
+                           juice_name=juice_name,
+                           syrup_name=syrup_name,
+                           syrup_img=syrup_img,
+                           syrup_vol=syrup_vol,
+                           syrup_timestamp=syrup_timestamp,
+                           fun_fact=fun_fact)
 
 
 @ app.route("/quiz/<drink>", methods=['GET', 'POST'])
