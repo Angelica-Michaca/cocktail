@@ -1,17 +1,15 @@
-function showLearnPage(cocktail) {
-  let name = cocktail.["name"]
-  let video = cocktail.video
-  let fun_fact = cocktail.facts.fun_fact
-  let taste_fact = cocktail.facts.taste
-  let food_fact = cocktail.facts.goes_well_with
- 
 
-  $("#name-of-drink").append(name)
+// function showAlcoholIngredientCards(){
+   
+     
+//      let alcCardRow="<div class ='col-sm-6'><div class='card mb-3' style='max-width:540px'><div class='row no-gutters'><div class='col-md-4'><img src='" + alcohol_img[i] + " ' class='card-img' alt = '...'/></div><div class='col-md-8'><div class='card-body white-font><h5 class='card-title'>" + alcohol_name[i] + "</h5><p class='card-text'>" + alcohol_vol[i] + "</p><p class='card-text'><small class='card-text'>Timestamp<span class='blue-time'>" + alcohol_timestamp[i] + "</span></p></div></div></div></div></div></div> "
+     
+//      $("#alcohol_Cardrow").append(alcCardRow)
+//    }
 
-  let videoCode= "<iframe width='540' height='493.2' src=' "
-  videoCode = videoCode + video
-  videoCode = videoCode + "'></iframe>"
-  $("#video-tutorial").append(videoCode)
+// }
 
-  let ingredientsCode=
-}
+// $(document).ready(function () {
+//   showAlcoholIngredientCards()
+
+// })

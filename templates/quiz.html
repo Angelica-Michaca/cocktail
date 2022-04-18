@@ -21,38 +21,17 @@
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
     <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
     <script>
-<<<<<<< Updated upstream
       //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
       let ingredients = {{ingredients| tojson}}
       let correct_ingredients = {{ correct_ingredients| tojson }}
       let glass = {{ glass| tojson }}
       let drink = {{drink| tojson}}
     </script>
-=======
-        //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
-        let ingredients = {{ingredients| tojson}}
-        let correct_ingredients = {{ correct_ingredients| tojson }}
-        let glass = {{ glass| tojson }}
-        </script>
-
-    <style>
-   
-    </style>
 
 
-
-</head>
->>>>>>> Stashed changes
-
-
-<<<<<<< Updated upstream
-  <body class="containerGray">
-    <div class="quizTitleText" id="title">{{drink}}</div>
-=======
 <body class="containerGray">
 
     <div class="quizTitleText" id="title"></div>
->>>>>>> Stashed changes
 
     <div class="quizBodyText" id="instruction">Drag and drop the necessary ingredients into the glass in the correct order to make a {{drink}}.</div>
 

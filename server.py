@@ -8,47 +8,47 @@ ingredients = ["lime", "orange juice", "tequila"]  # testing git
 
 data = {
     "moscow_mule": {
-    "ingredients": ["Fresh Lime Juice",
-    "Pineapple Juice",
-    "Ginger Syrup",
-    "Simple Syrup",
-    "Orange Tequila",
-    "Tequila",
-    "Vodka",
-    "Ginger Beer",
-    "Cream of Coconut"],
-    "correct_ingredients": ["Vodka", "Ginger Beer", "Fresh Lime Juice", "Ginger Syrup"]
+        "ingredients": ["Fresh Lime Juice",
+                        "Pineapple Juice",
+                        "Ginger Syrup",
+                        "Simple Syrup",
+                        "Orange Tequila",
+                        "Tequila",
+                        "Vodka",
+                        "Ginger Beer",
+                        "Cream of Coconut"],
+        "correct_ingredients": ["Vodka", "Ginger Beer", "Fresh Lime Juice", "Ginger Syrup"]
     },
     "pina_colada": {
-    "ingredients": ["Fresh Lime Juice",
-    "Pineapple Juice",
-    "Ginger Syrup",
-    "Simple Syrup",
-    "Orange Tequila",
-    "Tequila",
-    "Vodka",
-    "Ginger Beer",
-    "Cream of Coconut"],
-    "correct_ingredients": ["Tequila", "Pineapple Juice", "Fresh Lime Juice", "Cream of Coconut"]
+        "ingredients": ["Fresh Lime Juice",
+                        "Pineapple Juice",
+                        "Ginger Syrup",
+                        "Simple Syrup",
+                        "Orange Tequila",
+                        "Tequila",
+                        "Vodka",
+                        "Ginger Beer",
+                        "Cream of Coconut"],
+        "correct_ingredients": ["Tequila", "Pineapple Juice", "Fresh Lime Juice", "Cream of Coconut"]
     },
     "margarita": {
-    "ingredients": ["Fresh Lime Juice",
-    "Pineapple Juice",
-    "Ginger Syrup",
-    "Simple Syrup",
-    "Orange Tequila",
-    "Tequila",
-    "Vodka",
-    "Ginger Beer",
-    "Cream of Coconut"],
-    "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
+        "ingredients": ["Fresh Lime Juice",
+                        "Pineapple Juice",
+                        "Ginger Syrup",
+                        "Simple Syrup",
+                        "Orange Tequila",
+                        "Tequila",
+                        "Vodka",
+                        "Ginger Beer",
+                        "Cream of Coconut"],
+        "correct_ingredients": ["Fresh Lime Juice", "Simple Syrup", "Orange Tequila", "Tequila"]
     }
 }
 
 cocktails = {
     "margarita": {
         "name": "Margarita",
-        "image": "",
+        "image": "static/images/margarita",
         "video": "https://www.youtube.com/embed/2BiT4wfRfWg",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
@@ -59,13 +59,13 @@ cocktails = {
             "alcohol": {
                 "tequila": {
                     "name": "Tequila",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/tequila.png",
                     "volume": "1.5",
                     "timestamp": "0:15"
                 },
                 "orange_tequila": {
                     "name": "Orange Tequila",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/orange_tequila.png",
                     "volume": "0.75",
                     "timestamp": "0:12"
                 }
@@ -73,7 +73,7 @@ cocktails = {
             "juice": {
                 "fresh_lime_juice": {
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/fresh_lime_juice.png",
                     "volume": "0.75",
                     "timestamp": "0:09"
                 }
@@ -81,7 +81,7 @@ cocktails = {
             "syrup": {
                 "simple_syrup": {
                     "name": "Simple Syrup",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/simple_syrup.png",
                     "volume": "0.25",
                     "timestamp": "0:11"
                 }
@@ -90,7 +90,7 @@ cocktails = {
     },
     "pina_colada": {
         "name": "Piña Colada",
-        "image": "",
+        "image": "static/images/pina_colada",
         "video": "https://www.youtube.com/embed/nyzeEdPkfOw",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
@@ -101,7 +101,7 @@ cocktails = {
             "alcohol": {
                 "tequila": {
                     "name": "Tequila",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/tequila.png",
                     "volume": "2.0",
                     "timestamp": "0:04"
                 }
@@ -109,13 +109,13 @@ cocktails = {
             "juice": {
                 "pineapple_juice": {
                     "name": "Pineapple Juice",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/pineapple_juice",
                     "volume": "2.0",
                     "timestamp": "0:10"
                 },
                 "fresh_lime_juice": {
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/fresh_lime_juice",
                     "volume": "0.5",
                     "timestamp": "0:09"
                 }
@@ -123,7 +123,7 @@ cocktails = {
             "syrup": {
                 "cream_of_coconut": {
                     "name": "Cream of Coconut",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/cream_of_coconut",
                     "volume": "2.0",
                     "timestamp": "0:06"
                 }
@@ -132,7 +132,7 @@ cocktails = {
     },
     "moscow_mule": {
         "name": "Moscow Mule",
-        "image": "",
+        "image": "static/images/moscow_mule",
         "video": "https://www.youtube.com/embed/FirpAjZomHA",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
@@ -143,13 +143,13 @@ cocktails = {
             "alcohol": {
                 "tequila": {
                     "name": "Tequila",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/tequila.png",
                     "volume": "1.5",
                     "timestamp": "0:15"
                 },
                 "orange_tequila": {
                     "name": "Orange Tequila",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/orange_tequila",
                     "volume": "0.75",
                     "timestamp": "0:12"
                 }
@@ -157,7 +157,7 @@ cocktails = {
             "juice": {
                 "fresh_lime_juice": {
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/fresh_lime_juice",
                     "volume": "0.75",
                     "timestamp": "0:09"
                 }
@@ -165,7 +165,7 @@ cocktails = {
             "syrup": {
                 "simple_syrup": {
                     "name": "Simple Syrup",
-                    "ingredient_image": "",
+                    "ingredient_image": "/static/images/simple_syrup",
                     "volume": "0.25",
                     "timestamp": "0:11"
                 }
@@ -175,6 +175,7 @@ cocktails = {
 }
 
 glass = []
+
 # ROUTES
 
 
@@ -190,7 +191,7 @@ def home():
 
 @ app.route("/learn/<name>")
 def learnCocktailpage(name=None):
-    #for currCocktail in cocktails.values():
+    # for currCocktail in cocktails.values():
     #    if name == currCocktail["name"]:
     #        cocktail = currCocktail
 
@@ -199,8 +200,37 @@ def learnCocktailpage(name=None):
     video_url = drink["video"]
     print(video_url)
 
-    
-    return render_template("learn.html", video_url = video_url)
+    alcohols = drink["ingredients"]["alcohol"]
+    print(alcohols)
+    print(alcohols.keys())
+
+    # get length of items
+    alcohol_items = []
+
+    drink_name = []
+    test = drink["name"]
+    drink_name.append(test)
+    alcohol_img = []
+    alcohol_vol = []
+    alcohol_timestamp = []
+    alcohol_name = []
+
+    for alcohol in alcohols.keys():
+
+        alcohol_img.append(alcohols[alcohol]["ingredient_image"])
+        alcohol_vol.append(alcohols[alcohol]["volume"])
+        alcohol_timestamp.append(alcohols[alcohol]["timestamp"])
+        alcohol_name.append(alcohols[alcohol]["name"])
+
+    print("alcohol_img:", alcohol_img)
+    print("drink_name:", drink_name)
+
+    # juice_img = drink[]
+    # syrup_img = drink[]
+    #ingredients = cocktails[ingredients]
+
+    return render_template("learn.html", video_url=video_url, alcohol_img=alcohol_img, alcohol_vol=alcohol_vol, alcohol_timestamp=alcohol_timestamp, drink_name=drink_name, alcohol_name=alcohol_name, alcohol_items=alcohol_items)
+
 
 @ app.route("/quiz/<drink>", methods=['GET', 'POST'])
 def quiz(drink=None):
@@ -211,15 +241,12 @@ def quiz(drink=None):
     ingredients = data[drink]["ingredients"]
     correct_ingredients = data[drink]["correct_ingredients"]
 
-
     if drink == "moscow_mule":
         drink_name = "Moscow Mule"
     elif drink == "margarita":
         drink_name = "Margarita"
     elif drink == "pina_colada":
         drink_name = "Pina Colada"
-
-
 
     return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name)
 

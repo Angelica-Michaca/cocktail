@@ -6,7 +6,14 @@
 ></script>
 
 <script>
+
+  let drink_name = {{drink_name}}
   let video_url = {{video_url| tojson}}
+  let alcohol_img = {{alcohol_img| tojson}}
+  let alcohol_vol = {{alcohol_vol| tojson}}
+  let alcohol_timestamp = {{alcohol_timestamp| tojson}}
+  let alcohol_name = {{alcohol_name| tojson}}
+  let alcohol_items = {{alcohol_items| tojson}}
 </script>
 
 <!DOCTYPE html>
@@ -135,7 +142,7 @@
 
   <div class="row headers">
     <div class="col-md-6">
-      <h2 class="left-header center" id="name-of-drink"></h2>
+      <h2 class="left-header center" id="name-of-drink">{{drink_name[0]}}</h2>
     </div>
     <div class="col-md-6">
       <h4 class="right-header center">Ingredients</h4>
@@ -147,36 +154,12 @@
     <div class="col-md-6">
       <!--add video tutorial here using cocktail.video-->
       <div id="video-tutorial"></div>
-      <iframe
-        width="540"
-        height="493.2"
-        src="{{video_url}}"
-      >
-      </iframe>
+      <iframe width="540" height="493.2" src="{{video_url}}"> </iframe>
     </div>
     <div class="col-md-6">
       <div class="row ingredient_labels">Alcohol</div>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="..." class="card-img" alt="..." />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body white-font">
-                  <h5 class="card-title">Tequila</h5>
-                  <p class="card-text">1.5 oz</p>
-                  <p class="card-text">
-                    <small class="card-text"
-                      >Timestamp <span class="blue-time">0:15</span>
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="row" id="alcohol_Cardrow">
+        <img src="/static/images/tequila.png" alt="" />
       </div>
       <div class="row ingredient_labels">Juice</div>
       <div class="row"></div>
