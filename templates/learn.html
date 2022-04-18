@@ -4,6 +4,9 @@
   type="text/javascript"
   src="{{ url_for('static', filename = 'learn.js') }}"
 ></script>
+<style>
+
+</style>
 
 <script>
 
@@ -21,128 +24,13 @@
 <html>
   <head>
     <style>
-      .center {
-        height: 46.4px;
-        line-height: 46.4px; /* same as height! */
-      }
-      .horizontally-centered {
-        text-align: center;
-      }
-
-      .align-center {
-        text-align: center;
-      }
-
-      .custom-card-learn {
-        background-color: rgb(32, 32, 32);
-        color: white;
-        border-color: white;
-        border-radius: 0%;
-      }
-
-      .practice-btn {
-        margin: auto;
-        background-color: white;
-        border-color: white;
-        color: black;
-      }
-
-      .gap-3 {
-        margin: 10px;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: white;
-      }
-
-      .card-body {
-        background-color: rgb(32, 32, 32);
-      }
-      .white-font {
-        color: white;
-      }
-      .headers {
-        margin-top: 3rem;
-      }
-      .blue-time {
-        color: rgb(51, 92, 216);
-      }
-      .col-md-4 {
-        background-color: rgb(32, 32, 32);
-      }
-
-      .card-title {
-        font-size: 12px;
-      }
-
-      .card-text {
-        font-size: 10px;
-      }
-
-      .ingredient_labels {
-        color: white;
-        padding: 5px;
-      }
-      body {
-        background-color: rgb(32, 32, 32);
-        font-family: "DM Sans", sans-serif;
-      }
-
-      .facts-cards {
-        margin: 20px;
-        align-items: flex-end;
-      }
-
-      .fun_fact {
-        text-decoration: underline;
-        text-decoration-color: white;
-        margin-bottom: 5px;
-        font-size: 25px;
-      }
-
-      .cocktail_funfact {
-        font-size: 20px;
-      }
-
-      .custom-white-card {
-        background-color: transparent;
-        border-color: white;
-        border-radius: 0%;
-        color: white;
-      }
-
-      .parent-card {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        margin-top: 20px;
-      }
-
-      .practiceButton {
-        width: 250px;
-      }
-
-      a {
-        text-align: center;
-      }
-
-      .custom-card-size-facts {
-        width: 35rem;
-      }
-      .right-header {
-        font-size: 21px;
-      }
+      
     </style>
   </head>
 
   <div class="row headers">
     <div class="col-md-6">
-      <h2 class="left-header center" id="name-of-drink">{{drink_name[0]}}</h2>
+      <h1 class="left-header" id="name-of-drink">{{drink_name[0]}}</h1>
     </div>
     <div class="col-md-6">
       <h4 class="right-header center">Ingredients</h4>
@@ -153,8 +41,9 @@
   <div class="row">
     <div class="col-md-6">
       <!--add video tutorial here using cocktail.video-->
-      <div id="video-tutorial"></div>
-      <iframe width="540" height="493.2" src="{{video_url}}"> </iframe>
+      <div id="video-tutorial">
+        <iframe width="540" height="493.2px" poster="" src="{{video_url}}"> </iframe>
+      </div>
     </div>
     <div class="col-md-6">
       <div class="row ingredient_labels">Alcohol</div>

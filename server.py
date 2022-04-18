@@ -189,6 +189,11 @@ def home():
     return render_template("home.html", cocktails=cocktails)
 
 
+@ app.route("/practice")
+def practicePage(name=None):
+    return render_template("practice.html")
+
+
 @ app.route("/learn/<name>")
 def learnCocktailpage(name=None):
     # for currCocktail in cocktails.values():
@@ -251,24 +256,23 @@ def quiz(drink=None):
         drink_name = "Pina Colada"
         drink_link = "pina_colada"
 
-
-
-    return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name, drink_link = drink_link)
+    return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name, drink_link=drink_link)
 
 
 @ app.route("/quizResult/<drink>", methods=['GET', 'POST'])
-def quizResult(drink = None):
-    if drink =="margarita":
-        drink_list =["Margarita", "Pina Colada","Moscow Mule"]
-        drink_link = ["pina_colada","moscow_mule"]
+def quizResult(drink=None):
+    if drink == "margarita":
+        drink_list = ["Margarita", "Pina Colada", "Moscow Mule"]
+        drink_link = ["pina_colada", "moscow_mule"]
     elif drink == "pina_colada":
-        drink_list =["Pina Colada", "Margarita","Moscow Mule"]
-        drink_link = ["margarita","moscow_mule"]
+        drink_list = ["Pina Colada", "Margarita", "Moscow Mule"]
+        drink_link = ["margarita", "moscow_mule"]
     elif drink == "moscow_mule":
         drink_list = ["Moscow Mule", "Margarita", "Pina Colada"]
-        drink_link = ["margarita","pina_colada"]
+        drink_link = ["margarita", "pina_colada"]
 
-    return render_template("quizResult.html", drink=drink, drink_list = drink_list, drink_link = drink_link)
+    return render_template("quizResult.html", drink=drink, drink_list=drink_list, drink_link=drink_link)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

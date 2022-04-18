@@ -1,0 +1,87 @@
+{% extends "layout.html" %} {% block content %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+
+<head>
+  <style>
+    /*
+    .headers {
+      margin-top: 3rem;
+    }
+    .right-header {
+      font-size: 21px;
+    }*/
+    .practice-questions {
+      padding-bottom: 15px;
+      font-size: 22px;
+    }
+    input::placeholder{
+      overflow: visible;
+    }
+    label { 
+      color:white;
+  }
+  #fname{
+    border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            background-color: transparent;
+    }
+    .no-outline:focus {
+            outline: none;
+          }
+    input::placeholder{
+          overflow: visible;
+        }
+        
+    .check{
+      position:relative;
+    }
+    
+    form{
+    color:white;
+    }
+    
+    .check{
+    color:white;
+    background-color:transparent;
+    border-color:white;
+    }
+
+    
+  </style>
+</head>
+
+<div class="row headers">
+  <div class="col-md-6">
+    <h1 class="left-header" id="name-of-drink">Drink Name</h1>
+    <h4 class="practice-text">Practice</h4>
+    <br />
+    <div class="practice-questions">
+      <form action="/">
+        <label for="fname">First, add <span></span> oz of </label>
+        <input type="text" id="fname" class='no-outline' name="fname "placeholder="insert name of ingredient">  <input class="check" type="submit" value="Check">
+        <br><br>
+          <label for="fname">Then, add <span></span> oz of </label>
+        <input type="text" id="fname" name="fname" class='no-outline' placeholder="insert name of ingredient">  <input type="submit" class="check" value="Check">
+        <br><br>
+          <label for="fname">Next, add <span></span> oz of </label>
+        <input type="text" id="fname" name="fname class='no-outline'"placeholder="insert name of ingredient">  <input type="submit" class="check" value="Check">
+        <br><br>
+          <label for="fname">Finally, add <span></span> oz of </label>
+        <input type="text" id="fname" name="fname" class='no-outline'placeholder="insert name of ingredient">  <input type="submit" class="check" value="Check">
+        
+      </form>
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-6"></div>
+
+  <!--Make second row with video and ingredients-->
+  <div class="row">
+    <div class="col-md-6"></div>
+  </div>
+</div>
+{% endblock %}
