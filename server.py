@@ -5,6 +5,17 @@ app = Flask(__name__)
 
 ingredients = ["lime", "orange juice", "tequila"]  # testing git
 
+practice_data = {
+    "moscow_mule": {
+        "correct_ingredients": ["fresh_lime_juice", "ginger_syrup", "vodka", "ginger_beer"]
+    },
+    "pina_colada": {
+        "correct_ingredients": ["tequila", "cream_of_coconut", "pineapple_juice", "fresh_lime_juice"]
+    },
+    "margarita": {
+        "correct_ingredients": ["fresh_lime_juice", "simple_syrup", "orange_tequila", "tequila"]
+    }
+}
 
 data = {
     "moscow_mule": {
@@ -17,7 +28,7 @@ data = {
                         "Vodka",
                         "Ginger Beer",
                         "Cream of Coconut"],
-        "correct_ingredients": ["Vodka", "Ginger Beer", "Fresh Lime Juice", "Ginger Syrup"]
+        "correct_ingredients": ["Fresh Lime Juice", "Ginger Syrup", "Vodka", "Ginger Beer"]
     },
     "pina_colada": {
         "ingredients": ["Fresh Lime Juice",
@@ -29,7 +40,7 @@ data = {
                         "Vodka",
                         "Ginger Beer",
                         "Cream of Coconut"],
-        "correct_ingredients": ["Tequila", "Pineapple Juice", "Fresh Lime Juice", "Cream of Coconut"]
+        "correct_ingredients": ["Tequila", "Cream of Coconut", "Pineapple Juice", "Fresh Lime Juice"]
     },
     "margarita": {
         "ingredients": ["Fresh Lime Juice",
@@ -192,6 +203,49 @@ def home():
 @ app.route("/practice")
 def practicePage(name=None):
     return render_template("practice.html")
+
+@ app.route("/practice/<name>")
+def practiceCocktailPage(name=None):
+    global practice_data
+    global cocktails
+
+    ingredients_in_order = practice_data[name]["correct_ingredients"]
+    ingredients_names_in_order = data[name]["correct_ingredients"]
+
+    alcohols = cocktails[name]["ingredients"]["alcohol"]
+    juices = cocktails[name]["ingredients"]["juice"]
+    syrups = cocktails[name]["ingredients"]["syrup"]
+
+    all_ingredients_with_volume = dict()
+
+    all_ingredients_with_volume.update(alcohols)
+    all_ingredients_with_volume.update(juices)
+    all_ingredients_with_volume.update(syrups)
+
+    names_and_volumes = dict()
+
+    for ingredient in ingredients_in_order:
+        names_and_volumes[ingredient] = all_ingredients_with_volume[ingredient]["volume"]
+
+    if name == "moscow_mule":
+        drink_name = "Moscow Mule"
+        drink_link = "moscow_mule"
+    elif name == "margarita":
+        drink_name = "Margarita"
+        drink_link = "margarita"
+    elif name == "pina_colada":
+        drink_name = "Pina Colada"
+        drink_link = "pina_colada"
+
+    drink_info = {"name":drink_name,
+                "link": drink_link}
+
+    return render_template("practice.html",
+        ingredients_names_in_order=ingredients_names_in_order,
+        names_and_volumes=names_and_volumes,
+        all_ingredients_with_volume=all_ingredients_with_volume,
+        ingredients_in_order=ingredients_in_order,
+        drink_info=drink_info)
 
 
 @ app.route("/learn/<name>")

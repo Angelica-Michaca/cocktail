@@ -1,6 +1,15 @@
 {% extends "layout.html" %} {% block content %}
 
 <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+<script type="text/javascript" src="{{ url_for('static', filename = 'practice.js') }}"></script>
+<script>
+  let ingredients_names_in_order = {{ingredients_names_in_order|tojson}}
+  let names_and_volumes = {{names_and_volumes|tojson}}
+  let all_ingredients_with_volume = {{ all_ingredients_with_volume | tojson }}
+  console.log(all_ingredients_with_volume)
+  let ingredients_in_order = {{ ingredients_in_order| tojson }}
+  let drink_info = {{drink_info|tojson}}
+</script>
 
 <head>
   <style>
@@ -20,68 +29,80 @@
     }
     label { 
       color:white;
-  }
-  #fname{
-    border-top-style: hidden;
-            border-right-style: hidden;
-            border-left-style: hidden;
-            border-bottom-style: groove;
-            background-color: transparent;
+    }
+    #fname{
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: groove;
+      background-color: transparent;
     }
     .no-outline:focus {
-            outline: none;
-          }
+      outline: none;
+    }
     input::placeholder{
-          overflow: visible;
-        }
-        
+      overflow: visible;
+    }
+
     .check{
       position:relative;
     }
     
     form{
-    color:white;
+      color:white;
     }
     
     .check{
-    color:white;
-    background-color:transparent;
-    border-color:white;
+      color:white;
+      background-color:transparent;
+      border-color:white;
     }
 
-    
+    .custom-white-card {
+              background-color: transparent;
+              border-color: white;
+              border-radius: 0%;
+              color: white;
+    }
+
+    .visible{
+      visibility: visible;
+    }
+
+    .invisible{
+      visibility: hidden;
+    }
+
+    .wrong-background{
+      background-color: #ffa38f;
+    }
+
+    .right-background{
+      background-color: #8fff98;
+    }
+
   </style>
 </head>
 
 <div class="row headers">
-  <div class="col-md-6">
-    <h1 class="left-header" id="name-of-drink">Drink Name</h1>
+  <div class="col-md-7">
+    <h1 class="left-header" id="name-of-drink">{{drink_info.name}}</h1>
     <h4 class="practice-text">Practice</h4>
-    <br />
-    <div class="practice-questions">
-      <form action="/">
-        <label for="fname">First, add <span></span> oz of </label>
-        <input type="text" id="fname" class='no-outline' name="fname "placeholder="insert name of ingredient">  <input class="check" type="submit" value="Check">
-        <br><br>
-          <label for="fname">Then, add <span></span> oz of </label>
-        <input type="text" id="fname" name="fname" class='no-outline' placeholder="insert name of ingredient">  <input type="submit" class="check" value="Check">
-        <br><br>
-          <label for="fname">Next, add <span></span> oz of </label>
-        <input type="text" id="fname" name="fname class='no-outline'"placeholder="insert name of ingredient">  <input type="submit" class="check" value="Check">
-        <br><br>
-          <label for="fname">Finally, add <span></span> oz of </label>
-        <input type="text" id="fname" name="fname" class='no-outline'placeholder="insert name of ingredient">  <input type="submit" class="check" value="Check">
-        
-      </form>
-    </div>
-    </div>
+    <br/>
+    <div class="practice-questions" id="practice-questions"></div>
   </div>
 
+  <div class="col-md-5" id="hintBox">
+    
+  </div>
+</div>
+</div>
+
+
+
+<!--Make second row with video and ingredients-->
+<div class="row">
   <div class="col-md-6"></div>
-
-  <!--Make second row with video and ingredients-->
-  <div class="row">
-    <div class="col-md-6"></div>
-  </div>
+</div>
 </div>
 {% endblock %}
