@@ -243,13 +243,36 @@ def quiz(drink=None):
 
     if drink == "moscow_mule":
         drink_name = "Moscow Mule"
+        drink_link = "moscow_mule"
     elif drink == "margarita":
         drink_name = "Margarita"
+        drink_link = "margarita"
     elif drink == "pina_colada":
         drink_name = "Pina Colada"
+        drink_link = "pina_colada"
 
+<<<<<<< HEAD
     return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name)
+=======
 
+
+    return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name, drink_link = drink_link)
+>>>>>>> 30cd85c71ff078ebcbe1e85a58919073a846745f
+
+
+@ app.route("/quizResult/<drink>", methods=['GET', 'POST'])
+def quizResult(drink = None):
+    if drink =="margarita":
+        drink_list =["Margarita", "Pina Colada","Moscow Mule"]
+        drink_link = ["pina_colada","moscow_mule"]
+    elif drink == "pina_colada":
+        drink_list =["Pina Colada", "Margarita","Moscow Mule"]
+        drink_link = ["margarita","moscow_mule"]
+    elif drink == "moscow_mule":
+        drink_list = ["Moscow Mule", "Margarita", "Pina Colada"]
+        drink_link = ["margarita","pina_colada"]
+
+    return render_template("quizResult.html", drink=drink, drink_list = drink_list, drink_link = drink_link)
 
 if __name__ == '__main__':
     app.run(debug=True)

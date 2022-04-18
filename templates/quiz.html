@@ -21,12 +21,18 @@
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
     <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
     <script>
+<<<<<<< HEAD
       //userIngredientChoices the list of ingredients the user moved to the glass, in order they dragged them.
+=======
+      //add data to be retrieved from the server
+>>>>>>> 30cd85c71ff078ebcbe1e85a58919073a846745f
       let ingredients = {{ingredients| tojson}}
       let correct_ingredients = {{ correct_ingredients| tojson }}
       let glass = {{ glass| tojson }}
       let drink = {{drink| tojson}}
+      let drink_link = {{drink_link| tojson}}
     </script>
+<<<<<<< HEAD
 
 
 <body class="containerGray">
@@ -35,6 +41,23 @@
 
     <div class="quizBodyText" id="instruction">Drag and drop the necessary ingredients into the glass in the correct order to make a {{drink}}.</div>
 
+=======
+
+
+    <style>
+   
+    </style>
+
+
+
+</head>
+
+<body class="containerGray">
+
+    <div class="quizTitleText" id="title"></div>
+    <div class="quizBodyText" id="instruction"></div>
+    
+>>>>>>> 30cd85c71ff078ebcbe1e85a58919073a846745f
     <div class="row quizBodyText" id="ingredientsRow"><!-- row for drink images/icons--></div>
 
 

@@ -19,9 +19,8 @@ function copyArray(){
 }
 
 function addInstruction() { // for 3 drinks, make arrays of title / instructions in server.py and use that to create html dynamically
-    //$("#title").append("Margarita Quiz")
-    //$("#title").append("Moscow Mule")
-    //$("#instruction").append("Drag and drop the necessary ingredients into the glass in the correct order to make a Margarita.")
+     $("#title").append( drink )
+     $("#instruction").append("Drag and drop the necessary ingredients into the glass in the correct order to make a "+ drink + ".")
     $("#glassInstruction").append("In your glass:")
 }
 
@@ -172,7 +171,7 @@ $(document).ready(function () {
             if(score != 4){
             alert("You submitted a wrong answer!\nYour score is: "+score + " out of 4")
             }else if(score==4){
-                location.href = "/quizResult";
+                location.href = "/quizResult/"+ drink_link;
             }
             reset();
             removeLists();

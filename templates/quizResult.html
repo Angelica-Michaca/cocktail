@@ -21,7 +21,9 @@
 
     <script>
         //add any data needed from the server
-
+        let drink = {{drink| tojson}}
+        let drink_list = {{drink_list | tojson}}
+        let drink_link = {{drink_link | tojson}}
     </script>
 
     <style>
@@ -46,14 +48,10 @@
 
     <div class="row">
         <!-- row for buttons that lead to with other two drinks to be learned-->
-        <div class="col-md">
-            <!-- col for reset button-->
-            <button class="btn btn-light btn-lg" id="pinaColadaButton" type="button">Pina Colada</button>
+        <div class="col-md" id = "otherDrinkToLearn1">
         </div>
 
-        <div class="col-md">
-            <!-- col for undo button -->
-            <button class="btn btn-light btn-lg" id="moscowMuleButton" type="button">Moscow Mule</button>
+        <div class="col-md" id = "otherDrinkToLearn2">
         </div>
     </div>
 <br>

@@ -39,13 +39,13 @@
         }
        
         
-        #pinaColadaButton{
+        #quizResultButton1{
            margin-left: auto !important;
            margin-right: auto !important;
            display: flex !important; 
            justify-content: center!important;
         }
-        #moscowMuleButton{
+        #quizResultButton2{
             margin-left: auto !important;
             margin-right: auto !important;
             display: flex !important; 
