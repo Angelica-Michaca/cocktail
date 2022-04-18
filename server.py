@@ -251,13 +251,9 @@ def quiz(drink=None):
         drink_name = "Pina Colada"
         drink_link = "pina_colada"
 
-<<<<<<< HEAD
-    return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name)
-=======
 
 
     return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name, drink_link = drink_link)
->>>>>>> 30cd85c71ff078ebcbe1e85a58919073a846745f
 
 
 @ app.route("/quizResult/<drink>", methods=['GET', 'POST'])
