@@ -30,9 +30,6 @@
 <html>
   <head>
     <style>
-      <<<<<<< HEAD
-
-      =======
             .center {
               height: 46.4px;
               line-height: 46.4px; /* same as height! */
@@ -194,7 +191,6 @@
               z-index: -1;
             }
 
-      >>>>>>> cfe8ecddf65d447fad116b7e0b1760b5c3bd495f
     </style>
   </head>
 
@@ -259,6 +255,7 @@
       </div>
       <div class="row ingredient_labels">Syrup</div>
       <div class="row">
+        {% for i in range(syrup_img|length) %}
         <div class="card">
           <div class="row">
             <p class="alc-name">{{syrup_name[i]}}</p>
@@ -274,6 +271,7 @@
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
