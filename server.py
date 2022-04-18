@@ -90,7 +90,7 @@ cocktails = {
     },
     "pina_colada": {
         "name": "Piña Colada",
-        "image": "static/images/pina_colada",
+        "image": "/static/images/pina_colada",
         "video": "https://www.youtube.com/embed/nyzeEdPkfOw",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
@@ -109,13 +109,13 @@ cocktails = {
             "juice": {
                 "pineapple_juice": {
                     "name": "Pineapple Juice",
-                    "ingredient_image": "/static/images/pineapple_juice",
+                    "ingredient_image": "/static/images/pineapple_juice.png",
                     "volume": "2.0",
                     "timestamp": "0:10"
                 },
                 "fresh_lime_juice": {
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "/static/images/fresh_lime_juice",
+                    "ingredient_image": "/static/images/fresh_lime_juice.png",
                     "volume": "0.5",
                     "timestamp": "0:09"
                 }
@@ -123,7 +123,7 @@ cocktails = {
             "syrup": {
                 "cream_of_coconut": {
                     "name": "Cream of Coconut",
-                    "ingredient_image": "/static/images/cream_of_coconut",
+                    "ingredient_image": "/static/images/cream_of_coconut.png",
                     "volume": "2.0",
                     "timestamp": "0:06"
                 }
@@ -132,7 +132,7 @@ cocktails = {
     },
     "moscow_mule": {
         "name": "Moscow Mule",
-        "image": "static/images/moscow_mule",
+        "image": "/static/images/moscow_mule",
         "video": "https://www.youtube.com/embed/FirpAjZomHA",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
@@ -141,33 +141,33 @@ cocktails = {
         },
         "ingredients": {
             "alcohol": {
-                "tequila": {
-                    "name": "Tequila",
-                    "ingredient_image": "/static/images/tequila.png",
-                    "volume": "1.5",
-                    "timestamp": "0:15"
+                "vodka": {
+                    "name": "Vodka",
+                    "ingredient_image": "/static/images/vodka.png",
+                    "volume": "2",
+                    "timestamp": "0:05"
                 },
-                "orange_tequila": {
-                    "name": "Orange Tequila",
-                    "ingredient_image": "/static/images/orange_tequila",
-                    "volume": "0.75",
-                    "timestamp": "0:12"
-                }
             },
             "juice": {
                 "fresh_lime_juice": {
                     "name": "Fresh Lime Juice",
-                    "ingredient_image": "/static/images/fresh_lime_juice",
-                    "volume": "0.75",
-                    "timestamp": "0:09"
+                    "ingredient_image": "/static/images/fresh_lime_juice.png",
+                    "volume": "1",
+                    "timestamp": "0:03"
+                },
+                "ginger_beer": {
+                    "name": "Ginger Beer",
+                    "ingredient_image": "/static/images/ginger_beer.png",
+                    "volume": "N/A",
+                    "timestamp": "0:12"
                 }
             },
             "syrup": {
-                "simple_syrup": {
-                    "name": "Simple Syrup",
-                    "ingredient_image": "/static/images/simple_syrup",
-                    "volume": "0.25",
-                    "timestamp": "0:11"
+                "ginger_syrup": {
+                    "name": "Ginger Syrup",
+                    "ingredient_image": "/static/images/ginger_syrup.png",
+                    "volume": "0.75",
+                    "timestamp": "0:04"
                 }
             }
         }
@@ -201,8 +201,8 @@ def learnCocktailpage(name=None):
     print(video_url)
 
     alcohols = drink["ingredients"]["alcohol"]
-    print(alcohols)
-    print(alcohols.keys())
+    juices = drink["ingredients"]["juice"]
+    syrups = drink["ingredients"]["syrup"]
 
     # get length of items
     alcohol_items = []
@@ -215,6 +215,16 @@ def learnCocktailpage(name=None):
     alcohol_timestamp = []
     alcohol_name = []
 
+    juice_img = []
+    juice_vol = []
+    juice_timestamp = []
+    juice_name = []
+
+    syrup_img = []
+    syrup_vol = []
+    syrup_timestamp = []
+    syrup_name = []
+
     for alcohol in alcohols.keys():
 
         alcohol_img.append(alcohols[alcohol]["ingredient_image"])
@@ -222,14 +232,37 @@ def learnCocktailpage(name=None):
         alcohol_timestamp.append(alcohols[alcohol]["timestamp"])
         alcohol_name.append(alcohols[alcohol]["name"])
 
-    print("alcohol_img:", alcohol_img)
-    print("drink_name:", drink_name)
+    for juice in juices.keys():
 
-    # juice_img = drink[]
-    # syrup_img = drink[]
-    #ingredients = cocktails[ingredients]
+        juice_img.append(juices[juice]["ingredient_image"])
+        juice_vol.append(juices[juice]["volume"])
+        juice_timestamp.append(juices[juice]["timestamp"])
+        juice_name.append(juices[juice]["name"])
 
-    return render_template("learn.html", video_url=video_url, alcohol_img=alcohol_img, alcohol_vol=alcohol_vol, alcohol_timestamp=alcohol_timestamp, drink_name=drink_name, alcohol_name=alcohol_name, alcohol_items=alcohol_items)
+    for syrup in syrups.keys():
+
+        syrup_img.append(syrups[syrup]["ingredient_image"])
+        syrup_vol.append(syrups[syrup]["volume"])
+        syrup_timestamp.append(syrups[syrup]["timestamp"])
+        syrup_name.append(syrups[syrup]["name"])
+
+
+
+    return render_template("learn.html", 
+        video_url=video_url, 
+        alcohol_img=alcohol_img, 
+        alcohol_vol=alcohol_vol, 
+        alcohol_timestamp=alcohol_timestamp, 
+        drink_name=drink_name, 
+        alcohol_name=alcohol_name, 
+        juice_img=juice_img,
+        juice_vol=juice_vol,
+        juice_timestamp=juice_timestamp,
+        juice_name=juice_name,
+        syrup_name=syrup_name,
+        syrup_img=syrup_img,
+        syrup_vol=syrup_vol,
+        syrup_timestamp=syrup_timestamp)
 
 
 @ app.route("/quiz/<drink>", methods=['GET', 'POST'])
