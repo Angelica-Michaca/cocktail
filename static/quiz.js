@@ -28,39 +28,39 @@ function addInstruction() { // for 3 drinks, make arrays of title / instructions
  * This function adds images of the ingredients dynamically. 
  */
 function addImages() {
-    let new_post = $("<div class='col-md ingredients'>  <img src='/static/images/fresh_lime_juice.png' alt='Fresh Lime Juice' draggable='true' width ='100' height = '100'>Fresh Lime Juice</div>")
+    let new_post = $("<div class='col-lg-1 ingredients' id = 'Fresh Lime Juice'>  <img src='/static/images/fresh_lime_juice.png' alt='Fresh Lime Juice' draggable='true' width ='100' height = '100'>Fresh Lime Juice</div>")
     new_post.data("value", ingredients[0])
     $("#ingredientsRow").append(new_post)
 
-    new_post = $("<div class='col-md ingredients'>  <img src='/static/images/pineapple_juice.png' alt='Pineapple Juice' draggable='true' width ='100' height = '100'>Pineapple Juice</div>")
+    new_post = $("<div class='col-lg-1 ingredients' id = 'Pineapple Juice'>  <img src='/static/images/pineapple_juice.png' alt='Pineapple Juice' draggable='true' width ='100' height = '100'>Pineapple Juice</div>")
     new_post.data("value", ingredients[1])
     $("#ingredientsRow").append(new_post)
 
-    new_post = $("<div class='col-md ingredients'>  <img src='/static/images/ginger_syrup.png' alt='Ginger Syrup' draggable='true' width ='100' height = '100'>Ginger Syrup</div>")
+    new_post = $("<div class='col-lg-1 ingredients'  id = 'Ginger Syrup'>  <img src='/static/images/ginger_syrup.png' alt='Ginger Syrup' draggable='true' width ='100' height = '100'>Ginger Syrup</div>")
     new_post.data("value", ingredients[2])
     $("#ingredientsRow").append(new_post)
     
-    new_post = $("<div class='col-md ingredients'>  <img src='/static/images/simple_syrup.png' alt='Simple Syrup' draggable='true' width ='100' height = '100'>Simple Syrup</div>")
+    new_post = $("<div class='col-lg-1 ingredients' id = 'Simple Syrup'>  <img src='/static/images/simple_syrup.png' alt='Simple Syrup' draggable='true' width ='100' height = '100'>Simple Syrup</div>")
     new_post.data("value", ingredients[3])
     $("#ingredientsRow").append(new_post)
 
-    new_post = $("<div class='col-md ingredients'>  <img src='/static/images/orange_tequila.png' alt='Orange Tequila' draggable='true' width ='100' height = '100'>Orange Tequila</div>")
+    new_post = $("<div class='col-lg-1 ingredients' id = 'Orange Tequila'>  <img src='/static/images/orange_tequila.png' alt='Orange Tequila' draggable='true' width ='100' height = '100'>Orange Tequila</div>")
     new_post.data("value", ingredients[4])
     $("#ingredientsRow").append(new_post)
 
-    new_post = $("<div class='col-md ingredients'>  <img src='/static/images/tequila.png' alt='Tequila' draggable='true' width ='100' height = '100'>Tequila</div>")
+    new_post = $("<div class='col-lg-1 ingredients' id = 'Tequila'>  <img src='/static/images/tequila.png' alt='Tequila' draggable='true' width ='100' height = '100'>Tequila</div>")
     new_post.data("value", ingredients[5])
     $("#ingredientsRow").append(new_post)
 
-    new_post = $("<div class='col-md ingredients'>  <img src='/static/images/vodka.png' alt='Vodka' draggable='true' width ='100' height = '100'>Vodka</div>")
+    new_post = $("<div class='col-lg-1 ingredients' id = 'Vodka'>  <img src='/static/images/vodka.png' alt='Vodka' draggable='true' width ='100' height = '100'>Vodka</div>")
     new_post.data("value", ingredients[6])
     $("#ingredientsRow").append(new_post)
 
-    new_post = $("<div class='col-md ingredients'>  <img src='/static/images/ginger_beer.png' alt='Giner Beer' draggable='true' width ='100' height = '100'>Giner Beer</div>")
+    new_post = $("<div class='col-lg-1 ingredients' id = 'Ginger Beer'>  <img src='/static/images/ginger_beer.png' alt='Giner Beer' draggable='true' width ='100' height = '100'>Giner Beer</div>")
     new_post.data("value", ingredients[7])
     $("#ingredientsRow").append(new_post)
 
-    new_post = $("<div class='col-md ingredients'>  <img src='/static/images/cream_of_coconut.png' alt='Cream of Coconut' draggable='true' width ='100' height = '100'>Cream of Coconut</div>")
+    new_post = $("<div class='col-lg-1 ingredients' id = 'Cream of Coconut'>  <img src='/static/images/cream_of_coconut.png' alt='Cream of Coconut' draggable='true' width ='100' height = '100'>Cream of Coconut</div>")
     new_post.data("value", ingredients[8])
     $("#ingredientsRow").append(new_post)
 }
@@ -117,9 +117,21 @@ function reset() {
 
 }
 
+function removeSpecificIngredientImage(ingredient){
+    // let str = "#"+ingredient;
+    // console.log("");
+    document.getElementById((ingredient)).remove()
+ 
+}
+
 function undo(){
-    
     if(glass.length>0){
+       let lastItem = glass[glass.length-1];
+        console.log(lastItem);
+        removeSpecificIngredientImage(lastItem);
+
+        //add ingredient back to the row
+
         glass.splice(glass.length-1,1);
     }
 
@@ -134,7 +146,7 @@ $(document).ready(function () {
     addImages()
     addGlass()
     updateLists()
-    $(".ingredients").draggable({ revert: "valid" })
+    $(".ingredients").draggable({ revert: "false" })
     $("#glass").droppable({  // dropping to glass
         accept: ".ingredients",
 
@@ -155,7 +167,7 @@ $(document).ready(function () {
             removeLists()
             //update new "what's in your glass"
             updateLists()
-            $(".ingredients").draggable({ revert: true })
+            $(".ingredients").draggable({ revert: "false" })
 
             //for debugging purpose, console.log the arrays
             console.log("glass: " + glass)
@@ -186,11 +198,15 @@ $(document).ready(function () {
         reset();
         removeLists()
         updateLists()
+        location.reload(true); 
+        window.location.reload();
     })
 
     $("#undoButton").click(function () {
         undo();
         removeLists()
         updateLists()
+        
+        // need to add the image for  glass[length-1] back in the row.
     })
 })
