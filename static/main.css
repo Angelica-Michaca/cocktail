@@ -121,4 +121,114 @@
             font-family: 'DM Sans', sans-serif;
         }
        
+        .center-text{
+            text-align: center;
+        }
+
+
+
+        /***** Nav Bar*******/
+        .navbar{
+            font-size: 18px;
+            font-weight: 100;
+            
+            
+        }
+
+        .navbar-brand{
+            font-size: 24px;
+            font-family: italiana;
+            font-weight: bolder;
+        }
+
+        .mr-auto{
+            color:white;
+        }
+
+
+
+        /***** Welcome intro to website and instructions */
+        .welcomeLine1{
+            margin: 20px;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 75px;
+            font-weight: 100;
+            
+
+        }
+
+        .welcomeLine2{
+            color: white;
+            margin-bottom: 20px;
+            font-size: 28px;
+
+        }
+
+        .welcomeLine3{
+            color: rgb(154, 154, 154);
+            margin-bottom: 60px;
+            font-size: 20px;
+
+        }
+
+        /******* Dynamic Cards on Home page *******/
+        .customHomeCard{
+            width: 250px;
+            height: 380px;
+
+        }
+
+        .centerCardContents{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card-img-top{
+            /*display: block;*/
+            margin: auto;
+            
+        }
         
+
+        .ratio-images{
+            margin-right:30px;
+            margin-left:30px;
+            margin-top: 10px;
+            height: 262px;
+            display: flex;
+            
+        }
+        
+        
+
+        .btn-in-home-cards{
+            display: block;
+            margin: auto;
+            padding: 8px;
+            width: 190px;
+
+        }
+
+        
+
+        .learn-drink-btn{
+            color: black;
+            background-color: white;   
+            border-color: white;
+            margin-bottom: 8px;
+            
+
+        }
+
+        .take-quiz-btn{
+            color: white;
+            background-color: rgb(32, 32, 32)
+            ;
+            border-color: white;  
+            
+
+        }
+
+       

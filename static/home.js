@@ -1,29 +1,15 @@
-function featureCocktails(cocktail){
-  let link_learn = "http://127.0.0.1:5000/learn/" + cocktail.name
-  let link_quiz = "http://127.0.0.1:5000/quiz/" + cocktail.name
-
-  let featureCode = "<div class='card'><img class='card-img-top' src='/images/ginger_beer.png' "   
-  
-  featureCode = featureCode + "  alt='Card image cap'><div class='card-body'> "
-  featureCode = featureCode + "<div class='btn-group'>"
-  featureCode = featureCode + "<a href='"+ link_learn + "'><button>"+ cocktail.name + "</button></a>"
-  featureCode = featureCode + "<a href='"+ link_quiz + "'><button> Take the Quiz</button></a></div></div></div>"
-  
-  
-  return featureCode
+function featureCocktails(){
+  let new_card = $("<div class = 'col-md-4 '><div class='card custom-card customHomeCard text-center '> <div class = 'ratio-images'> <img class='card-img-top' src='" + cocktails[drink]['image'] + "' alt='card image cap' /> </div> <div class='card-body'> <div class='btn-container'> <a href=" + cocktails[drink]['learnUrl'] + "><button class='btn-in-home-cards learn-drink-btn'>" + cocktails[drink]['name']+ "</button></a> <a  href=" + cocktails[drink]['quizUrl'] + "><button class='take-quiz-btn btn-in-home-cards'>Take the Quiz</button></a></div></div></div></div>") 
+  $(".homeDynamicCardsRow").append(new_card)
 }
 
+//This function dynamically creates the three cocktail cards on the home page
 $(document).ready(function(){
-  let code=""
+  for (drink in cocktails){
+    featureCocktails()
 
-  code=featureCocktails(cocktails.margarita)
-  $("#one").append(code)
-
-  code=featureCocktails(cocktails.pina_colada)
-  $("#two").append(code)
-
-  code=featureCocktails(cocktails.moscow_mule)
-  $("#three").append(code)
+  }
+  
 
 })
 

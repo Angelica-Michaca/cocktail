@@ -1,224 +1,34 @@
 {% extends "layout.html" %} {% block content %}
 
-<style>
-  <style > .center {
-    height: 46.4px;
-    line-height: 46.4px; /* same as height! */
-  }
-  .horizontally-centered {
-    text-align: center;
-  }
-
-  .align-center {
-    text-align: center;
-  }
-
-  .custom-card-learn {
-    background-color: rgb(32, 32, 32);
-    color: white;
-    border-color: white;
-    border-radius: 0%;
-  }
-
-  .practice-btn {
-    margin: auto;
-    background-color: white;
-    border-color: white;
-    color: black;
-  }
-
-  .gap-3 {
-    margin: 10px;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: white;
-  }
-
-  .card-body {
-    background-color: rgb(32, 32, 32);
-  }
-  .white-font {
-    color: white;
-  }
-  .headers {
-    margin-top: 3rem;
-  }
-  .blue-time {
-    color: rgb(51, 92, 216);
-  }
-  .col-md-4 {
-    background-color: rgb(32, 32, 32);
-  }
-
-  .card-title {
-    font-size: 12px;
-  }
-
-  .card-text {
-    font-size: 10px;
-  }
-
-  .ingredient_labels {
-    color: white;
-    padding: 5px;
-  }
-  body {
-    background-color: rgb(32, 32, 32);
-    font-family: "DM Sans", sans-serif;
-  }
-
-  .facts-cards {
-    margin: 20px;
-    align-items: flex-end;
-  }
-
-  .fun_fact {
-    text-decoration: underline;
-    text-decoration-color: white;
-    margin-bottom: 5px;
-    font-size: 25px;
-  }
-
-  .cocktail_funfact {
-    font-size: 20px;
-  }
-
-  .custom-white-card {
-    background-color: transparent;
-    border-color: white;
-    border-radius: 0%;
-    color: white;
-  }
-
-  .parent-card {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-
-  .practiceButton {
-    width: 250px;
-  }
-
-  a {
-    text-align: center;
-  }
-
-  .custom-card-size-facts {
-    width: 35rem;
-  }
-  .right-header {
-    font-size: 21px;
-  }
-
-  .muscow-mug-pic {
-  }
-</style>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'main.css') }}" />
 <script
   type="text/javascript"
   src="{{ url_for('static', filename = 'home.js') }}"
 ></script>
+<script>
+  //add cocktails to be retrieved from server
 
-<link rel="stylesheet" href="{{ url_for('static', filename = 'main.css') }}" />
+  let cocktails= {{cocktails|tojson}}
+</script>
 
-<div id="welcome-header">
-  <h1 class="welcome-blurb">Welcome to the LionBar!</h1>
-  <h5 class="learn-blurb">Learn about drinks and how to mix them</h5>
-  <h6 class="click-drink-blurb">
-    Choose a drink to learn about or a quiz to test your knowledge about each
-    drink
-  </h6>
-</div>
-<div class="row">
-  <div class="card-deck">
-    <!-- dynamically create 3 cards on home page-->
-    <div class="card custom-card text-center">
-      <div class="ratio-images">
-        <img
-          class="card-img-top"
-          src="/static/images/margarita.png"
-          alt="Card image cap"
-        />
-      </div>
-
-      <div class="card-body">
-        <div class="btn-container">
-          <a href="http://127.0.0.1:5000/learn/margarita"
-            ><button class="btn-in-home-cards learn-drink-btn">
-              Margarita
-            </button></a
-          >
-          <a href="http://127.0.0.1:5000/quiz/margarita"
-            ><button class="take-quiz-btn btn-in-home-cards">
-              Take the Quiz
-            </button></a
-          >
-        </div>
-      </div>
-    </div>
-    <!--pina colada card-->
-    <div class="card custom-card text-center">
-      <div class="ratio-images">
-        <img
-          class="card-img-top"
-          src="/static/images/pina_colada.png"
-          alt="Card image cap"
-        />
-      </div>
-
-      <div class="card-body">
-        <div class="btn-container">
-          <a href="http://127.0.0.1:5000/learn/pina_colada"
-            ><button class="btn-in-home-cards learn-drink-btn">
-              Pina Colada
-            </button></a
-          >
-          <a href="http://127.0.0.1:5000/quiz/pina_colada"
-            ><button class="take-quiz-btn btn-in-home-cards">
-              Take the Quiz
-            </button></a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card custom-card text-center">
-      <div class="ratio-images">
-        <img
-          class="card-img-top muscow-mug-pic"
-          src="/static/images/moscow_mule.png"
-          alt="Card image cap"
-        />
-      </div>
-
-      <div class="card-body">
-        <div class="btn-container">
-          <a href="http://127.0.0.1:5000/learn/moscow_mule"
-            ><button class="btn-in-home-cards learn-drink-btn">
-              Moscow Mule
-            </button></a
-          >
-          <a href="http://127.0.0.1:5000/quiz/moscow_mule"
-            ><button class="take-quiz-btn btn-in-home-cards">
-              Take the Quiz
-            </button></a
-          >
-        </div>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 welcomeLine1 center-text">
+      Welcome to the LionBar!
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="row-deck">
-    <div id="one"></div>
-    <div id="two"></div>
-    <div id="three"></div>
+  <div class="row">
+    <div class="col-md-12 welcomeLine2 center-text">
+      Learn about drinks and how to mix them
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 welcomeLine3 center-text">
+      Choose a drink to learn or a quiz to test your knowledge about each drink
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-12 card-deck homeDynamicCardsRow"></div>
   </div>
 </div>
 

@@ -63,6 +63,8 @@ cocktails = {
     "margarita": {
         "name": "Margarita",
         "image": "static/images/margarita.png",
+        "learnUrl":"http://127.0.0.1:5000/learn/margarita",
+        "quizUrl":"http://127.0.0.1:5000/quiz/margarita",
         "video": "https://www.youtube.com/embed/2BiT4wfRfWg",
         "facts": {
             "fun_fact": "Using a salt-rimmed glass makes the drink sweeter",
@@ -105,6 +107,8 @@ cocktails = {
     "pina_colada": {
         "name": "Piña Colada",
         "image": "/static/images/pina_colada.png",
+        "learnUrl":"http://127.0.0.1:5000/learn/pina_colada",
+        "quizUrl":"http://127.0.0.1:5000/quiz/pina_colada",
         "video": "https://www.youtube.com/embed/nyzeEdPkfOw",
         "facts": {
             "fun_fact": " Pina means pineapple and colada means strained",
@@ -146,6 +150,8 @@ cocktails = {
     },
     "moscow_mule": {
         "name": "Moscow Mule",
+        "learnUrl":"http://127.0.0.1:5000/learn/moscow_mule",
+        "quizUrl":"http://127.0.0.1:5000/quiz/moscow_mule",
         "image": "/static/images/moscow_mule.png",
         "video": "https://www.youtube.com/embed/FirpAjZomHA",
         "facts": {
@@ -192,13 +198,13 @@ glass = []
 
 
 @ app.route("/")
-def defaultPage():
-    return render_template("home.html")
-
-
-@ app.route("/home")
 def home():
     return render_template("home.html", cocktails=cocktails)
+
+
+# @ app.route("/home")
+# def home():
+#     return render_template("home.html", cocktails=cocktails)
 
 
 @ app.route("/practice")
@@ -251,23 +257,19 @@ def practiceCocktailPage(name=None):
 
 @ app.route("/learn/<name>")
 def learnCocktailpage(name=None):
-    # for currCocktail in cocktails.values():
-    #    if name == currCocktail["name"]:
-    #        cocktail = currCocktail
-
+    
     drink = cocktails[name]
     print(drink)
     video_url = drink["video"]
     print(video_url)
 
-    #fun_fact1 = drink[""]
+
 
     alcohols = drink["ingredients"]["alcohol"]
     juices = drink["ingredients"]["juice"]
     syrups = drink["ingredients"]["syrup"]
 
-    print(alcohols)
-    # fun facts data full list w/ fun, taste, and pairs well with data
+    
     fun_fact = drink["facts"]
 
     drink_name = []
