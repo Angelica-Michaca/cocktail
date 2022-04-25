@@ -175,7 +175,7 @@
         /******* Dynamic Cards on Home page *******/
         .customHomeCard{
             width: 250px;
-            height: 380px;
+            height: 370px;
 
         }
 
@@ -188,8 +188,10 @@
         .card-img-top{
             /*display: block;*/
             margin: auto;
+            width: 175px;
             
         }
+        
         
 
         .ratio-images{
@@ -201,18 +203,21 @@
             
         }
         
-        
+        .btn-container{
+            margin-top: -2.5rem;
+        }
 
         .btn-in-home-cards{
             display: block;
-            margin: auto;
+            margin-left:auto;
+            margin-right: auto;
             padding: 8px;
             width: 190px;
+            
 
         }
 
         
-
         .learn-drink-btn{
             color: black;
             background-color: white;   
@@ -228,7 +233,93 @@
             ;
             border-color: white;  
             
+            
 
         }
 
-       
+       /*****Ingredients title on the learn page****/
+       .titleRow{
+           display: flex;
+       }
+
+       #ingredientsTitle{
+           font-size: 35px;
+           margin:50px
+
+       }
+
+       .ingredient_labels {
+        color: white;
+        padding: 10px;
+      }
+
+      img {
+        margin-left: 10px;
+        margin-top: -30px;
+        height: 100%;
+        width: 100%;
+      }
+
+      .card {
+        border-color: white;
+        background-color: transparent;
+        width: 270px;
+        height: 110px;
+        color: white;
+        margin: 5px;
+        border-radius: 0%;
+      }
+    
+
+      .alc-name {
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 115px;
+        
+      }
+
+      
+
+
+      /*****Facts *********/
+      .fact-container{
+          margin-top: 20px;
+
+      }
+
+      .card-title-fact {
+        font-size: 25px;
+        text-decoration: underline;
+        font-family: italiano;
+        
+      }
+
+      .card-text-blurb {
+        font-size: 18px;
+      }
+
+      /* .vstack {
+        border-color: white;
+        margin: auto;
+        width: 60%;
+      } */
+      .stack-of-facts {
+        width: 40rem;
+      }
+
+      .btn-primary {
+        background-color: white;
+        border-color: white;
+        color: black;
+      }
+      
+      .practiceButton {
+        display: block;
+        height: 40px;
+        width: 5rem;
+        font-size: 15px;
+        margin: 6px;
+        font-family: italiano;
+        border-radius: 0%;
+

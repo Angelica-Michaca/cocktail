@@ -258,10 +258,13 @@ def practiceCocktailPage(name=None):
 @ app.route("/learn/<name>")
 def learnCocktailpage(name=None):
     
+    
     drink = cocktails[name]
-    print(drink)
+    print("DRINK: ", drink)
+    print("Drink Name: ")
+    print(drink["name"])
     video_url = drink["video"]
-    print(video_url)
+    
 
 
 
@@ -310,7 +313,7 @@ def learnCocktailpage(name=None):
         syrup_vol.append(syrups[syrup]["volume"])
         syrup_timestamp.append(syrups[syrup]["timestamp"])
         syrup_name.append(syrups[syrup]["name"])
-    print(fun_fact)
+    
 
     return render_template("learn.html",
                            name=name,
@@ -328,7 +331,7 @@ def learnCocktailpage(name=None):
                            syrup_img=syrup_img,
                            syrup_vol=syrup_vol,
                            syrup_timestamp=syrup_timestamp,
-                           fun_fact=fun_fact)
+                           fun_fact=fun_fact, drink=drink)
 
 
 @ app.route("/quiz/<drink>", methods=['GET', 'POST'])
