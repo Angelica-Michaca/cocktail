@@ -131,6 +131,13 @@ function undo(){
         removeSpecificIngredientImage(lastItem);
 
         //add ingredient back to the row
+        lastItemJpeg = undo_dict[lastItem]
+
+        
+
+        new_post = $("<div class='col-lg-1 ingredients' id = " + lastItem + ">  <img src=" + lastItemJpeg + "  alt= " + lastItem + " draggable='true' width ='100' height = '100'>"+lastItem+"</div>")
+        new_post.data("value", lastItem)
+        $("#ingredientsRow").append(new_post)
 
         glass.splice(glass.length-1,1);
     }
@@ -182,12 +189,15 @@ $(document).ready(function () {
             calculateScore()
             if(score != 4){
             alert("You submitted a wrong answer!\nYour score is: "+score + " out of 4")
-            }else if(score==4){
-                location.href = "/quizResult/"+ drink_link;
-            }
             reset();
             removeLists();
             updateLists();
+            location.reload(true); 
+            window.location.reload();
+            }else if(score==4){
+                location.href = "/quizResult/"+ drink_link;
+            }
+            
        }
         
         

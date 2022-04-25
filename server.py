@@ -3,9 +3,6 @@ from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
 
-sergio_test = []
-sergio_test2 = []
-
 ingredients = ["lime", "orange juice", "tequila"]  # testing git
 
 practice_data = {
@@ -18,6 +15,19 @@ practice_data = {
     "margarita": {
         "correct_ingredients": ["fresh_lime_juice", "simple_syrup", "orange_tequila", "tequila"]
     }
+}
+
+
+undo_dict = {
+    "Fresh Lime Juice": '/static/images/fresh_lime_juice.png',
+    "Pineapple Juice": '/static/images/pineapple_juice.png',
+    "Ginger Syrup": '/static/images/ginger_syrup.png',
+    "Simple Syrup": '/static/images/simple_syrup.png',
+    "Orange Tequila": '/static/images/orange_tequila.png',
+    "Tequila": '/static/images/tequila.png',
+    "Vodka": '/static/images/vodka.png',
+    "Ginger Beer": '/static/images/ginger_beer.png',
+    "Cream of Coconut": '/static/images/cream_of_coconut.png'
 }
 
 data = {
@@ -62,7 +72,7 @@ data = {
 cocktails = {
     "margarita": {
         "name": "Margarita",
-        "image": "static/images/margarita.png",
+        "image": "/static/images/margarita.png",
         "learnUrl":"http://127.0.0.1:5000/learn/margarita",
         "quizUrl":"http://127.0.0.1:5000/quiz/margarita",
         "video": "https://www.youtube.com/embed/2BiT4wfRfWg",
@@ -338,6 +348,7 @@ def learnCocktailpage(name=None):
 def quiz(drink=None):
     global data
     global glass
+    global undo_dict
 
     #ingredients = data["margarita"]["ingredients"]
     ingredients = data[drink]["ingredients"]
@@ -353,11 +364,16 @@ def quiz(drink=None):
         drink_name = "Pina Colada"
         drink_link = "pina_colada"
 
-    return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name, drink_link=drink_link)
+    return render_template("quiz.html", ingredients=ingredients, glass=glass, correct_ingredients=correct_ingredients, drink=drink_name, drink_link=drink_link, undo_dict=undo_dict)
 
 
 @ app.route("/quizResult/<drink>", methods=['GET', 'POST'])
 def quizResult(drink=None):
+
+    global cocktails
+
+    drink_image = cocktails[drink]["image"]
+
     if drink == "margarita":
         drink_list = ["Margarita", "Pina Colada", "Moscow Mule"]
         drink_link = ["pina_colada", "moscow_mule"]
@@ -368,7 +384,7 @@ def quizResult(drink=None):
         drink_list = ["Moscow Mule", "Margarita", "Pina Colada"]
         drink_link = ["margarita", "pina_colada"]
 
-    return render_template("quizResult.html", drink=drink, drink_list=drink_list, drink_link=drink_link)
+    return render_template("quizResult.html", drink=drink, drink_list=drink_list, drink_link=drink_link, drink_image=drink_image)
 
 
 if __name__ == '__main__':

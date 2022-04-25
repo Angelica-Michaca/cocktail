@@ -237,6 +237,7 @@
 
         }
 
+<<<<<<< HEAD
        /*****Ingredients title on the learn page****/
        .titleRow{
            display: flex;
@@ -323,3 +324,13 @@
         font-family: italiano;
         border-radius: 0%;
 
+=======
+        .quizResultDrinkImage{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+       
+>>>>>>> 593b21068a962d61cb739053e14be89c906f5669
