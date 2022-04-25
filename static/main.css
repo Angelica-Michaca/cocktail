@@ -279,10 +279,16 @@
     
 
       .alc-name {
+        font-family: italiana;
         font-weight: bold;
         font-size: 20px;
         padding-top: 10px;
         padding-left: 115px;
+        
+      }
+
+      .alc-info{
+        font-family: italiana;
         
       }
 
