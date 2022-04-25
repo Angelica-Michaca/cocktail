@@ -154,6 +154,7 @@
             color: white;
             font-size: 75px;
             font-weight: 100;
+            font-family: italiana;
             
 
         }
@@ -162,6 +163,7 @@
             color: white;
             margin-bottom: 20px;
             font-size: 28px;
+            font-family: italiana;
 
         }
 
@@ -169,10 +171,14 @@
             color: rgb(154, 154, 154);
             margin-bottom: 60px;
             font-size: 20px;
+            font-family: italiana;
 
         }
 
         /******* Dynamic Cards on Home page *******/
+        .col-md-4{
+            font-family: italiana;
+        }
         .customHomeCard{
             width: 250px;
             height: 370px;
@@ -292,7 +298,7 @@
       .card-title-fact {
         font-size: 25px;
         text-decoration: underline;
-        font-family: italiano;
+        font-family: italiana;
         
       }
 
@@ -321,7 +327,7 @@
         width: 5rem;
         font-size: 15px;
         margin: 6px;
-        font-family: italiano;
+        font-family: italiana;
         border-radius: 0%;
 
 =======
