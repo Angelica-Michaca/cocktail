@@ -24,6 +24,7 @@
         let drink = {{drink| tojson}}
         let drink_list = {{drink_list | tojson}}
         let drink_link = {{drink_link | tojson}}
+        let drink_image = {{drink_image| tojson}}
     </script>
 
     <style>
@@ -38,7 +39,7 @@
 <body class="containerGray">
 
     <div class="quizResultTitleText" id="title"></div>
-
+    <div class="quizResultDrinkImage" id="drinkImage"></div>
     <div class="quizResultBodyText" id="instruction"></div>
 
 
@@ -62,6 +63,8 @@
         
     </div>
 </body>
+
+<br>
 
 </html>
 {% endblock %}

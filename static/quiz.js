@@ -189,12 +189,15 @@ $(document).ready(function () {
             calculateScore()
             if(score != 4){
             alert("You submitted a wrong answer!\nYour score is: "+score + " out of 4")
-            }else if(score==4){
-                location.href = "/quizResult/"+ drink_link;
-            }
             reset();
             removeLists();
             updateLists();
+            location.reload(true); 
+            window.location.reload();
+            }else if(score==4){
+                location.href = "/quizResult/"+ drink_link;
+            }
+            
        }
         
         
