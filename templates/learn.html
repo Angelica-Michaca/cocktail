@@ -44,14 +44,14 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <div id="video-tutorial">
+        <div id="video-tutorial ">
           <iframe width="540" height="493.2px" poster="" src="{{video_url}}">
           </iframe>
         </div>
       </div>
       <div class="col-md-6">
         <!--ingredients go in this column-->
-        <div class="row ingredient_labels">Alcohol</div>
+        <div class="row ingredient_labels">Alcohol:</div>
         <div class="row">
           {% for i in range(alcohol_img|length) %}
           <div class="card cardIngredients">
@@ -76,7 +76,7 @@
           </div>
           {% endfor %}
         </div>
-        <div class="row ingredient_labels">Juice</div>
+        <div class="row ingredient_labels">Juice:</div>
         <div class="row">
           {% for i in range(juice_img|length) %}
           <div class="card cardIngredients">
@@ -100,7 +100,7 @@
           </div>
           {% endfor %}
         </div>
-        <div class="row ingredient_labels">Syrup</div>
+        <div class="row ingredient_labels">Syrup:</div>
         <div class="row">
           {% for i in range(syrup_img|length) %}
           <div class="card cardIngredients">
