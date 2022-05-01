@@ -211,10 +211,10 @@ glass = []
 def home():
     return render_template("home.html", cocktails=cocktails)
 
-
-# @ app.route("/home")
-# def home():
-#     return render_template("home.html", cocktails=cocktails)
+#Do not erase this please
+@ app.route("/home")
+def home():
+    return render_template("home.html", cocktails=cocktails)
 
 
 @ app.route("/practice")

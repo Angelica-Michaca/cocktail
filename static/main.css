@@ -13,6 +13,13 @@
         .quizTitleText {
             margin: 20px;
             font-family: italiana;
+            color: rgb(218, 165, 32);
+            font-size: 60px;
+        }
+
+        .learnTitleText{
+            padding: 0px !important;
+            font-family: italiana;
             color: white;
             font-size: 60px;
         }
@@ -28,10 +35,11 @@
         .quizResultTitleText {
             margin: 20px;
             font-family: italiana;
-            color: white;
+            color: rgb(218, 165, 32);
             font-size: 60px;
         }
         #submitButton{
+            color:rgb(218, 165, 32);
             margin-left: auto !important;
             margin-right: auto !important;
             display: flex !important; 
@@ -53,6 +61,7 @@
         }
         #backToHomePageButton{
             margin: auto;
+            color: rgb(218, 165, 32);
         }
         #ingredientsRow{
             margin:auto;
@@ -81,7 +90,7 @@
         }
 
         .highlightHover {
-            background-color: gray;
+            background-color: rgb(218, 165, 32);
         }
 
         .center {
@@ -211,6 +220,7 @@
         
         .btn-container{
             margin-top: -2.5rem;
+            background-color: rgb(218, 165, 32);
         }
 
         .btn-in-home-cards{
@@ -262,12 +272,19 @@
 
        /*****Ingredients title on the learn page****/
        .titleRow{
+           color:rgb(218, 165, 32);
            display: flex;
        }
 
+       .ingredientsTitleRow{
+        display: flex;
+    }
+
        #ingredientsTitle{
            font-size: 35px;
-           margin:50px
+           /* margin: 50px; */
+           margin-top:50px;
+           /* margin-left:50px; */
 
        }
 
@@ -276,6 +293,7 @@
         padding-bottom: 10;
         font-family: italiana;
         font-size: 25px;
+       
       }
 
       .imgOfIngredients {
@@ -292,6 +310,7 @@
         height: 110px;
         color: white;
         margin: 5px;
+      
         border-radius: 0%;
       }
     
@@ -354,6 +373,8 @@
         margin: 6px;
         font-family: italiana;
         border-radius: 0%;
+        color:rgb(218, 165, 32);
+      }
 
         .quizResultDrinkImage{
             display: block;
