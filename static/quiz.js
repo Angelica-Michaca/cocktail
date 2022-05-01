@@ -69,7 +69,7 @@ function addImages() {
  * This function adds image of the glass dynamically. 
  */
 function addGlass() {
-    $("#glass-holder").append("<img src = 'https://proofmart.com/wp-content/uploads/2021/06/glass-4-web.png' alt='glass' draggable = 'false' id='glass'></img>")
+    $("#glass-holder").append("<img src = 'https://dxf1.com/images/jdownloads/screenshots/wine-glass-01.png' alt='glass' draggable = 'false' id='glass'></img>")
 }
 
 
@@ -135,7 +135,7 @@ function undo(){
 
         
 
-        new_post = $("<div class='col-lg-1 ingredients' id = " + lastItem + ">  <img src=" + lastItemJpeg + "  alt= " + lastItem + " draggable='true' width ='100' height = '100'>"+lastItem+"</div>")
+        new_post = $("<div class='col-lg-1 ingredients' id = " + lastItem + ">  <img src=" + lastItemJpeg + " draggable='true' width ='100' height = '100' alt= " + lastItem +">"+lastItem+"</div>")
         new_post.data("value", lastItem)
         $("#ingredientsRow").append(new_post)
 
@@ -216,6 +216,7 @@ $(document).ready(function () {
         undo();
         removeLists()
         updateLists()
+    
         
         // need to add the image for  glass[length-1] back in the row.
     })
