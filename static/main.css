@@ -252,23 +252,28 @@
         }
 
         /*****Video on learn page***/
-        #video-tutorial{
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; 
-            height: 0;
-          }
+        
+    
+          
+          .iframe-container{
+              
+             display: block;
+            }
 
-        #video-tutorial iframe {
+          .iframe-container iframe{
             position: absolute;
             top:0;
             left: 0;
-            width: 100%;
-            height: 100%;
-        }
+            width: 570px;
+            height: 472px;
+          }
 
+          .frame{
+            width:500px;
+            height: 672px;
+        }
+    
         
-          
 
        /*****Ingredients title on the learn page****/
        .titleRow{
