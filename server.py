@@ -213,7 +213,7 @@ def home():
 
 #Do not erase this please
 @ app.route("/home")
-def home():
+def homepage():
     return render_template("home.html", cocktails=cocktails)
 
 
