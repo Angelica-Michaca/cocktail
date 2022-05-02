@@ -35,7 +35,13 @@ let correct_answers = 0;
 
         $("#ingredient_"+i+"_check").click(function() {
           checkAnswer(i);
-      });
+        });
+
+        $("#ingredient_"+i).keyup(function(event) {
+            if (event.keyCode === 13) {
+                $("#ingredient_"+i+"_check").click();
+            }
+        });
     });
 
     // POPULATE RETURN BUTTON
@@ -130,8 +136,8 @@ function quizButton(){
     let drinkPic = $("<div class = 'quizBodyImg'><img class='practQuizImg'src='" +  drinksPics + "'  alt='drink image'></div>");
     let areYou = $("<div class = 'quizBodyText'>Are you ready for a </div>");
     let harder = $("<div class = 'quizBodyText'>harder Quiz? </div>");
-    let quiz_button = $("<a class='btn-lg-custom firstBtn whiteBtn ' href='http://127.0.0.1:5000/quiz/"+drink_info.link+"'>Take the Quiz</a>");
-    let back_button = $("<a class='btn btn-dark btn-lg-custom secondBtn' href='http://127.0.0.1:5000/'>Back to Home</a>");
+    let quiz_button = $("<a class='btn btn-dark btn-lg-custom secondBtn'  href='http://127.0.0.1:5000/quiz/"+drink_info.link+"'>Take the Quiz</a>");
+    let back_button = $("<a class='btn-lg-custom firstBtn whiteBtn' href='http://127.0.0.1:5000/'>Back to Home</a>");
     $(".row.headers").append(congrats);
     $(".drinksReady").append(drinksReady);
     $(".drinkPic").append(drinkPic);

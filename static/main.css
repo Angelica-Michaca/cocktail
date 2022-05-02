@@ -761,7 +761,6 @@
             font-family: italiana;
 
     }
-
     .practiceHintText{
       color: rgb(154, 154, 154);
       margin-top: -20px;
@@ -769,4 +768,8 @@
       margin-left: 10px;
       font-size: 20px;
       font-family: italiana;
+    }
+      
+    .footer{
+        padding-top: 60px;
     }
