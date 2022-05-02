@@ -233,6 +233,8 @@ def practiceCocktailPage(name=None):
     alcohols = cocktails[name]["ingredients"]["alcohol"]
     juices = cocktails[name]["ingredients"]["juice"]
     syrups = cocktails[name]["ingredients"]["syrup"]
+    
+    drinksPics = cocktails[name]["image"]
 
     all_ingredients_with_volume = dict()
 
@@ -263,7 +265,7 @@ def practiceCocktailPage(name=None):
         names_and_volumes=names_and_volumes,
         all_ingredients_with_volume=all_ingredients_with_volume,
         ingredients_in_order=ingredients_in_order,
-        drink_info=drink_info)
+        drink_info=drink_info, drinksPics=drinksPics)
 
 
 @ app.route("/learn/<name>")

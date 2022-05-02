@@ -1,34 +1,39 @@
 {% extends "layout.html" %} {% block content %}
 
 <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
-<script type="text/javascript" src="{{ url_for('static', filename = 'practice.js') }}"></script>
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'practice.js') }}"
+></script>
 <script>
   let ingredients_names_in_order = {{ingredients_names_in_order|tojson}}
   let names_and_volumes = {{names_and_volumes|tojson}}
   let all_ingredients_with_volume = {{ all_ingredients_with_volume | tojson }}
   let ingredients_in_order = {{ ingredients_in_order| tojson }}
   let drink_info = {{drink_info|tojson}}
+  let drinksPics = {{drinksPics|tojson}}
 </script>
 
 <head>
-  <style>
-    
-
-  </style>
+  <style></style>
 </head>
 
-<div class="row headers">
-  <div class="col-md-7">
-    <h1 class="left-header" id="name-of-drink">{{drink_info.name}}</h1>
-    <h4 class="practice-text">Practice</h4>
-    <br/>
-    <div class="practice-questions" id="practice-questions"></div>
+<div class="container">
+  <div class="row headers mainContent">
+    <div class="col-md-7">
+      <h1 class="left-header" id="name-of-drink">{{drink_info.name}}</h1>
+      <h4 class="practice-text">Practice</h4>
+      <br />
+      <div class="practice-questions" id="practice-questions"></div>
+    </div>
+    <div class="col-md-5" id="hintBox"></div>
   </div>
-
-  <div class="col-md-5" id="hintBox">
-    
-  </div>
-</div>
+  <div class="drinksReady "></div>
+  <div class="drinkPic"></div>
+  <div class="areYou "></div>
+  <div class="harder "></div>
+  <div class="button1"></div>
+  <div class="button2"></div>
 </div>
 
 {% endblock %}

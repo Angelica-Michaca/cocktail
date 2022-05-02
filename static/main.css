@@ -402,8 +402,11 @@
       font-size: 21px;
     }*/
 
+    
     .mainContent{
         font-family: italiana;
+        display: flex;
+        justify-content: center;
 
     }
 
@@ -413,6 +416,7 @@
         
       }
    
+      
 
       input::placeholder{
         overflow: visible;
@@ -422,7 +426,7 @@
         margin-right: 10px;
       }
 
-      #ingredient_0
+      /* #ingredient_0 */
       
       #fname{
         border-top-style: hidden;
@@ -474,5 +478,87 @@
       .right-background{
         background-color: #8fff98;
       }
+
+
+      .row.headers{
+          margin-bottom: -1rem;
+      }
+      .drinksReady{
+          display: flex;
+          justify-content: center;
+      }
+
+      .drinkPic{
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+
+    .areYou{
+        display: flex;
+        justify-content: center;
+        margin-bottom: -1rem;
+    }
+
+    .harder{
+        display: flex;
+        justify-content: center;
+    }
+
+    .button1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+        
+        
+        
+
+    }
+
+    .button2{
+        display: flex;
+        justify-content: center;
+        
+        
+        
+        
+    }
+
+    .btn-light{
+        border-radius: 0%;
+
+    }
+
+    .btn-dark{
+        border-color: white;
+        border-radius: 0%;
+        background-color: rgb(32, 32, 32);
+        
+        
+    }
+
+
+
+    .practQuizImg{
+        width: 200px;
+        height: 200px;
+        
+
+    }
+
     
+
+    .btn-lg-custom{
+        width: 350px;
+        font-size:26px;
+    }
+    
+      /* .practiceQuizContainer{
+        font-family: italiana;
+        color: white;
+        font-size: 30px;
+
+      } */
        
+            
