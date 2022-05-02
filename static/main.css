@@ -157,7 +157,11 @@
             font-weight: 100;
             font-family: italiana;
             
-            
+        }
+
+        a.goldenText:hover{
+            color: goldenrod;
+
         }
 
         .navbar-brand{
