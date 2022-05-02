@@ -132,9 +132,6 @@ function undo(){
 
         //add ingredient back to the row
         lastItemJpeg = undo_dict[lastItem]
-
-        
-
         new_post = $("<div class='col-lg-1 ingredients' id = " + lastItem + ">  <img src=" + lastItemJpeg + " draggable='true' width ='100' height = '100' alt= " + lastItem +">"+lastItem+"</div>")
         new_post.data("value", lastItem)
         $("#ingredientsRow").append(new_post)

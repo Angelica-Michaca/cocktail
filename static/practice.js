@@ -38,7 +38,7 @@ let correct_answers = 0;
         let ing_card = $("<div class='custom-white-card'>");
 
         //Create card img
-        let ing_card_img = $("<img class='card-img-top' src='"+ ingredient.ingredient_image +"'>");
+        let ing_card_img = $("<img class='card-img-top' width ='200' height = '200' src='"+ ingredient.ingredient_image +"'>");
         
         //Append card img to card
         $(ing_card).append(ing_card_img);

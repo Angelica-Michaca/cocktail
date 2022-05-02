@@ -44,6 +44,21 @@
             margin-right: auto !important;
             display: flex !important; 
             justify-content: center!important;
+            font-size: 24px;
+            padding: 12px 28px;
+            border-radius: 0px;
+        }
+
+        #undoButton{
+            font-size: 24px;
+            padding: 12px 28px;
+            border-radius: 0px;
+        }
+       
+        #resetButton{
+            font-size: 24px;
+            padding: 12px 28px;
+            border-radius: 0px;
         }
        
         
@@ -71,7 +86,7 @@
             font-family: italiana;
             width: 100;
             height: 100;
-            text-align: center;
+            text-align: right;
         }
 
         .quizIngredientsText {
