@@ -136,7 +136,7 @@ function undo(){
         new_post.data("value", lastItem)
         $("#ingredientsRow").append(new_post)
 
-        glass.splice(glass.length-1,1);
+        glass.splice(glass.length-1,1); //removing
     }
 
 }
