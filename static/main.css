@@ -525,7 +525,7 @@
     .button1{
         display: flex;
         justify-content: center;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
         
         
         
@@ -537,6 +537,16 @@
         justify-content: center;    
         
         
+    }
+
+    a.firstBtn:hover{
+        text-decoration: underline;
+        text-decoration-color:  goldenrod;
+
+    }
+    a.secondBtn:hover{
+        border-color: goldenrod;
+
     }
 
     .btn-light{
