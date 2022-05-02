@@ -124,12 +124,12 @@
             border-radius: 0%;
         }
         
-        .practice-btn{
+        /* .practice-btn{
             margin: auto;
             background-color: white;
             border-color: white;
             color: black;
-        }
+        } */
         
         .gap-3{
             margin: 10px;
@@ -155,8 +155,12 @@
         .navbar{
             font-size: 18px;
             font-weight: 100;
+            font-family: italiana;
             
-            
+        }
+        a.goldenText:hover{
+            color: goldenrod;
+
         }
 
         .navbar-brand{
@@ -250,7 +254,7 @@
         
         .btn-container{
             margin-top: -2.5rem;
-            background-color: rgb(218, 165, 32);
+            /* background-color: rgb(218, 165, 32); */
         }
 
         .btn-in-home-cards{
@@ -264,6 +268,10 @@
         }
 
         
+
+
+
+        
         .learn-drink-btn{
             color: black;
             background-color: white;   
@@ -273,13 +281,84 @@
 
         }
 
-        .take-quiz-btn{
+        /* .take-quiz-btn{
             color: white;
             background-color: rgb(32, 32, 32)
             ;
             border-color: white;  
         
-        }
+        } */
+
+        .btn {
+            /* display: inline-block; */
+            outline: none;
+            background: transparent;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 0.900rem;
+            /* letter-spacing: 0.3em; */
+            color: rgba(218,165,32,0.8);
+            border-radius: 0;
+            /* padding: 18px 80px 20px; */
+            transition: all 0.7s ease-out;
+            background: linear-gradient(270deg, rgba(218,165,32,1), rgba(218,165,32,0.1), rgba(34,34,34,0), rgba(34,34,34,0));
+            background-position: 1% 50%;
+            background-size: 300% 300%;
+            text-decoration: none;
+            /* margin: 0.625rem; */
+            border: none;
+            border: 1px solid rgba(223,190,106,0.3);
+          }
+          
+          .btn:hover {
+            color: #fff;
+            border: 1px solid rgba(223,190,106,0);
+            color: $white;
+            background-position: 99% 50%;
+          }
+    
+
+          .whiteBtn {
+            /* display: inline-block; */
+            outline: none;
+            background-color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 0.900rem;
+            /* letter-spacing: 0.3em; */
+            color: rgb(32,32,32);
+            border-radius: 0;
+            /* padding: 18px 80px 20px; */
+            transition: all 0.7s ease-out;
+            /* background: linear-gradient(270deg, rgba(218,165,32,1), rgba(218,165,32,0.1), rgba(34,34,34,0), rgba(34,34,34,0)); */
+            background-position: 1% 50%;
+            background-size: 300% 300%;
+            text-decoration: none;
+            /* margin: 0.625rem; */
+            border: none;
+            border: 1px solid rgba(247, 246, 243, 0.3);
+          }
+          
+          .whiteBtn:hover {
+            color: rgba(218,165,32);
+            border: 1px solid rgba(255, 255, 255, 0);
+            /* color: $white; */
+            background-position: 99% 50%;
+          }
+
+
+        /* .btn:hover {
+            
+            color: #fff;
+            border: 1px solid rgba(223,190,106,0);
+            color: $white;
+            background-position: 99% 50%;
+          } */
+
+
+
 
         /*****Video on learn page***/
 
@@ -404,6 +483,10 @@
       }
       
       .practiceButton {
+          margin-top: .5rem;
+          padding: 10px 50px;
+      }
+      /* .practiceButton {
         display: block;
         height: 40px;
         width: 5rem;
@@ -412,7 +495,7 @@
         font-family: italiana;
         border-radius: 0%;
         color:rgb(218, 165, 32);
-      }
+      } */
 
         .quizResultDrinkImage{
             display: block;
@@ -432,6 +515,9 @@
       font-size: 21px;
     }*/
 
+    #name-of-drink{
+        color: rgb(218,165,32);
+    }
     
     .mainContent{
         font-family: italiana;
@@ -554,15 +640,22 @@
         
     }
 
+    .firstBtn{
+        padding: 6px 12px;
+
+    }
+    
+
     a.firstBtn:hover{
         text-decoration: underline;
         text-decoration-color:  goldenrod;
 
     }
+    /*
     a.secondBtn:hover{
         border-color: goldenrod;
 
-    }
+    } */
 
     .btn-light{
         border-radius: 0%;
@@ -588,10 +681,10 @@
 
     
 
-    .btn-lg-custom{
+    /* .btn-lg-custom{
         width: 350px;
         font-size:26px;
-    }
+    } */
     
       /* .practiceQuizContainer{
         font-family: italiana;
