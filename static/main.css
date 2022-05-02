@@ -344,7 +344,7 @@
             text-decoration: none;
             /* margin: 0.625rem; */
             border: none;
-            border: 1px solid rgba(247, 246, 243, 0.3);
+            border: 1px solid rgba(218,165,32, 2);
           }
           
           .whiteBtn:hover {
@@ -353,6 +353,7 @@
             /* color: $white; */
             background-position: 99% 50%;
           }
+
 
 
         /* .btn:hover {
@@ -662,6 +663,11 @@
         border-color: goldenrod;
 
     } */
+
+    .secondBtn{
+        padding: 6px 12px;
+
+    }
 
     .btn-light{
         border-radius: 0%;
