@@ -757,3 +757,8 @@
             font-family: italiana;
 
     }
+
+    .footer{
+        color: transparent;
+        padding-top: 60px;
+    }
