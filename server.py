@@ -87,7 +87,7 @@ cocktails = {
                     "name": "Tequila",
                     "ingredient_image": "/static/images/tequila.png",
                     "volume": "1.5",
-                    "timestamp": "0:15"
+                    "timestamp": "0:14"
                 },
                 "orange_tequila": {
                     "name": "Orange Tequila",
@@ -145,7 +145,7 @@ cocktails = {
                     "name": "Fresh Lime Juice",
                     "ingredient_image": "/static/images/fresh_lime_juice.png",
                     "volume": "0.5",
-                    "timestamp": "0:09"
+                    "timestamp": "0:12"
                 }
             },
             "syrup": {
