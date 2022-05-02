@@ -344,12 +344,12 @@
             text-decoration: none;
             /* margin: 0.625rem; */
             border: none;
-            border: 1px solid rgba(218,165,32, 2);
+            border: 0px solid rgb(218,165,32);
           }
           
           .whiteBtn:hover {
             color: rgba(218,165,32) !important;
-            border: 1px solid rgba(255, 255, 255, 0);
+            border: 2px solid rgb(218,165,32);
             /* color: $white; */
             background-position: 99% 50%;
           }
