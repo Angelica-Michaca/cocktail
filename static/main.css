@@ -5,28 +5,28 @@
 
         .quizBodyText {
             margin: 10px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             color: white;
             font-size: 30px;
         }
 
         .quizTitleText {
             margin: 20px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             color: rgb(218, 165, 32);
             font-size: 60px;
         }
 
         .learnTitleText{
             padding: 0px !important;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             color: white;
             font-size: 60px;
         }
 
         .quizResultBodyText {
             margin: 10px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             color: white;
             font-size: 30px;
             text-align:center;
@@ -34,7 +34,7 @@
 
         .quizResultTitleText {
             margin: 20px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             color: rgb(218, 165, 32);
             font-size: 60px;
         }
@@ -89,7 +89,7 @@
         }
         .ingredients {
             font-size: 20px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             width: 100;
             height: 100;
             text-align: right;
@@ -97,7 +97,7 @@
 
         .quizIngredientsText {
             margin: 20px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             color: white;
             font-size: 20px;
         }
@@ -163,7 +163,7 @@
         .navbar{
             font-size: 18px;
             font-weight: 100;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             
         }
         a.goldenText:hover{
@@ -173,7 +173,7 @@
 
         .navbar-brand{
             font-size: 24px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             font-weight: bolder;
         }
 
@@ -194,7 +194,7 @@
             color: white;
             font-size: 75px;
             font-weight: 100;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             
 
         }
@@ -209,7 +209,7 @@
             color: white;
             margin-bottom: 20px;
             font-size: 28px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 
         }
 
@@ -222,13 +222,13 @@
             color: rgb(154, 154, 154);
             margin-bottom: 60px;
             font-size: 20px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 
         }
 
         /******* Dynamic Cards on Home page *******/
         .col-md-4{
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         }
         .customHomeCard{
             width: 250px;
@@ -417,7 +417,7 @@
        .ingredient_labels {
         color: white;
         padding-bottom: 10;
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         font-size: 25px;
        
       }
@@ -442,7 +442,7 @@
     
 
       .alc-name {
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         font-weight: bold;
         font-size: 20px;
         padding-top: 10px;
@@ -451,7 +451,7 @@
       }
 
       .alc-info{
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         padding-right: 10px;
         
       }
@@ -468,13 +468,13 @@
       .card-title-fact {
         font-size: 25px;
         text-decoration: underline;
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         
       }
 
       .card-text-blurb {
         font-size: 18px;
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
       }
 
       /* .vstack {
@@ -502,7 +502,7 @@
         width: 5rem;
         font-size: 15px;
         margin: 6px;
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         border-radius: 0%;
         color:rgb(218, 165, 32);
       } */
@@ -530,7 +530,7 @@
     }
     
     .mainContent{
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 
     }
 
@@ -702,7 +702,7 @@
     } */
     
       /* .practiceQuizContainer{
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         color: white;
         font-size: 30px;
 
@@ -715,7 +715,7 @@
             margin-bottom: 50px;
             /* font-size: 20px; */
             font-size: 30px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 
     }
 
@@ -750,14 +750,14 @@
         border-radius: 0%;
     }
     .alc-name-hint {
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         font-weight: bold;
         font-size: 20px;
         margin-top: 15px; 
       }
 
       .alc-info-hint{
-        font-family: italiana;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
         margin: 0;
       }
 
@@ -771,7 +771,7 @@
             margin-top: 20px;
             margin-bottom: 10px;
             font-size: 20px;
-            font-family: italiana;
+            font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 
     }
     .practiceHintText{
@@ -780,7 +780,7 @@
       margin-bottom: 10px;
       margin-left: 10px;
       font-size: 20px;
-      font-family: italiana;
+      font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     }
       
     .footer{
