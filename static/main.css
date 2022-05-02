@@ -420,8 +420,6 @@
     
     .mainContent{
         font-family: italiana;
-        display: flex;
-        justify-content: center;
 
     }
 
@@ -497,6 +495,9 @@
 
       .row.headers{
           margin-bottom: -1rem;
+          display: flex;
+          justify-content: center;
+          
       }
       .drinksReady{
           display: flex;
@@ -533,9 +534,7 @@
 
     .button2{
         display: flex;
-        justify-content: center;
-        
-        
+        justify-content: center;    
         
         
     }
