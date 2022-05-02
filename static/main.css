@@ -388,4 +388,88 @@
             width: 50%;
         }
 
+
+        /*********Practice HTML*********/
+
+        /*
+    .headers {
+      margin-top: 3rem;
+    }
+    .right-header {
+      font-size: 21px;
+    }*/
+
+    .mainContent{
+        font-family: italiana;
+
+    }
+
+    .practice-questions {
+        padding-bottom: 15px;
+        font-size: 22px;
+        
+      }
+   
+
+      input::placeholder{
+        overflow: visible;
+      }
+      label { 
+        color:white;
+        margin-right: 10px;
+      }
+
+      #ingredient_0
+      
+      #fname{
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        background-color: transparent;
+      }
+      .no-outline:focus {
+        outline: none;
+      }
+      input::placeholder{
+        overflow: visible;
+      }
+  
+      .check{
+        position:relative;
+      }
+      
+      form{
+        color:white;
+      }
+      
+      .check{
+        color:white;
+        background-color:transparent;
+        border-color:white;
+      }
+  
+      .custom-white-card {
+                background-color: transparent;
+                border-color: white;
+                border-radius: 0%;
+                color: white;
+      }
+  
+      .visible{
+        visibility: visible;
+      }
+  
+      .invisible{
+        visibility: hidden;
+      }
+  
+      .wrong-background{
+        background-color: #ffa38f;
+      }
+  
+      .right-background{
+        background-color: #8fff98;
+      }
+    
        
