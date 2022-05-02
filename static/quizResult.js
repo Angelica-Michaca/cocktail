@@ -8,7 +8,7 @@ function addInstruction() { // for 3 drinks, make arrays of title / instructions
     $("#title").append(drink_list[0]+ " Quiz Result")
     $("#drinkImage").append("<img src="+drink_image +" alt='+drink+' width ='400' height = '400'>")
     console.log(drink_image)
-    $("#instruction").append("You Mastered the " + drink_list[0]+"! Congratulations on learning how to make this cocktail. Are you ready to learn how to make other cocktails?")
+    $("#instruction").append("You scored 4/4. You Mastered the " + drink_list[0]+"! Congratulations on learning how to make this cocktail. Are you ready to learn how to make other cocktails?")
 }
 
 function addButtons(){
