@@ -158,7 +158,6 @@
             font-family: italiana;
             
         }
-
         a.goldenText:hover{
             color: goldenrod;
 
@@ -641,11 +640,18 @@
         
     }
 
-    /* a.firstBtn:hover{
+    .firstBtn{
+        padding: 6px 12px;
+
+    }
+    
+
+    a.firstBtn:hover{
         text-decoration: underline;
         text-decoration-color:  goldenrod;
 
     }
+    /*
     a.secondBtn:hover{
         border-color: goldenrod;
 
