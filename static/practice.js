@@ -40,12 +40,12 @@ let correct_answers = 0;
 
     // POPULATE RETURN BUTTON
     let not_ready = $("<h5 class='not-ready-text'>Not ready for the practice?</h5>");
-    let return_to_learning_button = $("<a class='btn btn-dark secondBtn' href='http://127.0.0.1:5000/learn/"+drink_info.link+"'>Return to Learning</a>");
+    let return_to_learning_button = $("<a class='btn secondBtn' href='http://127.0.0.1:5000/learn/"+drink_info.link+"'>Return to Learning</a>");
     $("#practice-questions").append(not_ready);
     $("#practice-questions").append(return_to_learning_button);
 
     // POPULATE HINT HEADER
-    let hint_header = $("<div class='quizBodyText need-hint'>Need a hint?</div><button class='btn btn-light btn-lg'  id='showHint' type='button' onclick='toggleHint()'>Show ingredients list</button>");
+    let hint_header = $(" <div class='practiceHintText need-hint'>Need a hint?</div><button class='btn btn-light btn-lg'  id='showHint' type='button' onclick='toggleHint()'>Show ingredients list</button>");
 
     $("#hintBox").append(hint_header);
 
