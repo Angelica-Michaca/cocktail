@@ -127,7 +127,7 @@ function removeSpecificIngredientImage(ingredient){
 function undo(){
     if(glass.length>0){
        //let lastItem = $(ui.draggable[0]).data("value")
-       let lastItem = glass[glass.length-1];
+        let lastItem = glass[glass.length-1];
         console.log("lastItem: "+ lastItem.va);
         removeSpecificIngredientImage(lastItem);
 
@@ -163,11 +163,15 @@ $(document).ready(function () {
 
         drop: function (event, ui) {
 
-            let name = $(ui.draggable[0]).data("value")   // when dynamically creating this, do sth like                                             
+            let name = $(ui.draggable[0]).data("value")                                 
             glass.push(name)
-            //remove the elem from ingredients  splice(index,1)
+            
+            
+            //remove the element from ingredients with splice(index,1)
             let index = ingredients.indexOf(name)
             ingredients.splice(index, 1)
+            
+
             //delete exising "what's in your glass"
             removeLists()
             //update new "what's in your glass"

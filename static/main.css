@@ -107,11 +107,13 @@
         }
 
         .highlightActive {
-            background-color: darkgray;
+            /* background-color: darkgray; */
+            background-color:  rgb(212, 212, 212);
         }
+          
 
         .highlightHover {
-            background-color: rgb(218, 165, 32);
+            background-color: rgb(218, 165, 32, 0.2);
         }
 
         .center {
