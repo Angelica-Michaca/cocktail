@@ -51,7 +51,7 @@ let correct_answers = 0;
     $("#practice-questions").append(return_to_learning_button);
 
     // POPULATE HINT HEADER
-    let hint_header = $(" <div class='practiceHintText need-hint'>Need a hint?</div><button class='btn btn-light btn-lg'  id='showHint' type='button' onclick='toggleHint()'>Show ingredients list</button>");
+    let hint_header = $(" <div class='practiceHintText need-hint'>Need a hint?</div><button class='btn  btn-lg'  id='showHint' type='button' onclick='toggleHint()'>Show ingredients list</button>");
 
     $("#hintBox").append(hint_header);
 
