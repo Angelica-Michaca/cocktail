@@ -50,12 +50,14 @@
         }
 
         #undoButton{
+            color: white !important;
             font-size: 24px;
             padding: 12px 28px;
             border-radius: 0px;
         }
        
         #resetButton{
+            color: white !important;
             font-size: 24px;
             padding: 12px 28px;
             border-radius: 0px;

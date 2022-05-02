@@ -211,10 +211,9 @@ glass = []
 def home():
     return render_template("home.html", cocktails=cocktails)
 
-#Do not erase this please
-#keep homepage() do not change to home()
+
 @ app.route("/home")
-def homepage():
+def homepage():#keep def homepage(). Do not change to def home()
     return render_template("home.html", cocktails=cocktails)
 
 
