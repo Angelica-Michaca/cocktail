@@ -12,8 +12,8 @@ function addInstruction() { // for 3 drinks, make arrays of title / instructions
 }
 
 function addButtons(){
-   $("#otherDrinkToLearn1").append("<button class='btn btn-light btn-lg' id='quizResultButton1' type='button'>"+drink_list[1]+"</button>")
-   $("#otherDrinkToLearn2").append("<button class='btn btn-light btn-lg' id='quizResultButton2' type='button'>"+drink_list[2]+"</button>")
+   $("#otherDrinkToLearn1").append("<button class='btn ' id='quizResultButton1' type='button'>"+drink_list[1]+"</button>")
+   $("#otherDrinkToLearn2").append("<button class='btn ' id='quizResultButton2' type='button'>"+drink_list[2]+"</button>")
 }
 
 

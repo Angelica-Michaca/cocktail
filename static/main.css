@@ -44,22 +44,26 @@
             margin-right: auto !important;
             display: flex !important; 
             justify-content: center!important;
-            font-size: 24px;
-            padding: 12px 28px;
+       
+            padding: 10px 50px;
             border-radius: 0px;
         }
 
         #undoButton{
-            color: white !important;
-            font-size: 24px;
-            padding: 12px 28px;
+          background-color: white;   
+          border-color: white;
+            color: black;
+            padding: 10px 50px;
+       
             border-radius: 0px;
         }
        
         #resetButton{
-            color: white !important;
-            font-size: 24px;
-            padding: 12px 28px;
+          background-color: white;   
+          border-color: white;
+            color: black ;
+      
+            padding: 10px 50px;
             border-radius: 0px;
         }
        
@@ -78,7 +82,7 @@
         }
         #backToHomePageButton{
             margin: auto;
-            color: rgb(218, 165, 32);
+
         }
         #ingredientsRow{
             margin:auto;
@@ -316,10 +320,10 @@
           .btn:hover {
             color: #fff;
             border: 1px solid rgba(223,190,106,0);
-            color: $white;
+            color: white !important;
             background-position: 99% 50%;
           }
-    
+          
 
           .whiteBtn {
             /* display: inline-block; */
@@ -344,7 +348,7 @@
           }
           
           .whiteBtn:hover {
-            color: rgba(218,165,32);
+            color: rgba(218,165,32) !important;
             border: 1px solid rgba(255, 255, 255, 0);
             /* color: $white; */
             background-position: 99% 50%;
