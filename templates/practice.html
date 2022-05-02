@@ -18,17 +18,20 @@
   <style></style>
 </head>
 
-<div class="container ">
+<div class="container">
+  <div class="row empty-this">
+    <div class="col">
+      <h1 class="left-header learnTitleText titleRow" id="name-of-drink">{{drink_info.name}} Practice</h1>
+      <h5 class="practice-instructions-text">Enter the names of the ingredients in the boxes in the correct order.</h5>
+    </div>
+  </div>
   <div class="row headers mainContent">
     <div class="col-md-7">
-      <h1 class="left-header" id="name-of-drink">{{drink_info.name}}</h1>
-      <h4 class="practice-text">Practice</h4>
-      <br />
       <div class="practice-questions" id="practice-questions"></div>
     </div>
     <div class="col-md-5" id="hintBox"></div>
   </div>
-  <div class="drinksReady "></div>
+  <div class="drinksReady"></div>
   <div class="drinkPic"></div>
   <div class="areYou "></div>
   <div class="harder "></div>

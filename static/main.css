@@ -600,4 +600,67 @@
 
       } */
        
-            
+    .practice-instructions-text{
+            color: rgb(154, 154, 154);
+            margin-top: 20px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            font-family: italiana;
+
+    }
+
+    .practice-input{
+        background-color:transparent;
+        outline:none;
+        color:  white;
+        border: none;
+        border-bottom: 2px solid white;
+        margin-right: 10px;
+    }
+
+    .need-hint{
+        margin-top: -100px;
+    }
+
+    .imgOfIngredientsHint {
+        margin-left: 10px;
+        margin-top: 10px;
+        height: 100%;
+        width: 100%;
+      }
+
+    .cardIngredientsHint {
+        border-color: white;
+        background-color: transparent;
+        width: 270px;
+        height: 110px;
+        color: white;
+        margin: 5px;
+        margin-left: 22px;
+        border-radius: 0%;
+    }
+    .alc-name-hint {
+        font-family: italiana;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 15px; 
+      }
+
+      .alc-info-hint{
+        font-family: italiana;
+        margin: 0;
+      }
+
+    #showHint{
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .not-ready-text{
+            color: rgb(154, 154, 154);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-family: italiana;
+
+    }

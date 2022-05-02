@@ -7,10 +7,24 @@ let correct_answers = 0;
 
     //POPULATE TEXT
     $.each(ingredients_in_order, function(i, ingredient){
-        let label = $("<label for='ingredient_"+i+"'>First, add <span id='ingredient_"+i+"_vol'></span></label>");
+        let order;
+        if(i == 0 || i == 3){
+            if(i == 0){
+                order = "First";
+            }
+            else{
+                order = "Lastly";
+            }
+            
+        }
+        else{
+            order = "Then";
+        }
+
+        let label = $("<label for='ingredient_"+i+"'>"+ order +", add <span id='ingredient_"+i+"_vol'></span></label>");
         $("#practice-questions").append(label);
 
-        let input = $("<input type='text' id='ingredient_"+i+"' class='no-outline' name='ingredient_"+i+"' placeholder='insert name of ingredient'>");
+        let input = $("<input type='text' id='ingredient_"+i+"' class='no-outline practice-input' name='ingredient_"+i+"' placeholder='ingredient name'>");
         $("#practice-questions").append(input);
 
         let check_button = $("<input id='ingredient_"+i+"_check' class='check' type='submit' value='Check'>");
@@ -24,8 +38,14 @@ let correct_answers = 0;
       });
     });
 
+    // POPULATE RETURN BUTTON
+    let not_ready = $("<h5 class='not-ready-text'>Not ready for the practice?</h5>");
+    let return_to_learning_button = $("<a class='btn btn-dark secondBtn' href='http://127.0.0.1:5000/learn/"+drink_info.link+"'>Return to Learning</a>");
+    $("#practice-questions").append(not_ready);
+    $("#practice-questions").append(return_to_learning_button);
+
     // POPULATE HINT HEADER
-    let hint_header = $("<div class='quizBodyText'>Need a hint?</div><button class='btn btn-light btn-lg'  id='showHint' type='button' onclick='toggleHint()'>Show ingredients list</button>");
+    let hint_header = $("<div class='quizBodyText need-hint'>Need a hint?</div><button class='btn btn-light btn-lg'  id='showHint' type='button' onclick='toggleHint()'>Show ingredients list</button>");
 
     $("#hintBox").append(hint_header);
 
@@ -35,27 +55,25 @@ let correct_answers = 0;
 
     $.each(all_ingredients_with_volume, function(i, ingredient){
         //Create card element
-        let ing_card = $("<div class='custom-white-card'>");
+        let ing_card = $("<div class='card cardIngredientsHint'>");
 
-        //Create card img
-        let ing_card_img = $("<img class='card-img-top' width ='200' height = '200' src='"+ ingredient.ingredient_image +"'>");
+        //Create row for image and info
+        let info_row = $("<div class='row'>");
+
+        //Append row for image and info to card
+        $(ing_card).append(info_row);
+
+        //Create image col + image
+        let ing_card_img = $("<div class='col-md-4'><img class='imgOfIngredientsHint alcohol-img' src='"+ingredient.ingredient_image+"'alt=''/></div>");
         
         //Append card img to card
-        $(ing_card).append(ing_card_img);
+        $(info_row).append(ing_card_img);
 
-        //Create card body
-        let ing_card_body = $("<div class='card-body'>");
+        //Create card info
+        let ing_card_info = $("<div class='col-md-8'><p class='alc-name-hint'>"+ingredient.name+"</p><p class='alc-info-hint'>Volume: "+ingredient.volume+" oz</p></div>");
 
         //Append card body to card
-        $(ing_card).append(ing_card_body);
-
-        //Create artist name
-        let ing_name = $("<h5>"+ ingredient.name +"</h5>");
-        $(ing_card_body).append(ing_name);
-
-        //Create ing volume
-        let ing_volume = $("<p class='card-text'>"+ ingredient.volume +" oz</p>");
-        $(ing_card_body).append(ing_volume);
+        $(info_row).append(ing_card_info);
 
         //Append finished card to row
         $(hint_list).append(ing_card);
@@ -85,7 +103,6 @@ function checkAnswer(i){
         $("#ingredient_"+i).val("");
         $("#ingredient_"+i+"_check").removeClass("right-background");
         $("#ingredient_"+i+"_check").addClass("wrong-background");
-        correct_answers = correct_answers - 1
     }
 
     if(correct_answers == 4){
@@ -106,11 +123,10 @@ function toggleHint(){
 }
 
 function quizButton(){
+    $(".empty-this").empty();
     $(".row.headers").empty();
     let congrats = $("<div class='quizBodyText'>Well done.</div>");
-    // let congrats = $("<div class='quizBodyText'>Well done</div><div class='quizBodyText'>Your drink is ready.</div><div class='quizBodyText'>Are you ready for a harder quiz?</div>");
-    
-    let drinksReady = $("<div class = 'quizBodyText'>Your " + drink_info['name'] + " drink is ready. </div>");
+    let drinksReady = $("<div class = 'quizBodyText'>Your " + drink_info['name'] + " is ready. </div>");
     let drinkPic = $("<div class = 'quizBodyImg'><img class='practQuizImg'src='" +  drinksPics + "'  alt='drink image'></div>");
     let areYou = $("<div class = 'quizBodyText'>Are you ready for a </div>");
     let harder = $("<div class = 'quizBodyText'>harder Quiz? </div>");
