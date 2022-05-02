@@ -35,7 +35,13 @@ let correct_answers = 0;
 
         $("#ingredient_"+i+"_check").click(function() {
           checkAnswer(i);
-      });
+        });
+
+        $("#ingredient_"+i).keyup(function(event) {
+            if (event.keyCode === 13) {
+                $("#ingredient_"+i+"_check").click();
+            }
+        });
     });
 
     // POPULATE RETURN BUTTON
