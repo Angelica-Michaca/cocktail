@@ -119,15 +119,16 @@ function reset() {
 
 function removeSpecificIngredientImage(ingredient){
     // let str = "#"+ingredient;
-    // console.log("");
+     console.log("remove specific ingredient: "+ ingredient);
     document.getElementById((ingredient)).remove()
  
 }
 
 function undo(){
     if(glass.length>0){
+       //let lastItem = $(ui.draggable[0]).data("value")
        let lastItem = glass[glass.length-1];
-        console.log(lastItem);
+        console.log("lastItem: "+ lastItem.va);
         removeSpecificIngredientImage(lastItem);
 
         //add ingredient back to the row
