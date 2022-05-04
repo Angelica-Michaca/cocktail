@@ -165,21 +165,31 @@
             font-size: 18px;
             font-weight: 100;
             font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+            padding-top: 12px;
             
+        }
+
+        .darkerNavBarBackground{
+          color: rgb(20, 20, 20);
         }
         a.goldenText:hover{
             color: goldenrod;
 
         }
+        hr{
+          border-width:1px;
+          background-color: goldenrod
+        }
 
         .navbar-brand{
-            font-size: 24px;
+          color: white;
+            font-size: 18px;
             font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             font-weight: bolder;
         }
 
-        .mr-auto{
-            color:white;
+        .navbarGreyText{
+            color: rgb(178, 177, 177);
         }
 
 
@@ -193,8 +203,8 @@
             /* margin: 20px;
             margin-bottom: 10px; */
             color: white;
-            font-size: 75px;
-            font-weight: 100;
+            font-size: 80px;
+            /* font-weight: 100; */
             font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
             
 
@@ -541,6 +551,7 @@
     
     .mainContent{
         font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+        margin-top: 3rem;
 
     }
 
