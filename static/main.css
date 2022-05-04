@@ -50,23 +50,24 @@
         }
 
         #undoButton{
-          background-color: white;   
+          /* background-color: white;   
           border-color: white;
-            color: black;
+            color: black; */
             padding: 10px 50px;
        
             border-radius: 0px;
         }
        
         #resetButton{
-          background-color: white;   
+          /* background-color: white;   
           border-color: white;
-            color: black ;
+            color: black ; */
       
             padding: 10px 50px;
             border-radius: 0px;
         }
-       
+        
+      
         
         #quizResultButton1{
            margin-left: auto !important;
@@ -284,18 +285,15 @@
             color: black;
             background-color: white;   
             border-color: white;
-            margin-bottom: 8px;
+            margin-bottom: 5rem;
             
 
         }
 
-        /* .take-quiz-btn{
-            color: white;
-            background-color: rgb(32, 32, 32)
-            ;
-            border-color: white;  
+        .take-quiz-btn{
+            margin-bottom: 8px;
         
-        } */
+        }
 
         .btn {
             /* display: inline-block; */
@@ -306,7 +304,7 @@
             font-style: normal;
             font-size: 0.900rem;
             /* letter-spacing: 0.3em; */
-            color: rgba(218,165,32,0.8);
+            color: white;
             border-radius: 0;
             /* padding: 18px 80px 20px; */
             transition: all 0.7s ease-out;
@@ -317,43 +315,55 @@
             /* margin: 0.625rem; */
             border: none;
             border: 1px solid rgba(223,190,106,0.3);
+            background-position: 99% 50%;
           }
           
           .btn:hover {
             color: #fff;
             border: 1px solid rgba(223,190,106,0);
             color: white !important;
+            font-size: medium;
             background-position: 99% 50%;
+            text-decoration:  underline white;
           }
           
 
           .whiteBtn {
             /* display: inline-block; */
             outline: none;
-            background-color: white;
+            background-color: goldenrod;
             text-transform: uppercase;
             font-weight: 500;
             font-style: normal;
             font-size: 0.900rem;
             /* letter-spacing: 0.3em; */
-            color: rgb(32,32,32);
+            color: white;
             border-radius: 0;
             /* padding: 18px 80px 20px; */
             transition: all 0.7s ease-out;
-            /* background: linear-gradient(270deg, rgba(218,165,32,1), rgba(218,165,32,0.1), rgba(34,34,34,0), rgba(34,34,34,0)); */
+             background: linear-gradient(270deg, rgba(27,27,27,1), rgba(27,27,27,0.1), rgba(34,34,34,0), rgba(34,34,34,0));
             background-position: 1% 50%;
             background-size: 300% 300%;
             text-decoration: none;
             /* margin: 0.625rem; */
             border: none;
-            border: 0px solid rgb(218,165,32);
+            border: 1px solid rgba(223,190,106,0.3);
           }
+
           
+  
+
+
+
           .whiteBtn:hover {
-            color: rgba(218,165,32) !important;
-            border: 2px solid rgb(218,165,32);
+            color: white !important;
+            border: 1px solid rgba(223,190,106,0.3);
+            font-size: medium;
+            text-decoration:  underline white;
+        
             /* color: $white; */
             background-position: 99% 50%;
+
           }
 
 
