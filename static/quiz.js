@@ -21,7 +21,7 @@ function copyArray(){
 function addInstruction() { // for 3 drinks, make arrays of title / instructions in server.py and use that to create html dynamically
      $("#title").append( drink )
      $("#instruction").append("Drag and drop the necessary ingredients into the glass in the correct order to make a "+ drink + ".")
-    $("#glassInstruction").append("In your glass:")
+     $("#glassInstruction").append("In your glass:")
 }
 
 /**
@@ -126,9 +126,8 @@ function removeSpecificIngredientImage(ingredient){
 
 function undo(){
     if(glass.length>0){
-       //let lastItem = $(ui.draggable[0]).data("value")
         let lastItem = glass[glass.length-1];
-        console.log("lastItem: "+ lastItem.va);
+        console.log("lastItem: "+ lastItem);
         removeSpecificIngredientImage(lastItem);
 
         //add ingredient back to the row
@@ -141,8 +140,6 @@ function undo(){
     }
 
 }
-
-
 
 
 $(document).ready(function () {
@@ -162,10 +159,15 @@ $(document).ready(function () {
         },
 
         drop: function (event, ui) {
-
+            //event.target.attr("color","transparent");
+            //console.log("dropped: " + event.target.id);
+            //console.log("dropped: " + ui.draggable[0].id);
+            
             let name = $(ui.draggable[0]).data("value")                                 
             glass.push(name)
-            
+          // console.log("printing: "+ document.getElementById(name))
+            //$(idd).css("color", "transparent");
+            document.getElementById(name).style.color = "rgba(0,0,0,0)";
             
             //remove the element from ingredients with splice(index,1)
             let index = ingredients.indexOf(name)
@@ -222,4 +224,9 @@ $(document).ready(function () {
         
         // need to add the image for  glass[length-1] back in the row.
     })
+
+ 
+
+
+    
 })
