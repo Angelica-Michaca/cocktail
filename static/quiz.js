@@ -79,7 +79,7 @@ function addGlass() {
 function updateLists() {
     let glassLength = glass.length;
     for (i = 0; i < glassLength; i++) {
-        let new_post = $("<div class = glassContents>" + glass[i] + "</div>")
+        let new_post = $("<div class = glassContents> -" + glass[i] + "</div>")
         new_post.data("value", glass[i])
         $("#glassInput").append(new_post)  // first in first out 
     }
