@@ -46,7 +46,7 @@ let correct_answers = 0;
 
     // POPULATE RETURN BUTTON
     let not_ready = $("<h5 class='not-ready-text'>Not ready for the practice?</h5>");
-    let return_to_learning_button = $("<a class='whiteBtn secondBtn ' href='http://127.0.0.1:5000/learn/"+drink_info.link+"'>Return to Learning</a>");
+    let return_to_learning_button = $("<a class='take-quiz-btn whiteBtn btnInReturn2Learn ' href='http://127.0.0.1:5000/learn/"+drink_info.link+"'>Return to Learning</a>");
     $("#practice-questions").append(not_ready);
     $("#practice-questions").append(return_to_learning_button);
 
