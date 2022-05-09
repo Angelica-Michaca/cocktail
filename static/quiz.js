@@ -138,7 +138,7 @@ function undo(){
 
         glass.splice(glass.length-1,1); //removing
     }
-
+   
 }
 
 

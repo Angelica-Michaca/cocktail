@@ -181,6 +181,7 @@
 
         }
         hr{
+          margin-top: -5px;
           border-width:1px;
           background-color: goldenrod
         }
