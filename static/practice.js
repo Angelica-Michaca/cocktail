@@ -99,11 +99,14 @@ function populateVolumes() {
 }
 
 function checkAnswer(i){
-    let user_input = $("#ingredient_"+i).val();
+    let user_input = $("#ingredient_"+i).val().trim();
     if(user_input.toLowerCase() == ingredients_names_in_order[i].toLowerCase()){
         $("#ingredient_"+i+"_check").removeClass("wrong-background");
         $("#ingredient_"+i+"_check").addClass("right-background");
-        correct_answers = correct_answers + 1
+        correct_answers = correct_answers + 1;
+         if(i<3){
+            $("#ingredient_"+(i+1)).focus();
+        }
     }
     else{
         $("#ingredient_"+i).val("");
