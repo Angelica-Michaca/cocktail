@@ -1,7 +1,7 @@
 function addInstruction() { // for 3 drinks, make arrays of title / instructions in server.py and use that to create html dynamically
     $("#title").append(drink_list[0]+ " Quiz Result")
     $("#feedback").append("You scored 4/4!<br>You Mastered the " + drink_list[0]+"!");
-    $("#drinkImage").append("<img src="+drink_image +" alt='+drink+' width ='470' height = '400'>")
+    $("#drinkImage").append("<img src="+drink_image +" alt='+drink+' width ='550' height = '450'>")
     $("#instruction").append("Congratulations on learning how to make this cocktail.<br> Are you ready to learn how to make other cocktails?")
 }
 
